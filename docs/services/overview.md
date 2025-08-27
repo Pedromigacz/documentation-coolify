@@ -76,6 +76,7 @@ You can host ANY service with Coolify that could be containerized.
 - [Drupal](/services/drupal) - Open-source content management system.
 - [Duplicati](/services/duplicati) - A free backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.
 - [Easy Appointments](/services/easyappointments) - Open-source appointment scheduler.
+- [Elastic Search](/services/elastic-search) - Open-source search and analytics engine designed for fast, scalable data retrieval—ideal.
 - [Emby](/services/emby) - A media server to organize, play, and stream audio and video to a variety of devices.
 - [Emby Stat](/services/emby-stat) - A simple and easy-to-use Emby statistics dashboard.
 - [Evolution API](/services/evolution-api) - WhatsApp API service for automation.

@@ -249,6 +249,7 @@ export default defineConfig({
               { text: 'Drupal', link: '/services/drupal' },
               { text: 'Duplicati', link: '/services/duplicati' },
               { text: 'Easy Appointments', link: '/services/easyappointments' },
+              { text: 'Elastic Search', link: '/services/elastic-search' },
               { text: 'Emby', link: '/services/emby' },
               { text: 'Emby Stat', link: '/services/emby-stat' },
               { text: 'Evolution API', link: '/services/evolution-api' },

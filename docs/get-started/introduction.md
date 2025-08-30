@@ -1,5 +1,8 @@
 ---
 title: Introduction to Coolify
+outline: [2, 4]
+lastUpdated: true
+editLink: true
 ---
 
 <ZoomableImage src="/docs/images/get-started/introduction-banner.webp" />
@@ -7,20 +10,21 @@ title: Introduction to Coolify
 <br />
 
 ## What is Coolify?
+
 Coolify is a software that makes self-hosting simple and powerful. It lets you run your applications, databases, and services on your own server, whether that’s an old laptop, a Raspberry Pi, or a rented server from a provider like [Hetzner ↗](https://coolify.io/hetzner). 
 
 With Coolify, you get full control over your projects, your data, and your costs. It’s completely free to use, open-source, and has no features locked behind a paywall. 
 
 Think of Coolify as your personal alternative to cloud platforms like [Vercel ↗](https://vercel.com?utm_source=coolify.io), [Railway ↗](https://railway.com/?utm_source=coolify.io), or [Heroku ↗](https://www.heroku.com/?utm_source=coolify.io), but without the huge bills or privacy trade-offs.
 
+### What Coolify Is Not
 
-## What Coolify Is Not
 Coolify isn’t a cloud service that hosts everything for you, you need your own server. That could be your old laptop, a Raspberry Pi, or a rented server from a hosting provider like [Hetzner ↗](https://coolify.io/hetzner), and you’ll need SSH access to use it. 
 
 It’s not a zero-effort solution either, if you choose to self-host, you’ll need to set up your server and install Coolify. But once it’s running, managing your projects becomes very easy.
 
-
 ## Features of Coolify
+
 Coolify is loaded with tools to make self-hosting smooth and powerful. Here’s a detailed look at what it offers:
 
 | Features                  | Explanation                                                                                              |
@@ -40,7 +44,6 @@ Coolify is loaded with tools to make self-hosting smooth and powerful. Here’s 
 | **PR Deployments**        | Deploy commits and pull requests separately for quick reviews and faster teamwork.                       |
 | **Server Automations**    | Handles server setup tasks automatically after connection, saving you time.                              |
 | **Monitoring**            | Monitor deployments, servers, disk usage, and receive alerts for issues.                                 |
-
 
 ## Benefits of Using Coolify
 Coolify delivers unbeatable advantages for developers who want to self-host. Here’s why it stands out:

@@ -6,6 +6,7 @@ import { useSidebar } from 'vitepress/theme'
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import VPNavBarAppearance from 'vitepress/dist/client/theme-default/components/VPNavBarAppearance.vue'
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
 
 const { sidebarGroups, hasSidebar } = useSidebar()
 
@@ -43,13 +44,11 @@ watch(
 
     <aside v-if="hasSidebar" class="VPSidebar" :class="{ open }" ref="navEl" @click.stop>
 
-        <div class="curtain" />
+        <div class="curtain sm:mb-12" />
 
-        <div class="flex gap-4 mt-4">
-            <VPNavBarSearch class="search w-full my-auto px-0 " />
-        </div>
-
+        
         <nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1">
+            <VPNavBarSearch class="sm:block search w-full my-auto px-0 " /> 
 
             <span class="visually-hidden" id="sidebar-aria-label">
                 Sidebar Navigation

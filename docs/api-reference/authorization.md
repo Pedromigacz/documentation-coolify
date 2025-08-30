@@ -1,5 +1,6 @@
 ---
 title: Authorization
+layout: doc
 description: "Learn how to authorize your API requests."
 ---
 

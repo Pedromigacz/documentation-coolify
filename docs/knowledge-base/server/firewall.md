@@ -59,27 +59,8 @@ If your provider does not offer firewall functionality, you can use one of the f
 :::
 
 
-#### Option 1: Use `ufw-docker`
+#### Use `ufw-docker`
 [ufw-docker](https://github.com/chaifeng/ufw-docker) is a community-maintained tool that helps bridge UFW and Docker by allowing you to block specific ports effectively. Refer to the [GitHub repository](https://github.com/chaifeng/ufw-docker) for complete setup instructions
-
-#### Option 2: Prevent Coolify From Listening on External Ports
-You can stop Coolify from exposing ports by editing the `docker-compose.custom.yml` file:
-
-```yaml
-services:
-  coolify: # disables external access to port 8000
-    ports: !reset []
-  soketi:  # disables external access to ports 6001 and 6002
-    ports: !reset []
-```
-
-After making these changes, re-run the [Coolify install script](https://coolify.io/docs/get-started/installation) to apply the updated configuration.
-
-You can verify that the ports are closed using `nmap` from your local machine:
-
-```bash
-nmap -Pn -p 8000,6001,6002 <SERVER_IP>
-```
 
 ---
 

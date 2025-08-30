@@ -1,6 +1,7 @@
 ---
 aside: false
 outline: false
+layout: doc
 title: API Reference
 toc: false
 ---

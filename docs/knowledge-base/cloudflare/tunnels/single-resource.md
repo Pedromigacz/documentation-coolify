@@ -166,6 +166,10 @@ Follow [Step 2](#_2-create-a-cloudflare-tunnel) from the main guide to create pu
 
 - **Type**: HTTP (Ensure you select HTTP for each hostname.)
 
+::: warning HEADS UP!
+The order of the hostnames matters! Be sure to match it exactly as shown above.
+:::
+
 ---
 
 ### 2. Update Coolify’s `.env` File

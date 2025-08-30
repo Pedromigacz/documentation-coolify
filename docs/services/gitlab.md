@@ -16,5 +16,5 @@ GitLab is a web-based DevOps lifecycle tool that provides a Git-repository manag
 
 ## Links
 
-- [The official website ›](https://gitlab.com/)
-- [GitHub ›](https://github.com/gitlabhq/gitlabhq)
+- [The official website ›](https://about.gitlab.com)
+- [GitLab ›](https://gitlab.com/gitlab-org/gitlab)

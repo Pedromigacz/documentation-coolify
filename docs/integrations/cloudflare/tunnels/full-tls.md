@@ -54,7 +54,7 @@ To follow this guide, you'll need:
 ## 1. Create a Cloudflare Origin Certificate
 To create your Cloudflare Origin Certificate, follow these steps:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/1.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/1.webp" />
 
 1. In your Cloudflare dashboard, go to **SSL/TLS**.
 2. Select **Origin Server**.
@@ -62,7 +62,7 @@ To create your Cloudflare Origin Certificate, follow these steps:
 
 You’ll be asked to choose a private key type, hostnames, and certificate validity.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/2.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/2.webp" />
 
 1. Choose **RSA (2048)** for the key type.
 2. Add the hostnames you want the certificate to cover.
@@ -82,7 +82,7 @@ You’ll be asked to choose a private key type, hostnames, and certificate valid
 
 Your certificate will now be generated.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/3.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/3.webp" />
 
 1. Choose **PEM** as the key format.
 2. Copy your **Certificate**.
@@ -152,7 +152,7 @@ Now the origin certificate is installed on your server.
 ## 3. Configure Coolify to Use the Origin Certificate
 Now, in your Coolify dashboard:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/12.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/12.webp" />
 
 1. Go to the **Server** section in the sidebar.
 2. Select **Proxy**.
@@ -161,7 +161,7 @@ Now, in your Coolify dashboard:
 
 You will now be prompted to enter the Dynamic Configuration.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/13.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/13.webp" />
 
 1. Choose a name for your configuration.
 2. Enter the following details in the configuration field:
@@ -198,13 +198,13 @@ From now on, Coolify will use the origin certificate for requests matching the h
 ## 4. Setup Encryption mode on Cloudflare
 To set up encryption on Cloudflare, follow these steps:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/4.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/4.webp" />
 
 1. Go to **SSL/TLS** in Cloudflare.
 2. Select **Overview**.
 3. Click **Configure** button
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/5.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/5.webp" />
 
 Choose **Full (Strict)** as the encryption mode.
 
@@ -212,19 +212,19 @@ Choose **Full (Strict)** as the encryption mode.
 ## 5. Configure Tunnel to Use HTTPS
 To configure the tunnel for HTTPS, follow these steps:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/6.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/6.webp" />
 
 1. Click the three dots icon to open the settings menu.
 2. Select **Edit** to allow hostname modifications.
 
 Next, update the hostnames as follows:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/7.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/7.webp" />
 
 1. Change the type from **HTTP** to **HTTPS**.
 2. Change the port from **80** to **443**.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/8.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/8.webp" />
 
 3. Click on **Additional Application Settings**.
 4. Select **TLS**.
@@ -234,7 +234,7 @@ Next, update the hostnames as follows:
 
 ## 6. Configure Cloudflare to Always Use HTTPS
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/9.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/9.webp" />
 
 1. In the Cloudflare dashboard, go to **SSL/TLS**.
 2. Select **Edge Certificates**.
@@ -244,10 +244,10 @@ Next, update the hostnames as follows:
 ## 7. Update URLs from HTTP to HTTPS
 Now, update all URLs from **HTTP** to **HTTPS** in Coolify, including resources and the instance domain on the settings page.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/10.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/10.webp" />
 
 <br />
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-tunnel/full-tls/11.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/tunnels/full-tls/11.webp" />
 
 **Congratulations!** All your resources are now running on HTTPS at all times.

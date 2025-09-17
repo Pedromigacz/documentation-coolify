@@ -206,7 +206,6 @@ export default defineConfig({
         text: 'Integrations',
         collapsed: true,
         items: [
-          { text: 'Webstudio', link: '/integrations/webstudio.md' },
           {
             text: 'Cloudflare',
             collapsed: true,
@@ -305,6 +304,7 @@ export default defineConfig({
                   { text: 'Raspberry Pi OS Setup', link: '/knowledge-base/how-to/raspberry-pi-os' },
                   { text: 'Private NPM Registry', link: '/knowledge-base/how-to/private-npm-registry' },
                   { text: 'Ollama with GPU', link: '/knowledge-base/how-to/ollama-with-gpu' },
+                  { text: 'Webstudio with Hetzner', link: '/knowledge-base/how-to/webstudio-with-hetzner' },
                 ]
               },
               {

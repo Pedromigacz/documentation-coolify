@@ -207,6 +207,24 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Webstudio', link: '/integrations/webstudio.md' },
+          {
+            text: 'Cloudflare',
+            collapsed: true,
+            items: [
+              {
+                text: 'Tunnels',
+                collapsed: true,
+                items: [
+                  { text: 'Overview', link: '/integrations/cloudflare/tunnels/overview' },
+                  { text: 'All Resources', link: '/integrations/cloudflare/tunnels/all-resource' },
+                  { text: 'Single Resource', link: '/integrations/cloudflare/tunnels/single-resource' },
+                  { text: 'Server SSH Access', link: '/integrations/cloudflare/tunnels/server-ssh' },
+                  { text: 'Full TLS/HTTPS', link: '/integrations/cloudflare/tunnels/full-tls' },
+                ]
+              },
+              { text: 'Origin Certificate', link: '/knowledge-base/cloudflare/origin-cert' },
+            ]
+          },
         ],
       },
       {
@@ -353,24 +371,6 @@ export default defineConfig({
                   { text: 'Docker Commands', link: '/knowledge-base/docker/custom-commands' },
                   { text: 'Registry', link: '/knowledge-base/docker/registry' },
                   { text: 'Swarm', link: '/knowledge-base/docker/swarm' },
-                ]
-              },
-              {
-                text: 'Cloudflare',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'Tunnels',
-                    collapsed: true,
-                    items: [
-                      { text: 'Overview', link: '/knowledge-base/cloudflare/tunnels/overview' },
-                      { text: 'All Resources', link: '/knowledge-base/cloudflare/tunnels/all-resource' },
-                      { text: 'Single Resource', link: '/knowledge-base/cloudflare/tunnels/single-resource' },
-                      { text: 'Server SSH Access', link: '/knowledge-base/cloudflare/tunnels/server-ssh' },
-                      { text: 'Full TLS/HTTPS', link: '/knowledge-base/cloudflare/tunnels/full-tls' },
-                    ]
-                  },
-                  { text: 'Origin Certificate', link: '/knowledge-base/cloudflare/origin-cert' },
                 ]
               },
               {

@@ -187,7 +187,7 @@ Finally, enable HTTP to HTTPS redirects:
 ::: warning
 In this step, we're focusing on configuring Traefik (Coolify's proxy) to use the Origin Certificate. 
 
-If you're using Caddy instead, please refer to their [official documentation](https://caddyserver.com/docs/caddyfile/directives/tls).
+If you're using Caddy instead, please refer to their [official documentation ↗](https://caddyserver.com/docs/caddyfile/directives/tls).
 :::
 
 Now, in your Coolify dashboard:
@@ -240,7 +240,15 @@ Now you’re done! Your server is set up to use the Cloudflare Origin Certificat
 **All the steps below are optional. Cloudflare should already be protecting your applications. Follow the below steps if you want to prevent attackers from directly attacking your server by it's IP Address on Port 80 and 443**
 :::
 
----
+
+## 5. Configure Firewall to Allow Only Cloudflare Traffic
+Configure your firewall to allow incoming traffic on port **443** only from [Cloudflare’s IP ranges ↗](https://www.cloudflare.com/en-gb/ips/).
+
+Block all other inbound traffic, except for your SSH port.
+
+This prevents attackers from bypassing Cloudflare and directly targeting your server with traffic on ports 80 or 443.
+
+This step is completely optional but recommended.
 
 
 ## Credits

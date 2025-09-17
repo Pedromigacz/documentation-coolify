@@ -222,7 +222,7 @@ export default defineConfig({
                   { text: 'Full TLS/HTTPS', link: '/integrations/cloudflare/tunnels/full-tls' },
                 ]
               },
-              { text: 'Origin Certificate', link: '/knowledge-base/cloudflare/origin-cert' },
+              { text: 'DDoS Protection', link: '/integrations/cloudflare/ddos-protection' },
             ]
           },
         ],

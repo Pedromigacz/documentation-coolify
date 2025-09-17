@@ -1,24 +1,32 @@
 ---
-title: Cloudflare Origin Certificate
+title: Cloudflare DDoS Protection
 description: Coolify is a deployment tool designed to simplify the process of deploying and managing applications.
 ---
 
-# Cloudflare Origin Certificate
-<br />
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/header.webp" />
+# Cloudflare DDoS Protection
 
-The Cloudflare Origin Certificate ensures secure communication between your server and Cloudflare when using Cloudflare’s Proxy, CDN, and security features. 
+Cloudflare provides a robust layer of DDoS protection for your server and applications. 
 
-It encrypts the data exchanged between your server and Cloudflare, keeping it safe.
+When using Cloudflare’s Proxy, CDN, and security features, all incoming traffic to your Coolify-hosted apps is shielded from malicious attacks, like DDoS, and secured through Cloudflare’s global network.
 
-### Why Use Cloudflare Origin Certificate with Coolify?
-1. No need for HTTP or DNS challenges to create certificates.
-2. Keep port 80 closed — everything happens securely over TLS.
-3. Longer certificate validity (15 years) — once set up, you don’t need to worry about renewing every few months.
+---
 
-### When to Avoid Using Cloudflare Origin Certificate
-1. If you need a free certificate for subdomains with multiple levels (e.g., app.sub.domain.com).
-2. The certificate is only trusted by Cloudflare, meaning if Cloudflare is down, nobody can access your apps and websites (via your domain).
+### Why Use Cloudflare for DDoS Protection with Coolify?
+
+1. Blocks malicious traffic before it reaches your server, reducing risk and server load.
+2. No need to scale server resources during DDoS attacks — Cloudflare absorbs the impact.
+3. Minimal configuration required to enable robust protection against potentially costly attacks.
+4. Hides your server’s real IP address by resolving your domain to Cloudflare’s IPs.
+
+---
+
+### When Not to Use Cloudflare for DDoS Protection
+
+1. You prefer not to route all traffic through Cloudflare’s network.
+2. Privacy concerns, Cloudflare terminates TLS, which means they can inspect incoming requests.
+3. Cloudflare downtime, although extremely rare, could affect your service if you rely entirely on their protection.
+4. You want full control over SSL/TLS certificates issued by a global Certificate Authority.
+5. You need free wildcard support for deep subdomains (more than 1 level subdomains -- e.g., `*.sub.domain.com` which Cloudflare does not offer for free).
 
 ---
 
@@ -32,6 +40,11 @@ It encrypts the data exchanged between your server and Cloudflare, keeping it sa
 
 
 ## 1. Create the Origin Certificate
+Communication between your server and Cloudflare is encrypted using a custom Cloudflare Origin Certificate (required when using Cloudflare’s proxy).
+
+<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/header.webp" />
+
+
 To create your Cloudflare Origin Certificate, follow these steps:
 
 <ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/1.webp" />
@@ -140,7 +153,13 @@ To make the origin certificate work, configure your DNS records, enable TLS, and
 3. Add 2 A records:
 4. Enter name as **`shadowarcanist.com`** and `*`
 5. Use the **IP address** of your server as the content for both records.
-6. Set the proxy status to **Proxied** for better security.
+6. Set the proxy status to **Proxied** for both records.
+
+::: info
+Enabling the "Proxied" (orange cloud) option for both A records — `shadowarcanist.com` and `*` — will proxy the root domain and all one-level subdomains via a wildcard. 
+
+This isn't necessary if you only need to proxy (or protect against DDoS) for a specific domain. In that case, simply enable proxying for the domain you want protection for.
+:::
 
 Next, set up TLS encryption:
 
@@ -163,7 +182,14 @@ Finally, enable HTTP to HTTPS redirects:
 3. Enable **Always Use HTTPS**.
 
 
-## 4. Configure Coolify to Use the Origin Certificate
+## 4. Configure Coolify proxy to Use the Origin Certificate
+
+::: warning
+In this step, we're focusing on configuring Traefik (Coolify's proxy) to use the Origin Certificate. 
+
+If you're using Caddy instead, please refer to their [official documentation](https://caddyserver.com/docs/caddyfile/directives/tls).
+:::
+
 Now, in your Coolify dashboard:
 
 <ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/8.webp" />
@@ -187,7 +213,7 @@ tls:
       keyFile: /traefik/certs/shadowarcanist.key
 ```
 
-Adding Multiple Certificates (click to view)
+:::details Adding Multiple Certificates (click to view)
  
 ```sh
 tls:
@@ -202,118 +228,19 @@ tls:
       certFile: /traefik/certs/name3.cert
       keyFile: /traefik/certs/name3.key
 ```
- 
+:::
 
 3. Save the configuration
 
 From now on, Coolify will use the origin certificate for requests matching the hostname.
 
-::: danger HEADS UP!
-  **All the steps below are optional. Coolify should already be using the origin certificate. Follow these steps only if you know what you're doing and want to simplify the configuration**
+Now you’re done! Your server is set up to use the Cloudflare Origin Certificate, and all traffic is proxied through Cloudflare network so all incoming attacks like DDoS are prevented by Cloudflare before it reaches your server.
+
+::: danger HEADS UP!!
+**All the steps below are optional. Cloudflare should already be protecting your applications. Follow the below steps if you want to prevent attackers from directly attacking your server by it's IP Address on Port 80 and 443**
 :::
-
-
-
-## 5. Optional: Configure Traefik
-This step is optional but recommended for cleaning up unnecessary settings while self-hosting. 
-
-Since you’re using an Origin Certificate, you no longer need HTTP challenges or port 80 open.
-
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/10.webp" />
-
-1. Go **Server** in the Coolify dashboard.
-2. Select **Proxy**.
-3. Open **Configuration**.
-4. Replace the configuration with this:
-
-```sh
-# Define external networks
-networks:
-  coolify:
-    external: true  # External network.
-
-services:
-  # Traefik reverse proxy
-  traefik:
-    container_name: coolify-proxy  # Container name.
-    image: 'traefik:v3.1'  # Traefik image version.
-    restart: unless-stopped  # Auto-restart policy.
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'  # Host communication.
-    networks:
-      - coolify  # Network connection.
-    ports:
-      - '443:443'  # Expose HTTPS port.
-    healthcheck:  # Health check configuration.
-      test: 'wget -qO- http://localhost:80/ping || exit 1'  # Ping endpoint for health check.
-      interval: 4s  # Health check interval.
-      timeout: 2s  # Health check timeout.
-      retries: 5  # Retry attempts.
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock:ro'  # Docker socket access.
-      - '/data/coolify/proxy:/traefik'  # Traefik config volume.
-    command:
-      # Traefik configuration options
-      - '--ping=true'  # Enable ping for health check.
-      - '--ping.entrypoint=http'  # Use HTTP entrypoint for ping.
-      - '--entrypoints.http.address=:80'  # HTTP entry point for health checks.
-      - '--entrypoints.https.address=:443'  # HTTPS entry point.
-      - '--entrypoints.http.http.encodequerysemicolons=true'  # Enable query semicolon encoding.
-      - '--entryPoints.http.http2.maxConcurrentStreams=50'  # HTTP/2 max streams.
-      - '--entrypoints.https.http.encodequerysemicolons=true'  # Enable HTTPS query encoding.
-      - '--entryPoints.https.http2.maxConcurrentStreams=50'  # HTTPS/2 max streams.
-      - '--entrypoints.https.http3'  # Enable HTTP/3.
-      - '--providers.docker.exposedbydefault=false'  # Disable default exposure.
-      - '--providers.file.directory=/traefik/dynamic/'  # Dynamic config directory.
-      - '--certificatesresolvers.letsencrypt.acme.httpchallenge=false'  # Disable HTTP challenge for Let's Encrypt.
-      - '--providers.file.watch=true'  # Enable config file watching.
-      - '--providers.docker=true'  # Enable Docker provider.
-    labels:
-      - coolify.managed=true  # Managed by Coolify.
-      - coolify.proxy=true  # Proxy service.
-```
-
-::: info Note
-  The comments in this configuration explain each line. You can remove the comments when copying it into your configuration.
-:::
-
-Next, you'll need to remove a few labels from your Dockerfile-based deployments. Below is an **example** of how I set this up for my website.
-
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/11.webp" />
-
-1. Go to **Projects** and select your project.
-2. Open **Configuration**
-3. Go to **General**
-4. Check **Readonly labels** option
-5. Replace the labels with the following:
-
-```sh
-# Enable Traefik for this configuration
-traefik.enable=true
-
-# Define the entry point for the router (HTTPS)
-traefik.http.routers.shadowarcanist.entryPoints=https
-
-# Set the routing rule for this router to match the domain "shadowarcanist.com" and any path starting with "/"
-traefik.http.routers.shadowarcanist.rule=Host(`shadowarcanist.com`) && PathPrefix(`/`)
-
-# Assign the service 'shadowarcanist' to this router
-traefik.http.routers.shadowarcanist.service=shadowarcanist
-
-# Enable TLS (HTTPS) for this router
-traefik.http.routers.shadowarcanist.tls=true
-
-# Specify the backend service and its port (port 80)
-traefik.http.services.shadowarcanist.loadbalancer.server.port=80
-```
-
-Now you’re done! Your server is set up to use the Cloudflare Origin Certificate, and all traffic is secured via TLS.
 
 ---
-
-::: warning Note
-  Keep in mind that the above labels are provided as an example. These may or may not work for your specific use case, so use them as a reference.
-:::
 
 
 ## Credits

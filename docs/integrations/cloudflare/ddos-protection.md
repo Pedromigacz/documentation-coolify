@@ -42,12 +42,12 @@ When using Cloudflare’s Proxy, CDN, and security features, all incoming traffi
 ## 1. Create the Origin Certificate
 Communication between your server and Cloudflare is encrypted using a custom Cloudflare Origin Certificate (required when using Cloudflare’s proxy).
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/header.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/origin-cert-illustration.webp" />
 
 
 To create your Cloudflare Origin Certificate, follow these steps:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/1.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/1.webp" />
 
 1. In your Cloudflare dashboard, go to **SSL/TLS**.
 2. Select **Origin Server**.
@@ -55,7 +55,7 @@ To create your Cloudflare Origin Certificate, follow these steps:
 
 You’ll be asked to choose a private key type, hostnames, and certificate validity.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/2.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/2.webp" />
 
 1. Choose **RSA (2048)** for the key type.
 2. Add the hostnames you want the certificate to cover.
@@ -75,7 +75,7 @@ You’ll be asked to choose a private key type, hostnames, and certificate valid
 
 Your certificate will now be generated.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/3.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/3.webp" />
 
 1. Choose **PEM** as the key format.
 2. Copy your **Certificate**.
@@ -146,7 +146,7 @@ Now the origin certificate is installed on your server.
 ## 3. Set Up DNS Records and TLS Encryption
 To make the origin certificate work, configure your DNS records, enable TLS, and set up HTTP to HTTPS redirects in Cloudflare:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/4.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/4.webp" />
 
 1. In Cloudflare, go to **DNS**.
 2. Select **Records**.
@@ -163,7 +163,7 @@ This isn't necessary if you only need to proxy (or protect against DDoS) for a s
 
 Next, set up TLS encryption:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/5.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/5.webp" />
 
 1. Go to **SSL/TLS** in Cloudflare.
 2. Select **Overview**.
@@ -171,11 +171,11 @@ Next, set up TLS encryption:
 
 Choose **Full (Strict)** as the encryption mode.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/6.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/6.webp" />
 
 Finally, enable HTTP to HTTPS redirects:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/7.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/7.webp" />
 
 1. In Cloudflare, go to **SSL/TLS** 
 2. Select **Edge Certificates**.
@@ -192,7 +192,7 @@ If you're using Caddy instead, please refer to their [official documentation ↗
 
 Now, in your Coolify dashboard:
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/8.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/8.webp" />
 
 1. Go to the **Server** section in the sidebar.
 2. Select **Proxy**.
@@ -201,7 +201,7 @@ Now, in your Coolify dashboard:
 
 You will now be prompted to enter the Dynamic Configuration.
 
-<ZoomableImage src="/docs/images/knowledge-base/cf-origin-cert/9.webp" />
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/9.webp" />
 
 1. Choose a name for your configuration.
 2. Enter the following details in the configuration field:

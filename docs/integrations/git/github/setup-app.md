@@ -1,5 +1,5 @@
 ---
-title: "Manually Setup GitHub App"
+title: "Setup GitHub App"
 ---
 
 # Manually Setup GitHub App

@@ -1,5 +1,5 @@
 ---
-title: "Move Between GitHub Apps"
+title: "Switch GitHub Apps"
 ---
 
 # Move Between GitHub Apps

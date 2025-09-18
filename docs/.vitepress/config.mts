@@ -230,25 +230,27 @@ export default defineConfig({
             items: [
               {
                 text: 'Github', collapsed: true, items: [
-                  { text: 'Manually Setup GitHub App', link: '/knowledge-base/git/github/manually-setup-github-app' },
-                  { text: 'Move Between GitHub Apps', link: '/knowledge-base/git/github/move-between-github-apps' },
-                  { text: 'Integrations', link: '/knowledge-base/git/github/integration' },
-                  { text: 'Github Actions', link: '/knowledge-base/git/github/github-actions' },
+                  { text: 'Overview', link: '/integrations/git/github/overview' },
+                  { text: 'Getting Started', link: '/integrations/git/github/getting-started' },
+                  { text: 'Auto Deploy', link: '/integrations/git/github/auto-deploy' },
+                  { text: 'Actions', link: '/integrations/git/github/actions' },
+                  { text: 'Setup App', link: '/integrations/git/github/setup-app' },
+                  { text: 'Switch Apps', link: '/integrations/git/github/switch-apps' },
                 ]
               },
               {
                 text: 'Gitlab', collapsed: true, items: [
-                  { text: 'Integrations', link: '/knowledge-base/git/gitlab/integration' },
+                  { text: 'Integrations', link: '/integrations/git/gitlab/integration' },
                 ]
               },
               {
                 text: 'Bitbucket', collapsed: true, items: [
-                  { text: 'Integrations', link: '/knowledge-base/git/bitbucket/integration' },
+                  { text: 'Integrations', link: '/integrations/git/bitbucket/integration' },
                 ]
               },
               {
                 text: 'Gitea', collapsed: true, items: [
-                  { text: 'Integrations', link: '/knowledge-base/git/gitea/integration' },
+                  { text: 'Integrations', link: '/integrations/git/gitea/integration' },
                 ]
               },
             ]

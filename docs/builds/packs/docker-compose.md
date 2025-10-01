@@ -108,12 +108,73 @@ Coolify automatically detects environment variables mentioned in your compose fi
 services:
   myservice:
     environment:
-      - SOME_HARDCODED_VALUE=hello # Passed to the container, but not visible in Coolify's UI.
-      - SOME_VARIABLE=${SOME_VARIABLE_IN_COOLIFY_UI} # Creates an editable, uninitialized variable in the UI.
-      - SOME_DEFAULT_VARIABLE=${OTHER_NAME_IN_COOLIFY:-hello} # Sets a default value "hello" that can be edited.
+      - SOME_HARDCODED_VALUE=hello # Gets passed to the container but will not be visible in Coolify's UI
+      - SOME_VARIABLE=${SOME_VARIABLE_IN_COOLIFY_UI} # Creates an uninitialized environment variable editable in Coolify's UI
+      - SOME_DEFAULT_VARIABLE=${OTHER_NAME_IN_COOLIFY:-hello} # Creates an environment variable of value "hello" editable in Coolify's UI
 ```
 
 <ZoomableImage src="/docs/images/builds/packs/compose/6.webp" />
+
+#### Shared Environment Variables
+
+Coolify doesn't directly detect **shared** environment variables in the compose file, but are able to be referenced using with an additional step.
+
+1. Create your shared variable following the [shared variables documentation](/knowledge-base/environment-variables#shared-variables).
+
+2. Define your variables in your Docker Compose file, for example;
+
+```yaml
+services:
+  myservice:
+    environment:
+      - HARD_CODED=dev # Passed to the container, but not visible in Coolify's UI.
+      - SOME_OPTIONAL_VARIABLE=${EnvironmentNameShort} # Creates an editable, uninitialized variable in the UI.
+    volumes:
+      - data-persist:/var/data
+  volumes:
+    data-persist:
+      device: /mnt/serverstorage/${EnvironmentNameShort} # Re-uses the variable
+```
+
+3. Define the variable explicitly in the applications Environment Variables referencing your shared variable created in step 1;
+
+If in developer view, you can enter it like so;
+```
+EnvironmentNameShort={{environment.EnvironmentNameShort}}
+```
+
+Or in the normal view, the Name is what's referenced in the Docker Compose file `EnvironmentNameShort` with the Value being the referenced environment variable `{{environment.EnvironmentNameShort}}` as seen below. Once saved if correct, you'll see there's a third text box, if you reveal this, you should be able to see the true value.
+
+<ZoomableImage src="/docs/images/builds/packs/compose/7.webp" />
+
+## Required environment variables
+
+Coolify supports marking environment variables as required using Docker Compose's built-in syntax. This feature improves the deployment experience by validating critical configuration before starting services.
+
+### Syntax
+
+Use the `:?` syntax to mark variables as required:
+
+```yaml
+services:
+  webapp:
+    environment:
+      # Required variable - must be set, no default
+      - DATABASE_URL=${DATABASE_URL:?}
+
+      # Required variable with default value - prefilled but editable
+      - PORT=${PORT:?3000}
+
+      # Optional variable with default - standard Docker Compose behavior
+      - DEBUG=${DEBUG:-false}
+```
+
+
+
+
+
+
+
 
 ### Required Environment Variables
 
@@ -292,7 +353,7 @@ By default, each compose stack is deployed to a separate network named after you
 
 If you want to connect services across different stacks (for example, linking an application to a separate database), enable the **Connect to Predefined Network** option on your Service Stack page.
 
-<ZoomableImage src="/docs/images/builds/packs/compose/7.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/8.webp" />
 
 Note that you must use the full name (like `postgres-<uuid>`) when referencing a service in another stack.
 
@@ -300,7 +361,7 @@ Note that you must use the full name (like `postgres-<uuid>`) when referencing a
 
 For advanced users, Coolify offers a "Raw Compose Deployment" mode. This option lets you deploy your Docker Compose file directly without many of Coolify's additional configurations.
 
-<ZoomableImage src="/docs/images/builds/packs/compose/8.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/9.webp" />
 
 ::: danger CAUTION
 This mode is intended for advanced users familiar with Docker Compose.

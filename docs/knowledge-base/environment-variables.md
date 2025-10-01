@@ -37,20 +37,9 @@ You can set them on the `Projects` page, under the gear icon and use it with <co
 
 You can set them on the `Environments` page (select a `Project`), under the gear icon and use it with <code v-pre>{{environment.NODE_ENV}}</code> Do not replace "environment" with your actual environment name.
 
-#### Using Shared Variables in Compose File
+#### Using Shared Variables in a Docker Compose File
 
-If you want to use the environment variables in your compose file, you can do so by using the following syntax:
-
-```bash
-environment:
-  - NODE_ENV=${NODE_ENV}
-```
-
-And then in the UI set `NODE_ENV` to your desired shared variable. For example if you want to use a team based variable (make sure you have the `NODE_ENV` variable set in the Team Variables):
-
-```bash
-NODE_ENV={{team.NODE_ENV}}
-```
+Please refer to [Shared Environment Variables in Docker Compose](/builds/packs/docker-compose#shared-environment-variables)
 
 ## Predefined Variables
 

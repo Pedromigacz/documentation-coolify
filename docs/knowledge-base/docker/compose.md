@@ -61,40 +61,7 @@ For further details, please refer to the [Docker Networking in Compose](https://
 
 ## Defining environment variables
 
-Coolify will notice the environment variables you mention in your compose file and will display it in its UI.
-
-```yaml
-services:
-  myservice:
-    environment:
-      - SOME_HARDCODED_VALUE=hello # Gets passed to the container but will not be visible in Coolify's UI
-      - SOME_VARIABLE=${SOME_VARIABLE_IN_COOLIFY_UI} # Creates an uninitialized environment variable editable in Coolify's UI
-      - SOME_DEFAULT_VARIABLE=${OTHER_NAME_IN_COOLIFY:-hello} # Creates an environment variable of value "hello" editable in Coolify's UI
-```
-
-<ZoomableImage src="/docs/images/screenshots/Docker-compose-environment-variables-UI.webp" />
-
-## Required environment variables
-
-Coolify supports marking environment variables as required using Docker Compose's built-in syntax. This feature improves the deployment experience by validating critical configuration before starting services.
-
-### Syntax
-
-Use the `:?` syntax to mark variables as required:
-
-```yaml
-services:
-  webapp:
-    environment:
-      # Required variable - must be set, no default
-      - DATABASE_URL=${DATABASE_URL:?}
-
-      # Required variable with default value - prefilled but editable
-      - PORT=${PORT:?3000}
-
-      # Optional variable with default - standard Docker Compose behavior
-      - DEBUG=${DEBUG:-false}
-```
+Please refer to [Defining Environment Variables in Docker Compose](/builds/packs/docker-compose#defining-environment-variables)
 
 **Key behaviors:**
 

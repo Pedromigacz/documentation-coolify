@@ -1,20 +1,12 @@
 ---
 title: No Available Server Error
 description: Troubleshooting "No Available Server" (503) errors in Coolify applications and services.
-tags:
-  [
-    "No Available Server",
-    "503",
-    "Troubleshooting",
-    "Coolify",
-    "Traefik",
-    "Healthcheck",
-  ]
+tags: ["No Available Server", "503"]
 ---
 
 # No Available Server (503) Error
 
-If your deployed application or service shows a **"No Available Server"** error, this indicates that [Traefik](/knowledge-base/proxy/traefik/overview) (the reverse proxy) cannot find any healthy containers to route traffic to. This is one of the most common issues encountered in Coolify deployments.
+If your deployed application or service shows a **"No Available Server"** error, this indicates that [Traefik](/knowledge-base/proxy/traefik/overview) (the reverse proxy) cannot find any (healthy) containers to route traffic to under the provided secured URL (`https`).
 
 ## What Causes This Error?
 
@@ -51,9 +43,6 @@ Navigate to your application's configuration and check:
 - What port is the health check using?
 
 #### Service Stacks
-
-<ZoomableImage src="/docs/images/knowledge-base/resources/healthcheck-service.webp" />
-<ZoomableImage src="/docs/images/knowledge-base/resources/healthcheck-dockercompose.webp" />
 
 Look in your `docker-compose.yml` for the `healthcheck` section and check:
 
@@ -122,6 +111,8 @@ You can find this either in the Coolify UI by clicking on the `Edit Compose File
 
 ### Solution 2: Fix Domain Configuration
 
+#### Redirect Issues
+
 **Symptoms:**
 
 - Works with auto-generated domain (e.g. `sslip.io`) but not custom domain
@@ -141,11 +132,20 @@ You can find this either in the Coolify UI by clicking on the `Edit Compose File
 3. **Restart Application:**
    - Always restart after domain changes
 
+#### HTTPS Issues
+
+If your site is only accessible via HTTP but not HTTPS, check your domain configuration:
+
+- **For HTTPS with SSL**: Use `https://` prefix in the domain field: `https://example.com`
+- **For HTTP only**: Use `http://` prefix in the domain field: `http://example.com` (no SSL certificate will be generated)
+
+Make sure the protocol in your domain configuration matches how you want to access your site, then restart your application.
+
 ### Solution 3: Fix Port Configuration
 
 **Symptoms:**
 
-- Application / Service works via `http://IP:port` but not via domain
+- Application / Service works via `http://IP:port` but not via domain (manual port mapping required)
 - [Traefik](/knowledge-base/proxy/traefik/overview) can't reach the application
 
 **Steps:**
@@ -154,7 +154,7 @@ You can find this either in the Coolify UI by clicking on the `Edit Compose File
 
    The proxy needs to know which port your application is listening on. Check that the port is configured correctly.
 
-   In [Applications](/applications/index), this is defined in a `Port Exposes` field.
+   In [Applications](/applications/index), this is defined in the `Port Exposes` field.
 
    In **Service Stacks**, this is defined by either adding the port at the end of the URL in the `Domains` field (e.g. `https://example.com:3000`) or by defining the `EXPOSE` directive in your `Dockerfile`.
 

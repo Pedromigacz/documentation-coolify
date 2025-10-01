@@ -189,6 +189,9 @@ cat /data/coolify/proxy/dynamic/*.yml
 
 # Check Traefik logs
 docker logs coolify-proxy -f
+
+# Inspect container labels to verify Traefik routing configuration
+docker inspect <your-container-name> --format='{{json .Config.Labels}}' | jq
 ```
 
 ### Check Application Logs

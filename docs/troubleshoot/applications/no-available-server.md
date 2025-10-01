@@ -91,12 +91,12 @@ You can find this either in the Coolify UI by clicking on the `Edit Compose File
 
    **Wrong health check path / hostname:**
 
-   Make sure that your app is actually serving the health check endpoint and does not return an error. Usually the hostname will be `localhost` or `127.0.0.1`.
+   Make sure that your app is actually serving the health check endpoint and does not return an error. In most cases, the hostname will be `localhost` or `127.0.0.1`.
 
    **Port mismatch:**
 
    - Ensure health check port matches your app's listening port
-   - If app runs on port `3000`, health check should use port `3000`
+   - If the app runs on port `3000`, health check should use port `3000`
 
 3. **Test Health Check Manually:**
 
@@ -154,7 +154,11 @@ Make sure the protocol in your domain configuration matches how you want to acce
 
    The proxy needs to know which port your application is listening on. Check that the port is configured correctly.
 
-   In [Applications](/applications/index), this is defined in the `Port Exposes` field.
+   <ZoomableImage src="/docs/images/troubleshoot/applications/bad-gateway/1.webp" />
+
+   In [Applications](/applications/index), this is defined in the `Ports Exposes` field.
+
+      <ZoomableImage src="/docs/images/troubleshoot/applications/bad-gateway/4.webp" />
 
    In **Service Stacks**, this is defined by either adding the port at the end of the URL in the `Domains` field (e.g. `https://example.com:3000`) or by defining the `EXPOSE` directive in your `Dockerfile`.
 

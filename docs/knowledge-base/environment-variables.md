@@ -37,9 +37,9 @@ You can set them on the `Projects` page, under the gear icon and use it with <co
 
 You can set them on the `Environments` page (select a `Project`), under the gear icon and use it with <code v-pre>{{environment.NODE_ENV}}</code> Do not replace "environment" with your actual environment name.
 
-#### Using Shared Variables in a Docker Compose File
+### Using Environment and Shared Variables in Docker Compose
 
-Please refer to [Shared Environment Variables in Docker Compose](/builds/packs/docker-compose#shared-environment-variables)
+Within Coolify you can configure these easily following the details found in the [Knowledge Base for Docker Compose](/knowledge-base/compose#defining-environment-and-shared-variables).
 
 ## Predefined Variables
 

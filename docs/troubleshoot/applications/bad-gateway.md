@@ -1,8 +1,10 @@
 ---
 title: Bad Gateway Error
+description: Troubleshooting Bad Gateway (502) errors in Coolify applications and services.
+tags: ["Bad Gateway", "502", "Troubleshooting", "Coolify", "Traefik"]
 ---
 
-# Bad Gateway Error
+# Bad Gateway (502) Error
 
 If your deployed application **maybe** works when you access it via your server’s IP address and port but shows a **Bad Gateway** error on your domain, the issue is most often due to misconfigured port settings, incorrect host mapping, or your app listening only on localhost.
 

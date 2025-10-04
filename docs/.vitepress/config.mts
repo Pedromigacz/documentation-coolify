@@ -438,7 +438,9 @@ export default defineConfig({
             text: 'Applications',
             collapsed: true,
             items: [
-              { text: 'Bad Gateway', link: '/troubleshoot/applications/bad-gateway.md' },
+              { text: 'Bad Gateway (502)', link: '/troubleshoot/applications/bad-gateway.md' },
+              { text: 'No Available Server (503)', link: '/troubleshoot/applications/no-available-server' },
+              { text: 'Gateway Timeout (504)', link: '/troubleshoot/applications/gateway-timeout' },
               { text: 'Failed To Get Access Token During Deployment', link: '/troubleshoot/applications/failed-to-get-token' },
             ]
           },
@@ -475,6 +477,7 @@ export default defineConfig({
             items: [
               { text: 'Wildcard SSL not working', link: '/troubleshoot/dns-and-domains/wildcard-ssl-certs' },
               { text: "Let's Encrypt not working", link: '/troubleshoot/dns-and-domains/lets-encrypt-not-working' },
+              { text: "Cert Resolver doesn't exist", link: '/troubleshoot/dns-and-domains/certificate-resolver-doesnt-exist' },
             ]
           },
         ],

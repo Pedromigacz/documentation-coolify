@@ -1,9 +1,9 @@
 ---
 title: "Plausible Analytics"
-description: "Here you can find the documentation for hosting Plausible Analytics with Coolify."
+description: "Deploy Plausible Analytics on Coolify for lightweight, cookieless, GDPR-compliant web analytics with privacy-first visitor insights."
 ---
 
-<ZoomableImage src="/docs/images/services/plausible.svg" />
+<ZoomableImage src="/docs/images/services/plausible.svg" alt="Plausible dashboard" />
 
 
 ## What is Plausible Analytics?

@@ -1413,6 +1413,146 @@ const services = [
         icon: '/public/images/services/zipline.svg',
         description: 'Next generation ShareX / File upload server',
         category: 'File Management'
+    },
+    {
+        name: 'CodiMD',
+        slug: 'codimd',
+        icon: '/public/images/services/codimd.png',
+        description: 'Realtime collaborative markdown notes on all platforms.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Diun',
+        slug: 'diun',
+        icon: '/public/images/services/diun.svg',
+        description: 'Docker Image Update Notifier.',
+        category: 'Monitoring'
+    },
+    {
+        name: 'Drizzle Gateway',
+        slug: 'drizzle-gateway',
+        icon: '/public/images/services/drizzle.jpeg',
+        description: 'Drizzle Studio for exploring SQL databases.',
+        category: 'Development'
+    },
+    {
+        name: 'Grist',
+        slug: 'grist',
+        icon: '/public/images/services/grist.svg',
+        description: 'Modern relational spreadsheet combining flexibility and database robustness.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Leantime',
+        slug: 'leantime',
+        icon: '/public/images/services/leantime.svg',
+        description: 'Lean project management system for innovators.',
+        category: 'Project Management'
+    },
+    {
+        name: 'LimeSurvey',
+        slug: 'limesurvey',
+        icon: '/public/images/services/limesurvey.svg',
+        description: 'The most popular FOSS online survey tool on the web.',
+        category: 'Business'
+    },
+    {
+        name: 'Memos',
+        slug: 'memos',
+        icon: '/public/images/services/memos.png',
+        description: 'Open-source, self-hosted memo hub with knowledge management.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Navidrome',
+        slug: 'navidrome',
+        icon: '/public/images/services/navidrome.svg',
+        description: 'Modern music server and streamer compatible with Subsonic/Airsonic.',
+        category: 'Media'
+    },
+    {
+        name: 'NetBird Client',
+        slug: 'netbird-client',
+        icon: '/public/images/services/netbird.png',
+        description: 'Connect your devices into a secure WireGuard-based mesh network.',
+        category: 'Networking'
+    },
+    {
+        name: 'Observium',
+        slug: 'observium',
+        icon: '/public/images/services/observium.webp',
+        description: 'Low-maintenance auto-discovering network monitoring platform.',
+        category: 'Monitoring'
+    },
+    {
+        name: 'OrangeHRM',
+        slug: 'orangehrm',
+        icon: '/public/images/services/orangehrm.svg',
+        description: 'Free HR management system for businesses.',
+        category: 'Business'
+    },
+    {
+        name: 'Passbolt',
+        slug: 'passbolt',
+        icon: '/public/images/services/passbolt.svg',
+        description: 'Open source password manager for teams.',
+        category: 'Security'
+    },
+    {
+        name: 'PGBackWeb',
+        slug: 'pgbackweb',
+        icon: '/public/images/services/pgbackweb.png',
+        description: 'Effortless PostgreSQL backups with a user-friendly web interface.',
+        category: 'Database'
+    },
+    {
+        name: 'Ryot',
+        slug: 'ryot',
+        icon: '/public/images/services/ryot.svg',
+        description: 'Self-hosted platform for tracking various facets of your life.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Seafile',
+        slug: 'seafile',
+        icon: '/public/images/services/seafile.svg',
+        description: 'High-performance file syncing and sharing with knowledge management features.',
+        category: 'Storage'
+    },
+    {
+        name: 'Typesense',
+        slug: 'typesense',
+        icon: '/public/images/services/typesense.png',
+        description: 'Open source alternative to Algolia and easier-to-use alternative to ElasticSearch.',
+        category: 'Search'
+    },
+    {
+        name: 'Vert',
+        slug: 'vert',
+        icon: '/public/images/services/vert.png',
+        description: 'Self-hosted file converter.',
+        category: 'Utilities'
+    },
+    {
+        name: 'Wings',
+        slug: 'wings',
+        icon: '/public/images/services/pterodactyl.png',
+        description: 'Pterodactyl server control plane for game servers.',
+        category: 'Gaming'
+    },
+    {
+        name: 'Yamtrack',
+        slug: 'yamtrack',
+        icon: '/public/images/services/yamtrack.svg',
+        description: 'Self-hosted music scrobble database.',
+        category: 'Media'
+    },
+    {
+        name: 'Marimo',
+        slug: 'marimo',
+        icon: '/public/images/services/marimo.svg',
+        description: 'Open-source reactive notebook for Python.',
+        category: 'Development'
     }
 ]
 
@@ -1490,7 +1630,7 @@ const navigateTo = (path: string, external: boolean = false) => {
     if (external) {
         window.location.href = path
     } else {
-        window.location.href = `/docs/${path}`
+        window.location.href = `/public/${path}`
     }
 }
 
@@ -1586,7 +1726,7 @@ const { handleImageError, hasImageError, getFallbackImage } = useImageFallback()
                             <div class="p-4">
                                 <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center" style="background-color: rgba(101, 117, 133, 0.16);">
                                     <img 
-                                        :src="hasImageError(service.name) ? getFallbackImage() : `https://raw.githubusercontent.com/coollabsio/coolify-docs/db61a7c5175b48b638cbc445980370af68374921/docs/public/images/services/${service.name.toLowerCase()}.svg`"
+                                        :src="hasImageError(service.name) ? getFallbackImage() : `https://raw.githubusercontent.com/coollabsio/coolify-docs/db61a7c5175b48b638cbc445980370af68374921/public/public/images/services/${service.name.toLowerCase()}.svg`"
                                         :alt="service.name" 
                                         @error="handleImageError(service.name)"
                                         class="w-auto h-8 px-2 rounded-lg" 
@@ -1620,7 +1760,7 @@ const { handleImageError, hasImageError, getFallbackImage } = useImageFallback()
                                     <div class="p-4">
                                         <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center" style="background-color: rgba(101, 117, 133, 0.16);">
                                             <img 
-                                                :src="hasImageError(service.name) ? getFallbackImage() : `https://raw.githubusercontent.com/coollabsio/coolify-docs/db61a7c5175b48b638cbc445980370af68374921/docs/public/images/services/${service.name.toLowerCase()}.svg`"
+                                                :src="hasImageError(service.name) ? getFallbackImage() : `https://raw.githubusercontent.com/coollabsio/coolify-docs/db61a7c5175b48b638cbc445980370af68374921/public/public/images/services/${service.name.toLowerCase()}.svg`"
                                                 :alt="service.name" 
                                                 @error="handleImageError(service.name)"
                                                 class="w-auto h-8 px-2 rounded-lg" 

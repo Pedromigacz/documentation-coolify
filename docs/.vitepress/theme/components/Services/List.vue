@@ -276,7 +276,8 @@ const services = [
         slug: 'plausible',
         icon: '/docs/images/services/plausible.svg',
         description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
-        category: 'Analytics'
+        category: 'Analytics',
+        ignore: true
     },
     {
         name: 'Activepieces',
@@ -1396,7 +1397,8 @@ const services = [
         slug: 'posthog',
         icon: '/docs/images/services/posthog.svg',
         description: 'Open source product analytics.',
-        category: 'Analytics'
+        category: 'Analytics',
+        ignore: true
     },
     {
         name: 'Postiz',
@@ -1920,6 +1922,7 @@ onUnmounted(() => {
 
 const filteredServicesByCategory = (category: string) => {
     return services.filter(s =>
+        !s.ignore &&
         s.category === category &&
         (search.value === '' || s.name.toLowerCase().includes(search.value.toLowerCase()) || s.description.toLowerCase().includes(search.value.toLowerCase()))
     )

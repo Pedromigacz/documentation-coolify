@@ -5,6 +5,9 @@ description: "Here you can find the documentation for hosting Plausible Analytic
 
 <ZoomableImage src="/docs/images/services/plausible.svg" />
 
+::: danger SERVICE TEMPORARILY DISABLED
+This service is currently disabled in Coolify due to known bugs. The installation is not available until these issues are resolved. Please check the [GitHub repository](https://github.com/coollabsio/coolify) for updates on when this service will be re-enabled.
+:::
 
 ## What is Plausible Analytics?
 

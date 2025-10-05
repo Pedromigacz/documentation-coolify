@@ -1,6 +1,6 @@
 ---
 title: "PostHog"
-description: "Here you can find the documentation for hosting PostHog with Coolify."
+description: "Run PostHog analytics on Coolify for product analytics, feature flags, session replay, A/B testing, and user behavior tracking platform."
 ---
 
 

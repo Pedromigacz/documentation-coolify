@@ -48,7 +48,7 @@ export default defineConfig({
     ['meta', { property: 'twitter:description', content: 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.' }],
     ['meta', { property: 'twitter:url', content: env.VITE_SITE_URL ?? 'https://coolify.io/docs/' }],
     ['meta', { property: 'twitter:image', content: 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png' }],
-    ['link', { rel: 'icon', href: '/docs/coolify-logo-transparent.png' }],
+    ['link', { rel: 'icon', href: '/docs/coolify-logo-transparent.png', alt: "Coolify's Logo" }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['script', { defer: 'true', src: 'https://analytics.coollabs.io/js/script.tagged-events.js', 'data-domain': env.VITE_ANALYTICS_DOMAIN ?? 'coolify.io/docs' }],
     ['script', { async: 'true', src: '/docs/trieve-user-script.js' }],

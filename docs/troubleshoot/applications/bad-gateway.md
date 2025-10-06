@@ -1,6 +1,6 @@
 ---
 title: Bad Gateway Error
-description: Troubleshooting Bad Gateway (502) errors in Coolify applications and services.
+description: Fix Bad Gateway (502) errors in Coolify by checking port configuration, host mapping, listening addresses, and container health.
 tags: ["Bad Gateway", "502", "Troubleshooting", "Coolify", "Traefik"]
 ---
 

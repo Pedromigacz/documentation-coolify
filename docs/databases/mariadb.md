@@ -1,5 +1,6 @@
 ---
 title: MariaDB
+description: Deploy MariaDB databases on Coolify with MySQL compatibility, enhanced performance, additional storage engines, and automated backups.
 ---
 
 # MariaDB

@@ -1,5 +1,6 @@
 ---
 title: "Add a new service template to Coolify"
+description: Add new service templates to Coolify using Docker Compose with magic environment variables, storage handling, and one-click deployment features.
 ---
 
 # Adding a new service template to Coolify

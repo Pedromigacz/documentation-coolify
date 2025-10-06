@@ -1,5 +1,6 @@
 ---
 title: Support
+description: Get Coolify support through Discord community with 13K+ members, direct email support for Cloud users, and core team developer assistance.
 ---
 
 <ZoomableImage src="/docs/images/get-started/support-banner.webp" alt="Coolify support banner" />

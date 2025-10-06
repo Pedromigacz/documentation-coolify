@@ -1,6 +1,6 @@
 ---
 title: Build Server
-description: Learn how to use a build server with Coolify to separate your build process from your deployment environment.
+description: Set up a build server in Coolify to separate your build process from deployment, reduce load, and improve performance.
 ---
 
 <ZoomableImage src="/docs/images/builds/servers/banner.webp" alt="Coolify banner" />

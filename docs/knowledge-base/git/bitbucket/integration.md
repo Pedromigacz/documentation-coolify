@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-description: "Deploy public and private Bitbucket repositories with Coolify using deploy keys, SSH authentication, and automated webhook deployments for commits and merge requests."
+description: "Deploy Bitbucket repositories with Coolify using deploy keys, SSH authentication, and automated webhooks for commits and pull requests."
 ---
 
 # Bitbucket Integration

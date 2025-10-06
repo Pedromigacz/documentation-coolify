@@ -1,6 +1,6 @@
 ---
 title: Let's Encrypt Not Generating SSL Certificates on Coolify
-description: Fix Let's Encrypt SSL certificate generation failures by opening ports 80/443, checking DNS records, verifying Cloudflare settings, and troubleshooting HTTP challenges.
+description: Fix Let's Encrypt SSL failures by opening ports 80/443, checking DNS records, verifying Cloudflare settings, and troubleshooting challenges.
 ---
 
 

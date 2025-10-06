@@ -1,5 +1,6 @@
 ---
 title: Static Build Packs
+description: Deploy static websites with Nginx web server using pre-built files from Git repositories, supporting Astro, Webstudio, and other static generators.
 ---
 
 <ZoomableImage src="/docs/images/builds/packs/static/banner.webp" alt="Coolify banner" />

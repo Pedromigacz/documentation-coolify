@@ -1,6 +1,6 @@
 ---
 title: Coolify Cloud
-description: Coolify Cloud is a fully managed service provided by the Coolify team.
+description: Coolify Cloud is a fully managed PaaS service with zero maintenance, automatic scaling, daily backups, and email notifications.
 ---
 
 <ZoomableImage src="/docs/images/get-started/cloud-banner.webp" alt="Coolify cloud banner" />

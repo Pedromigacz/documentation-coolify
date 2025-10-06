@@ -1,5 +1,6 @@
 ---
-title: Upgrading Coolify 
+title: Upgrading Coolify
+description: Upgrade self-hosted Coolify automatically, semi-automatically with UI notifications, or manually via terminal with version-specific installation.
 ---
 
 <ZoomableImage src="/docs/images/get-started/upgrade/banner.webp" alt="Coolify banner" />

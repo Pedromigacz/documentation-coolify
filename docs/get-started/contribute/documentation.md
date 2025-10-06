@@ -1,5 +1,6 @@
 ---
 title: "Contributing to Coolify Documentation"
+description: Contribute to Coolify docs with this guide covering repository setup, local development with Bun, image guidelines, and pull request workflow.
 ---
 
 # Coolify Docs Contribution Guide

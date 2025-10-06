@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-description: "Deploy public and private Gitea repositories with Coolify using deploy keys, SSH authentication, and automated webhook deployments for commits and merge requests."
+description: "Deploy Gitea repositories with Coolify using deploy keys, SSH authentication, and automated webhooks for commits and pull requests."
 ---
 
 # Gitea Integration

@@ -1,6 +1,6 @@
 ---
 title: No Available Server Error
-description: Troubleshooting "No Available Server" (503) errors in Coolify applications and services.
+description: Fix No Available Server (503) errors in Coolify by diagnosing health checks, domain configuration, port mismatches, and Traefik routing.
 tags: ["No Available Server", "503"]
 ---
 

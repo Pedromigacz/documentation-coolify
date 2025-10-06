@@ -1,5 +1,6 @@
 ---
 title: Database SSL
+description: Secure database connections on Coolify with SSL encryption, automatic certificate generation, and multiple SSL modes for enhanced security.
 ---
 
 # Database SSL  <Badge type="warning" text="^v4.0.0-beta.399" />

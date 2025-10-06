@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: Browse the complete directory of one-click services available in Coolify, including databases, development tools, and productivity apps.
 layout: doc
 ---
 

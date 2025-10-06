@@ -1,6 +1,6 @@
 ---
 title: "Drizzle Gateway"
-description: "Here you can find the documentation for hosting Drizzle Gateway with Coolify."
+description: "Deploy and host Drizzle Studio with Coolify to explore SQL databases in your Drizzle ORM project visually and efficiently."
 ---
 
 # Drizzle Gateway

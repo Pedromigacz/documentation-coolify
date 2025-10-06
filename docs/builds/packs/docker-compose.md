@@ -1,5 +1,6 @@
 ---
 title: Docker Compose Build Packs
+description: Deploy multi-container applications with Docker Compose using custom domains, magic environment variables, storage volumes, and service networking.
 ---
 
 <ZoomableImage src="/docs/images/builds/packs/compose/banner.webp" alt="Coolify banner" />

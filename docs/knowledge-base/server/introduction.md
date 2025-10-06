@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: "Connect localhost and remote Linux servers to Coolify with SSH key authentication, Docker Engine requirements, wildcard domains, and Traefik proxy configuration."
+description: "Connect localhost and remote Linux servers to Coolify with SSH authentication, Docker Engine, wildcard domains, and Traefik proxy setup."
 ---
 # Introduction
 No matter what type of server you have (localhost or remote), you need the following requirements.

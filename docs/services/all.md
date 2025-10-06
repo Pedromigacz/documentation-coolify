@@ -1,6 +1,6 @@
 ---
 title: All Services
-description: Complete list of one-click services available in Coolify
+description: Complete directory of one-click services in Coolify including AI, analytics, databases, CMS, monitoring, and more.
 layout: doc
 ---
 

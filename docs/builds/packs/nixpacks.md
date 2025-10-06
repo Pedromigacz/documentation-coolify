@@ -1,5 +1,6 @@
 ---
 title: Nixpacks Build Pack
+description: Build applications with Nixpacks automatic buildpack detecting your codebase, generating Dockerfiles, and deploying static sites or dynamic apps.
 ---
 
 <ZoomableImage src="/docs/images/builds/packs/nixpacks/banner.webp" alt="Coolify banner" />

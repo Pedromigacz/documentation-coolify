@@ -1,5 +1,6 @@
 ---
 title: Coolify UI Screenshots
+description: View screenshots of Coolify's user interface showing dashboard, deployment options, server management, and application configuration features.
 ---
 
 

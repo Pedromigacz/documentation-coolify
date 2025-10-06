@@ -1,6 +1,6 @@
 ---
 title: Dashboard Inaccessible via Instance Domain
-description: Fix Coolify dashboard access issues by diagnosing proxy problems, checking container health, verifying firewall ports, and resolving domain configuration errors.
+description: Fix Coolify dashboard access issues by checking proxy status, container health, firewall ports, and resolving domain configuration.
 ---
 
 # Coolify Dashboard Inaccessible

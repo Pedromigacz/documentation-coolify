@@ -1,5 +1,6 @@
 ---
 title: Downgrading Coolify
+description: Downgrade self-hosted Coolify to previous versions by disabling auto-update, using SSH terminal commands, and handling database compatibility risks.
 ---
 
 <ZoomableImage src="/docs/images/get-started/downgrade-banner.webp" alt="Coolify downgrade banner" />

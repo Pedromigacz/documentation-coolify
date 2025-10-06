@@ -1,5 +1,6 @@
 ---
 title: Dockerfile Build Pack
+description: Build Docker images from your custom Dockerfile with Coolify supporting Git repositories, environment variables, and pre/post-deployment commands.
 ---
 
 <ZoomableImage src="/docs/images/builds/packs/dockerfile/banner.webp" alt="Coolify banner" />

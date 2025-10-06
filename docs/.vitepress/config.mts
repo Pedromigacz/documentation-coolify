@@ -35,6 +35,13 @@ export default defineConfig({
     hostname: env.VITE_SITE_URL ?? 'https://coolify.io/docs/'
   },
 
+  transformHead: ({ pageData }) => {
+    const canonicalUrl = `${env.VITE_SITE_URL ?? 'https://coolify.io/docs'}${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
+    return [
+      ['link', { rel: 'canonical', href: canonicalUrl }]
+    ]
+  },
+
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
     ['meta', { property: 'og:type', content: 'website' }],

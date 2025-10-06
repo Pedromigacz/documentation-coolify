@@ -1,15 +1,15 @@
 ---
 title: "Bluesky PDS"
-description: "Host a Bluesky Personal Data Server on Coolify"
+description: "Host a Bluesky Personal Data Server with Coolify"
 ---
 
 # Bluesky PDS
 
 <ZoomableImage src="/docs/images/services/bluesky.svg" alt="Bluesky logo" />
 
-## What is Bluesky PDS?
+## What is a Bluesky PDS?
 
-Bluesky PDS (Personal Data Server) is a self-hosted server that stores your data for the Bluesky social network. It allows you to control your own social media data and identity while still participating in the broader Bluesky network. The PDS handles user accounts, posts, followers, and other social data in a decentralized manner.
+Bluesky PDS (Personal Data Server) is a self-hosted data server that stores your data in the AT Protocol network. It allows you to control your own social media data and identity while still participating in the AT Protocol network. The PDS handles user accounts, posts, followers, and other social data in a decentralized manner.
 
 ## Setting a domain with https if already not set
 

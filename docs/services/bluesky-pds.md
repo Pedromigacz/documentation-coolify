@@ -1,11 +1,11 @@
 ---
 title: "Bluesky PDS"
-description: "Here you can find the documentation for hosting a Bluesky PDS with Coolify."
+description: "Host a Bluesky Personal Data Server on Coolify"
 ---
 
 # Bluesky PDS
 
-<ZoomableImage src="/docs/images/services/bluesky.svg" />
+<ZoomableImage src="/docs/images/services/bluesky.svg" alt="Bluesky logo" />
 
 ## What is Bluesky PDS?
 

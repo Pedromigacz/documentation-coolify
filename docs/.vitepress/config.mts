@@ -32,21 +32,21 @@ export default defineConfig({
   lastUpdated: true,
   ignoreDeadLinks: true,
   sitemap: {
-    hostname: 'https://coolify.io/docs/'
+    hostname: env.VITE_SITE_URL ?? 'https://coolify.io/docs/'
   },
 
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Coolify Docs' }],
-    ['meta', { property: 'og:url', content: 'https://coolify.io/docs/' }],
+    ['meta', { property: 'og:url', content: env.VITE_SITE_URL ?? 'https://coolify.io/docs/' }],
     ['meta', { property: 'og:description', content: 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.' }],
     ['meta', { property: 'og:image', content: 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png' }],
     ['meta', { property: 'twitter:site', content: '@coolifyio' }],
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { property: 'twitter:title', content: 'Coolify Docs' }],
     ['meta', { property: 'twitter:description', content: 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.' }],
-    ['meta', { property: 'twitter:url', content: 'https://coolify.io/docs/' }],
+    ['meta', { property: 'twitter:url', content: env.VITE_SITE_URL ?? 'https://coolify.io/docs/' }],
     ['meta', { property: 'twitter:image', content: 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png' }],
     ['link', { rel: 'icon', href: '/docs/coolify-logo-transparent.png' }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

@@ -2109,8 +2109,8 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                 <div v-else v-for="category in filteredCategories" :key="category">
                     <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">{{ category }}</h2>
                     <div class="services-grid grid grid-cols-1 gap-6 rounded-lg">
-                        <div v-for="service in filteredServicesByCategory(category)" :key="service.name" @click="navigateTo(`services/${service.slug}`)"
-                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                        <a v-for="service in filteredServicesByCategory(category)" :key="service.name" :href="`/services/${service.slug}`"
+                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                             <div class="w-full h-full flex flex-col dark:default-soft rounded-t-xl p-3">
                                 <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}</div>
                                 <div class="text-gray-500 dark:text-gray-400 text-xs">{{ service.description }}</div>
@@ -2126,7 +2126,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </template>
@@ -2144,8 +2144,8 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                                 </div>
                             </template>
                             <template v-else>
-                                <div v-for="service in filteredServicesByCategory(category)" :key="service.name" @click="navigateTo(`services/${service.slug}`)"
-                                    class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                                <a v-for="service in filteredServicesByCategory(category)" :key="service.name" :href="`/services/${service.slug}`"
+                                    class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                                     <div class="w-full h-full flex flex-col dark:default-soft rounded-b-xl p-3">
                                         <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}</div>
                                         <div class="text-gray-500 dark:text-gray-400 text-xs">{{ service.description }}</div>
@@ -2161,7 +2161,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                                             />
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </template>
                         </div>
                     </div>

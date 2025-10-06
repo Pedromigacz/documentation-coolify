@@ -1,6 +1,6 @@
 ---
 title: "Bluesky PDS"
-description: "Here you can find the documentation for hosting Bluesky PDS with Coolify."
+description: "Here you can find the documentation for hosting a Bluesky PDS with Coolify."
 ---
 
 # Bluesky PDS
@@ -30,6 +30,24 @@ pdsadmin account create <email> <handle>
 ```
 
 To check for other available commands in pdsadmin, you can simply run `pdsadmin`
+
+## Setting up mail
+
+Mailing is important for a Bluesky PDS, it's needed to confirm email, and other things!
+
+You need to edit 2 environment variables in the Coolify UI, head to the Environment Variables tab and look for the `PDS_EMAIL_FROM_ADDRESS`, what you need to fill here is pretty much self explanatory, is the email address that's going to be used when sending an email, for example: `user@domain.com`
+
+The next environment variable is `PDS_EMAIL_SMTP_URL`, this one is not very self explanatory, but here's how to fill it:
+
+There are many ways to fill this variable, here are some examples:
+
+`smtps://user%40example.com:password@mail.example.com:465` (SMTP with SSL)
+
+`smtp://user%40example.com:password@mail.example.com:587` (SMTP without SSL)
+
+`smtps://resend:<your Resend api key>@smtp.resend.com:465` (Resend)
+
+You might need to URL-encode your username and password for the Mail Setup to work.
 
 And that's it, your PDS should be ready for you to use, it will work like any other PDS!
 

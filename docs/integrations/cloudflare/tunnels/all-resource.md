@@ -1,5 +1,6 @@
 ---
 title: "Access All Resource via Cloudflare Tunnels"
+description: "Expose all Coolify resources securely through Cloudflare Tunnels without public IPs or port forwarding using wildcard domains and HTTP proxy routing."
 ---
 
 # Access All Resource via Cloudflare Tunnels

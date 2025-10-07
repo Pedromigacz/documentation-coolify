@@ -1,6 +1,6 @@
 ---
 title: Gateway Timeout Errors
-description: Troubleshooting Gateway Timeout (504) errors in Coolify applications and services.
+description: Resolve Gateway Timeout (504) errors in Coolify by fixing network isolation, adjusting proxy timeouts for Traefik, Caddy, and Nginx.
 tags:
   [
     "Gateway Timeout",

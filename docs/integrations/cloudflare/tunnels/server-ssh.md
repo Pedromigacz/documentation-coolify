@@ -1,5 +1,6 @@
 ---
 title: "Server SSH Access via Cloudflare Tunnels"
+description: "Enable secure SSH access to Coolify servers via Cloudflare Tunnels with automated or manual cloudflared installation hiding server IP addresses."
 ---
 
 # Server SSH Access via Cloudflare Tunnels

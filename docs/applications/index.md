@@ -1,5 +1,6 @@
 ---
 title: Applications
+description: Deploy web applications on Coolify with Nixpacks, Docker, static sites, build packs, environment variables, and automated deployments.
 ---
 
 # Applications

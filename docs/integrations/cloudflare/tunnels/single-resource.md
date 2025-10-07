@@ -1,5 +1,6 @@
 ---
 title: "Access Single Resource via Cloudflare Tunnels"
+description: "Securely access individual Coolify applications through Cloudflare Tunnels with port mapping, domain configuration, and multi-resource tunneling support."
 ---
 
 # Access Single Resource via Cloudflare Tunnels

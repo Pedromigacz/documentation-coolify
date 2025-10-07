@@ -1,5 +1,6 @@
 ---
 title: "Full HTTPS/TLS Setup for All Resources"
+description: "Configure end-to-end HTTPS for Coolify resources through Cloudflare Tunnels with Origin Certificates, strict TLS encryption, and proper domain setup."
 ---
 
 # Full HTTPS/TLS Setup for All Resources

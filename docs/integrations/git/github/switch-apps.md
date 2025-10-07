@@ -1,5 +1,10 @@
 ---
+<<<<<<< HEAD:docs/integrations/git/github/switch-apps.md
 title: "Switch GitHub Apps"
+=======
+title: "Move Between GitHub Apps"
+description: "Migrate Coolify repositories between GitHub Apps when moving to new organizations with Git source updates and repository reconfiguration."
+>>>>>>> v4.x:docs/knowledge-base/git/github/move-between-github-apps.md
 ---
 
 # Move Between GitHub Apps

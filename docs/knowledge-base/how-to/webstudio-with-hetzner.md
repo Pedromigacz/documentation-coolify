@@ -1,5 +1,6 @@
 ---
 title: Deploy Webstudio Projects to Hetzner with Coolify
+description: Complete guide to deploying Webstudio projects with Coolify on Hetzner servers using Docker, GitHub integration, and automated deployment.
 ---
 
 # Deploy Webstudio Projects using Coolify

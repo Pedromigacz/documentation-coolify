@@ -283,6 +283,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 ## Notifications
 
 - [Ntfy](/services/ntfy) - Simple HTTP-based pub-sub notification service
+- [Gotify](/services/gotify) - Open-source push notifications for web and mobile apps
 
 ## Productivity
 

@@ -41,7 +41,7 @@ Before downgrading, it's important to disable the Auto Update feature to prevent
 :::
 
 
-## 2.Login to Your Server via SSH
+## 2. Login to Your Server via SSH
 Next, you need to SSH into your server to execute the downgrade command.
 
 

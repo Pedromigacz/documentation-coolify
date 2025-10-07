@@ -551,7 +551,7 @@ const services = [
     {
         name: 'Deno KV',
         slug: 'denokv',
-        icon: '/docs/images/services/denokv.svg',
+        icon: '/docs/images/services/deno-looking-up.svg',
         description: 'Deno\'s built-in key-value database service.',
         category: 'Development'
     },
@@ -1076,7 +1076,7 @@ const services = [
     {
         name: 'Mautic',
         slug: 'mautic',
-        icon: '/docs/images/services/mautic5.svg',
+        icon: '/docs/images/services/mautic.svg',
         description: 'Open-source marketing automation platform.',
         category: 'Marketing'
     },

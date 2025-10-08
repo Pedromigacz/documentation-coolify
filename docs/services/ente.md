@@ -3,7 +3,9 @@ title: "Ente"
 description: "Here you can find the documentation for hosting Ente with Coolify."
 ---
 
-![Ente](https://ph-files.imgix.net/38216c05-7ae5-4cf8-9079-4a2307167d0b.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=128&h=128&fit=crop&frame=1&dpr=1)
+# Ente
+
+![Ente](/images/services/ente.webp)
 
 ## What is Ente?
 

@@ -1186,6 +1186,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'NewAPI',
+        slug: 'newapi',
+        icon: '/docs/images/services/newapi.png',
+        description: 'The next-generation LLM gateway and AI asset management system supports multiple languages.',
+        category: 'AI'
+    },
+    {
         name: 'Next Image Transformation',
         slug: 'next-image-transformation',
         icon: '/docs/images/services/next-image-transformation.svg',

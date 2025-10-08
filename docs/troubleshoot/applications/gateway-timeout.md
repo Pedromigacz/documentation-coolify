@@ -1,6 +1,6 @@
 ---
 title: Gateway Timeout Errors
-description: Troubleshooting Gateway Timeout (504) errors in Coolify applications and services.
+description: Resolve Gateway Timeout (504) errors in Coolify by fixing network isolation, adjusting proxy timeouts for Traefik, Caddy, and Nginx.
 tags:
   [
     "Gateway Timeout",
@@ -15,7 +15,7 @@ tags:
 
 # Gateway Timeout (504) Errors
 
-Gateway timeout errors occur when the Coolify proxy cannot get a response from your application within the configured timeout period. This is different from [Bad Gateway (502)](troubleshoot/applications/bad-gateway) errors, which indicate the proxy cannot connect to your application at all.
+Gateway timeout errors occur when the Coolify proxy cannot get a response from your application within the configured timeout period. This is different from [Bad Gateway (502)](/troubleshoot/applications/bad-gateway#bad-gateway-502-error) errors, which indicate the proxy cannot connect to your application at all.
 
 ## Common Causes
 
@@ -144,17 +144,7 @@ The configuration method depends on your proxy type:
 
 Add custom Traefik configuration to increase the timeout. You have various options depending on your needs to achieve this:
 
-1. Navigate to your application settings in Coolify
-2. Add the following to your **Container Labels**:
-
-```yaml
-# For 5-minute timeout
-traefik.http.services.<service-name>.loadbalancer.timeout.read=300s
-traefik.http.services.<service-name>.loadbalancer.timeout.write=300s
-traefik.http.services.<service-name>.loadbalancer.timeout.idle=300s
-```
-
-Or navigate to your server's proxy settings and add global timeouts under the command section:
+Navigate to your server's proxy settings and add the new timeouts under the command section:
 
 ```yaml
 command:

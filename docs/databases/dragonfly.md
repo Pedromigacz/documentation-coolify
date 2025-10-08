@@ -1,5 +1,6 @@
 ---
 title: DragonFly
+description: Deploy DragonFly in-memory datastore on Coolify with Redis compatibility, multi-threaded architecture, and enhanced scalability features.
 ---
 
 # DragonFly

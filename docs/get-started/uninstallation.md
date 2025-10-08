@@ -1,8 +1,9 @@
 ---
 title: Uninstalling Coolify
+description: Completely remove Coolify from your self-hosted server by stopping containers, deleting volumes, networks, data directories, and Docker images.
 ---
 
-<ZoomableImage src="/docs/images/get-started/uninstallation-banner.webp" />
+<ZoomableImage src="/docs/images/get-started/uninstallation-banner.webp" alt="Coolify uninstallation banner" />
 
 <br />
 

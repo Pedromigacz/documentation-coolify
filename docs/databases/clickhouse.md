@@ -1,11 +1,12 @@
 ---
 title: ClickHouse
+description: Deploy ClickHouse on Coolify with column-oriented OLAP database, real-time analytics, S3 backups, and exceptional query performance.
 ---
 
 
 # Clickhouse
 
- <ZoomableImage src="/docs/images/database-logos/clickhouse.webp" />
+ <ZoomableImage src="/docs/images/database-logos/clickhouse.webp" alt="Coolify clickhouse" />
 
 
 ## What is ClickHouse

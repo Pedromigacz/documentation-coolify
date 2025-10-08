@@ -1,8 +1,9 @@
 ---
 title: Coolify Concepts
+description: Learn core Coolify concepts including servers, resources, environments, projects, Docker containers, reverse proxy, and team management basics.
 ---
 
-<ZoomableImage src="/docs/images/get-started/concepts-banner.webp" />
+<ZoomableImage src="/docs/images/get-started/concepts-banner.webp" alt="Coolify concepts banner" />
 
 <br />
 

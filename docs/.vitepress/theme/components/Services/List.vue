@@ -1,16 +1,18 @@
 <style scoped>
-.default-soft{
+.default-soft {
     background: rgba(101, 117, 133, 0.16);
     border-color: #3c3f44;
 }
 
 /* Purple checkboxes */
 input[type="checkbox"] {
-    accent-color: #9333ea; /* purple-600 */
+    accent-color: #9333ea;
+    /* purple-600 */
 }
 
 .dark input[type="checkbox"] {
-    accent-color: #8b5cf6; /* purple-500 */
+    accent-color: #8b5cf6;
+    /* purple-500 */
 }
 
 .search {
@@ -33,7 +35,8 @@ input[type="checkbox"] {
 @media (max-width: 640px) {
     .search {
         padding: 10px 12px;
-        font-size: 16px; /* Prevents zoom on iOS */
+        font-size: 16px;
+        /* Prevents zoom on iOS */
     }
 }
 
@@ -83,23 +86,23 @@ input[type="checkbox"] {
         flex-direction: row;
         gap: 1rem;
     }
-    
+
     .input-container .search {
         max-width: 20rem;
     }
-    
+
     .input-container .button-group {
         flex-direction: row;
     }
-    
+
     .input-container .select {
         width: 12rem;
     }
-    
+
     .input-container .add-service-btn {
         width: auto;
     }
-    
+
     .dropdown-content {
         left: 0;
         width: 12rem;
@@ -112,7 +115,7 @@ input[type="checkbox"] {
         font-size: 14px;
         padding: 8px;
     }
-    
+
     .dropdown-content label {
         padding: 10px 8px;
     }
@@ -123,7 +126,7 @@ input[type="checkbox"] {
         font-size: 16px;
         padding: 12px;
     }
-    
+
     .dropdown-content label {
         padding: 12px 10px;
     }
@@ -276,7 +279,8 @@ const services = [
         slug: 'plausible',
         icon: '/docs/images/services/plausible.svg',
         description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
-        category: 'Analytics'
+        category: 'Analytics',
+        ignore: true
     },
     {
         name: 'Activepieces',
@@ -1396,7 +1400,8 @@ const services = [
         slug: 'posthog',
         icon: '/docs/images/services/posthog.svg',
         description: 'Open source product analytics.',
-        category: 'Analytics'
+        category: 'Analytics',
+        ignore: true
     },
     {
         name: 'Postiz',
@@ -1747,6 +1752,146 @@ const services = [
         icon: '/docs/images/services/zipline.svg',
         description: 'Next generation ShareX / File upload server',
         category: 'File Management'
+    },
+    {
+        name: 'CodiMD',
+        slug: 'codimd',
+        icon: '/docs/images/services/codimd.png',
+        description: 'Realtime collaborative markdown notes on all platforms.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Diun',
+        slug: 'diun',
+        icon: '/docs/images/services/diun.svg',
+        description: 'Docker Image Update Notifier.',
+        category: 'Monitoring'
+    },
+    {
+        name: 'Drizzle Gateway',
+        slug: 'drizzle-gateway',
+        icon: '/docs/images/services/drizzle.jpeg',
+        description: 'Drizzle Studio for exploring SQL databases.',
+        category: 'Development'
+    },
+    {
+        name: 'Grist',
+        slug: 'grist',
+        icon: '/docs/images/services/grist.svg',
+        description: 'Modern relational spreadsheet combining flexibility and database robustness.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Leantime',
+        slug: 'leantime',
+        icon: '/docs/images/services/leantime.svg',
+        description: 'Lean project management system for innovators.',
+        category: 'Project Management'
+    },
+    {
+        name: 'LimeSurvey',
+        slug: 'limesurvey',
+        icon: '/docs/images/services/limesurvey.svg',
+        description: 'The most popular FOSS online survey tool on the web.',
+        category: 'Business'
+    },
+    {
+        name: 'Memos',
+        slug: 'memos',
+        icon: '/docs/images/services/memos.png',
+        description: 'Open-source, self-hosted memo hub with knowledge management.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Navidrome',
+        slug: 'navidrome',
+        icon: '/docs/images/services/navidrome.svg',
+        description: 'Modern music server and streamer compatible with Subsonic/Airsonic.',
+        category: 'Media'
+    },
+    {
+        name: 'NetBird Client',
+        slug: 'netbird-client',
+        icon: '/docs/images/services/netbird.png',
+        description: 'Connect your devices into a secure WireGuard-based mesh network.',
+        category: 'Networking'
+    },
+    {
+        name: 'Observium',
+        slug: 'observium',
+        icon: '/docs/images/services/observium.webp',
+        description: 'Low-maintenance auto-discovering network monitoring platform.',
+        category: 'Monitoring'
+    },
+    {
+        name: 'OrangeHRM',
+        slug: 'orangehrm',
+        icon: '/docs/images/services/orangehrm.svg',
+        description: 'Free HR management system for businesses.',
+        category: 'Business'
+    },
+    {
+        name: 'Passbolt',
+        slug: 'passbolt',
+        icon: '/docs/images/services/passbolt.svg',
+        description: 'Open source password manager for teams.',
+        category: 'Security'
+    },
+    {
+        name: 'PGBackWeb',
+        slug: 'pgbackweb',
+        icon: '/docs/images/services/pgbackweb.png',
+        description: 'Effortless PostgreSQL backups with a user-friendly web interface.',
+        category: 'Database'
+    },
+    {
+        name: 'Ryot',
+        slug: 'ryot',
+        icon: '/docs/images/services/ryot.svg',
+        description: 'Self-hosted platform for tracking various facets of your life.',
+        category: 'Productivity'
+    },
+    {
+        name: 'Seafile',
+        slug: 'seafile',
+        icon: '/docs/images/services/seafile.svg',
+        description: 'High-performance file syncing and sharing with knowledge management features.',
+        category: 'Storage'
+    },
+    {
+        name: 'Typesense',
+        slug: 'typesense',
+        icon: '/docs/images/services/typesense.png',
+        description: 'Open source alternative to Algolia and easier-to-use alternative to ElasticSearch.',
+        category: 'Search'
+    },
+    {
+        name: 'Vert',
+        slug: 'vert',
+        icon: '/docs/images/services/vert.png',
+        description: 'Self-hosted file converter.',
+        category: 'Utilities'
+    },
+    {
+        name: 'Wings',
+        slug: 'wings',
+        icon: '/docs/images/services/pterodactyl.png',
+        description: 'Pterodactyl server control plane for game servers.',
+        category: 'Gaming'
+    },
+    {
+        name: 'Yamtrack',
+        slug: 'yamtrack',
+        icon: '/docs/images/services/yamtrack.svg',
+        description: 'Self-hosted music scrobble database.',
+        category: 'Media'
+    },
+    {
+        name: 'Marimo',
+        slug: 'marimo',
+        icon: '/docs/images/services/marimo.svg',
+        description: 'Open-source reactive notebook for Python.',
+        category: 'Development'
     }
 ]
 
@@ -1780,6 +1925,7 @@ onUnmounted(() => {
 
 const filteredServicesByCategory = (category: string) => {
     return services.filter(s =>
+        !s.ignore &&
         s.category === category &&
         (search.value === '' || s.name.toLowerCase().includes(search.value.toLowerCase()) || s.description.toLowerCase().includes(search.value.toLowerCase()))
     )
@@ -1802,12 +1948,12 @@ const toggleCategory = (category: string) => {
         selectedCategories.value = ['All']
         return
     }
-    
+
     // Remove 'All' if it's currently selected and we're selecting a specific category
     if (selectedCategories.value.includes('All')) {
         selectedCategories.value = selectedCategories.value.filter(c => c !== 'All')
     }
-    
+
     const index = selectedCategories.value.indexOf(category)
     if (index === -1) {
         // Category not found, add it
@@ -1819,14 +1965,6 @@ const toggleCategory = (category: string) => {
         if (selectedCategories.value.length === 0) {
             selectedCategories.value = ['All']
         }
-    }
-}
-
-const navigateTo = (path: string, external: boolean = false) => {
-    if (external) {
-        window.location.href = path
-    } else {
-        window.location.href = `/docs/${path}`
     }
 }
 
@@ -1915,29 +2053,32 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
     <div class="flex flex-col">
         <div class="input-container w-full flex flex-col justify-between gap-2">
             <input v-model="search" type="text" placeholder="Search"
-                class="search w-full border-2 border-gray-300 dark:border-gray-600 rounded-lg py-3 sm:py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800" style="background-color: rgba(101, 117, 133, 0.16);" />
+                class="search w-full border-2 border-gray-300 dark:border-gray-600 rounded-lg py-3 sm:py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800"
+                style="background-color: rgba(101, 117, 133, 0.16);" />
             <div class="button-group relative flex flex-col gap-2" ref="dropdownRef">
-                <button @click.stop="isOpen = !isOpen" 
-                    class="select flex items-center justify-between w-full border-2 border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 sm:px-3 sm:py-2 bg-purple-700 dark:bg-purple-600 text-gray-900 dark:text-white focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800" style="background-color: rgba(101, 117, 133, 0.16);">
-                    <span class="text-sm sm:text-base">{{ selectedCategories.length === 1 ? selectedCategories[0] : `${selectedCategories.length} categories` }}</span>
+                <button @click.stop="isOpen = !isOpen"
+                    class="select flex items-center justify-between w-full border-2 border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 sm:px-3 sm:py-2 bg-purple-700 dark:bg-purple-600 text-gray-900 dark:text-white focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800"
+                    style="background-color: rgba(101, 117, 133, 0.16);">
+                    <span class="text-sm sm:text-base">{{ selectedCategories.length === 1 ? selectedCategories[0] :
+                        `${selectedCategories.length} categories` }}</span>
                     <svg class="w-4 h-4 ml-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div v-if="isOpen" 
+                <div v-if="isOpen"
                     class="dropdown-content absolute z-10 top-full left-0 right-0 rounded-lg shadow-lg bg-white dark:!bg-[#23272f] border border-gray-200 dark:border-gray-700 max-h-60 overflow-y-auto">
                     <div class="p-2">
-                        <label class="flex items-center space-x-2 p-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer">
-                            <input type="checkbox" 
-                                :checked="selectedCategories.includes('All')"
+                        <label
+                            class="flex items-center space-x-2 p-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer">
+                            <input type="checkbox" :checked="selectedCategories.includes('All')"
                                 @change="toggleCategory('All')"
                                 class="rounded border-gray-300 dark:border-gray-600 text-purple-600 dark:text-purple-500 focus:ring-purple-600 dark:focus:ring-purple-500 bg-white dark:bg-gray-800">
                             <span class="text-gray-900 dark:text-white">All Categories</span>
                         </label>
                         <div v-for="category in categories" :key="category" class="mt-1">
-                            <label class="flex items-center space-x-2 p-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer">
-                                <input type="checkbox" 
-                                    :checked="selectedCategories.includes(category)"
+                            <label
+                                class="flex items-center space-x-2 p-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer">
+                                <input type="checkbox" :checked="selectedCategories.includes(category)"
                                     @change="toggleCategory(category)"
                                     class="rounded border-gray-300 dark:border-gray-600 text-purple-600 dark:text-purple-500 focus:ring-purple-600 dark:focus:ring-purple-500 bg-white dark:bg-gray-800">
                                 <span class="text-gray-900 dark:text-white">{{ category }}</span>
@@ -1945,9 +2086,13 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                         </div>
                     </div>
                 </div>
-                <button @click="navigateTo('https://github.com/coollabsio/coolify/blob/v4.x/CONTRIBUTING.md', true)" class="add-service-btn text-gray-900 dark:text-white px-6 py-3 sm:px-4 sm:py-2 rounded-lg transition-colors text-sm sm:text-base w-full" style="background-color: rgba(101, 117, 133, 0.16);" onmouseover="this.style.backgroundColor='rgba(75, 85, 99, 0.25)'" onmouseout="this.style.backgroundColor='rgba(101, 117, 133, 0.16)'">
+                <a href='https://github.com/coollabsio/coolify/blob/v4.x/CONTRIBUTING.md'
+                    class="add-service-btn text-gray-900 dark:text-white px-6 py-3 sm:px-4 sm:py-2 rounded-lg transition-colors text-sm sm:text-base w-full"
+                    style="background-color: rgba(101, 117, 133, 0.16);"
+                    onmouseover="this.style.backgroundColor='rgba(75, 85, 99, 0.25)'"
+                    onmouseout="this.style.backgroundColor='rgba(101, 117, 133, 0.16)'">
                     Add Service
-                </button>
+                </a>
             </div>
         </div>
         <div class="grid-container">
@@ -1955,10 +2100,13 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                 <div v-if="filteredCategories.length === 0">
                     <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">No results found</h2>
                     <div class="services-grid not-found-grid grid grid-cols-1 gap-6">
-                        <div class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                        <div
+                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
                             <div class="w-full flex flex-col dark:default-soft rounded-b-xl p-3">
-                                <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">Service not found</div>
-                                <div class="text-gray-500 dark:text-gray-400 text-xs">Try adjusting your search or category filter.</div>
+                                <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">Service not found
+                                </div>
+                                <div class="text-gray-500 dark:text-gray-400 text-xs">Try adjusting your search or
+                                    category filter.</div>
                             </div>
                         </div>
                     </div>
@@ -1966,24 +2114,24 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                 <div v-else v-for="category in filteredCategories" :key="category">
                     <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">{{ category }}</h2>
                     <div class="services-grid grid grid-cols-1 gap-6 rounded-lg">
-                        <div v-for="service in filteredServicesByCategory(category)" :key="service.name" @click="navigateTo(`services/${service.slug}`)"
-                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                        <a v-for="service in filteredServicesByCategory(category)" :key="service.name"
+                            :href="`/docs/services/${service.slug}`"
+                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                             <div class="w-full h-full flex flex-col dark:default-soft rounded-t-xl p-3">
-                                <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}</div>
+                                <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}
+                                </div>
                                 <div class="text-gray-500 dark:text-gray-400 text-xs">{{ service.description }}</div>
                             </div>
                             <div class="p-4">
-                                <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center" style="background-color: rgba(101, 117, 133, 0.16);">
-                                    <img
-                                        :src="isImageLoading(service.icon) ? getLoadingSpinner() : (hasImageError(service.icon) ? getFallbackImage() : service.icon)"
-                                        :alt="service.name"
-                                        @error="handleImageError(service.name, service.icon)"
+                                <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center"
+                                    style="background-color: rgba(101, 117, 133, 0.16);">
+                                    <img :src="isImageLoading(service.icon) ? getLoadingSpinner() : (hasImageError(service.icon) ? getFallbackImage() : service.icon)"
+                                        :alt="service.name" @error="handleImageError(service.name, service.icon)"
                                         class="w-auto h-8 px-2 rounded-lg transition-opacity duration-200"
-                                        :class="{ 'opacity-50': isImageLoading(service.icon) }"
-                                    />
+                                        :class="{ 'opacity-50': isImageLoading(service.icon) }" />
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </template>
@@ -1993,32 +2141,37 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                         <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">{{ category }}</h2>
                         <div class="services-grid not-found-grid grid grid-cols-1 gap-6 mb-8">
                             <template v-if="filteredServicesByCategory(category).length === 0">
-                                <div class="dark:default-soft h-auto rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                                <div
+                                    class="dark:default-soft h-auto rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
                                     <div class="w-full flex flex-col dark:default-soft rounded-b-xl p-3">
-                                        <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">No services found</div>
-                                        <div class="text-gray-500 dark:text-gray-400 text-sm">Try adjusting your search or category filter.</div>
+                                        <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">No services
+                                            found</div>
+                                        <div class="text-gray-500 dark:text-gray-400 text-sm">Try adjusting your search
+                                            or category filter.</div>
                                     </div>
                                 </div>
                             </template>
                             <template v-else>
-                                <div v-for="service in filteredServicesByCategory(category)" :key="service.name" @click="navigateTo(`services/${service.slug}`)"
-                                    class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                                <a v-for="service in filteredServicesByCategory(category)" :key="service.name"
+                                    :href="`/docs/services/${service.slug}`"
+                                    class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                                     <div class="w-full h-full flex flex-col dark:default-soft rounded-b-xl p-3">
-                                        <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}</div>
-                                        <div class="text-gray-500 dark:text-gray-400 text-xs">{{ service.description }}</div>
+                                        <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{
+                                            service.name }}</div>
+                                        <div class="text-gray-500 dark:text-gray-400 text-xs">{{ service.description }}
+                                        </div>
                                     </div>
                                     <div class="p-4">
-                                        <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center" style="background-color: rgba(101, 117, 133, 0.16);">
-                                            <img
-                                                :src="isImageLoading(service.icon) ? getLoadingSpinner() : (hasImageError(service.icon) ? getFallbackImage() : service.icon)"
+                                        <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center"
+                                            style="background-color: rgba(101, 117, 133, 0.16);">
+                                            <img :src="isImageLoading(service.icon) ? getLoadingSpinner() : (hasImageError(service.icon) ? getFallbackImage() : service.icon)"
                                                 :alt="service.name"
                                                 @error="handleImageError(service.name, service.icon)"
                                                 class="w-auto h-8 px-2 rounded-lg transition-opacity duration-200"
-                                                :class="{ 'opacity-50': isImageLoading(service.icon) }"
-                                            />
+                                                :class="{ 'opacity-50': isImageLoading(service.icon) }" />
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </template>
                         </div>
                     </div>

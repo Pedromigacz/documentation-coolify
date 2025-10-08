@@ -1,11 +1,12 @@
 ---
 title: Introduction to Coolify
+description: Coolify is an open-source self-hosted PaaS alternative to Vercel, Heroku, and Railway with unlimited deployments, no vendor lock-in, and free SSL.
 outline: [2, 4]
 lastUpdated: true
 editLink: true
 ---
 
-<ZoomableImage src="/docs/images/get-started/introduction-banner.webp" />
+<ZoomableImage src="/docs/images/get-started/introduction-banner.webp" alt="Coolify introduction banner" />
 
 <br />
 

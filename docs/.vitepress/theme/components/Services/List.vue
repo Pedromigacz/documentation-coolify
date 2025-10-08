@@ -650,6 +650,13 @@ const services = [
         category: 'Media'
     },
     {
+        name: 'Ente',
+        slug: 'ente',
+        icon: '/public/images/services/ente.webp',
+        description: 'A fully open-source, end-to-end encrypted platform for you to store data in the cloud without needing to trust the service provider.',
+        category: 'Productivity'
+    },
+    {
         name: 'Excalidraw',
         slug: 'excalidraw',
         icon: '/docs/images/services/excalidraw.svg',

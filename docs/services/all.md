@@ -192,6 +192,10 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 - [Unsend](/services/unsend) - An open source bulk email manager
 
+## Family
+
+- [Gramps Web](/services/gramps-web) - The free, open-source genealogy system
+
 ## File Management
 
 - [Filebrowser](/services/filebrowser) - A file manager for the web

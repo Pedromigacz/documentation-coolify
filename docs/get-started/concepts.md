@@ -55,13 +55,15 @@ Alternatively, you can build the image elsewhere, push it to a registry, and let
 
 
 ## Reverse Proxy
-A reverse proxy is a server or app that sits between your application and users, forwarding requests to the right place. 
+A reverse proxy is a server or app that sits between your application and users, forwarding requests to the right place.
 
-Coolify includes two proxy options, Caddy and Traefik, which handle requests to your website by directing them to the container running your app. 
+Coolify includes two proxy options, Caddy and Traefik, which handle requests to your website by directing them to the container running your app.
 
-This setup lets you run multiple applications on one server without tweaking configs or ports. 
+This setup lets you run multiple applications on one server without tweaking configs or ports.
 
 Plus, Coolify supports unlimited domains, so you could deploy 20 different apps, each with its own unique domain.
+
+The reverse proxy also automatically manages SSL/TLS certificates for your applications. When you enter a domain with `https://`, the proxy requests and installs certificates from Let's Encrypt automatically, with no manual configuration needed. Certificates are renewed automatically before they expire, keeping your applications secure without any intervention.
 
 
 ## Security

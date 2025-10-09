@@ -12,6 +12,39 @@ All domain fields are capable to generate your proxy configurations based on the
 2. You can give multiple domains, separated by comma: `https://coolify.io,https://www.coolify.io`
 3. You can also add a port to the domain, so the proxy will know which port you would like to map to the domain: `https://coolify.io:8080,http://api.coolify.io:3000`
 
+## HTTPS & SSL Certificates
+
+Coolify automatically handles SSL/TLS certificates for your applications. When you enter a domain with the `https://` protocol, everything is configured for you behind the scenes.
+
+### How Automatic HTTPS Works
+
+When you enter a domain using the `https://` protocol (for example, `https://example.com`):
+
+1. **Automatic Proxy Configuration** - Coolify automatically applies the necessary configuration to your reverse proxy (Traefik or Caddy) to serve your application over HTTPS.
+
+2. **Certificate Issuance** - The proxy automatically starts the process to request and install SSL certificates from [Let's Encrypt ↗](https://letsencrypt.org?utm_source=coolify.io).
+
+3. **Automatic Renewal** - Certificates are automatically renewed before they expire. Let's Encrypt certificates are valid for 90 days and Coolify handles renewals seamlessly.
+
+::: success TIP
+You don't need to do anything special to enable HTTPS. Simply use `https://` when entering your domain, and Coolify takes care of the rest.
+:::
+
+### Self-Signed Certificates as Fallback
+
+If automatic certificate issuance from Let's Encrypt fails, Coolify will provide a self-signed certificate to keep your application accessible. This means your application will still be reachable, but browsers will show a security warning.
+
+Common reasons for automatic certificate issuance failure:
+
+- DNS records are not properly configured or not yet propagated
+- Required ports (80 for HTTP challenge, 443 for TLS-ALPN challenge) are not accessible from the internet
+- Server firewall is blocking Let's Encrypt validation requests
+- Domain ownership validation fails due to proxy interference (e.g., Cloudflare with certain settings)
+
+::: warning TROUBLESHOOTING
+If you see a certificate warning in your browser or your application shows a self-signed certificate, see the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.
+:::
+
 ## Wildcard Domain
 
 You can set a wildcard domain (`example: http://example.com`) to your server, so you can easily assign generated domains to all the resources connected to this server. [More details](/knowledge-base/server/introduction#wildcard-domain)

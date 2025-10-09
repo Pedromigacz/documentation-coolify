@@ -52,3 +52,18 @@ Documentation: https://developers.cloudflare.com/ssl/origin-configuration/ssl-mo
 
 ### How to map a port the server?
 If you want to map a port the host system (server), you need to use [Ports Mappings](/applications/#port-mappings) feature.
+
+## SSL & HTTPS
+
+### How do I enable HTTPS/SSL for my application?
+HTTPS is automatically enabled when you enter a domain using the `https://` protocol (for example, `https://example.com`). Coolify will automatically configure your reverse proxy and request SSL certificates from Let's Encrypt. You don't need to do any additional setup.
+
+For more details, see the [Domains documentation](/knowledge-base/domains#https-ssl-certificates).
+
+### My application is showing a certificate warning in the browser. What should I do?
+If your browser shows a certificate warning or indicates a self-signed certificate, it means the automatic certificate issuance from Let's Encrypt failed. This is usually due to DNS configuration issues, firewall problems, or port accessibility.
+
+See the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.
+
+### Do SSL certificates renew automatically?
+Yes. Coolify automatically renews SSL certificates from Let's Encrypt before they expire. Let's Encrypt certificates are valid for 90 days, and Coolify handles all renewals seamlessly in the background.

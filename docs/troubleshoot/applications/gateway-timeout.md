@@ -15,7 +15,7 @@ tags:
 
 # Gateway Timeout (504) Errors
 
-Gateway timeout errors occur when the Coolify proxy cannot get a response from your application within the configured timeout period. This is different from [Bad Gateway (502)](troubleshoot/applications/bad-gateway) errors, which indicate the proxy cannot connect to your application at all.
+Gateway timeout errors occur when the Coolify proxy cannot get a response from your application within the configured timeout period. This is different from [Bad Gateway (502)](/troubleshoot/applications/bad-gateway#bad-gateway-502-error) errors, which indicate the proxy cannot connect to your application at all.
 
 ## Common Causes
 

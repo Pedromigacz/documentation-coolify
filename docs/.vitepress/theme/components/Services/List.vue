@@ -99,10 +99,6 @@ input[type="checkbox"] {
         width: 12rem;
     }
 
-    .input-container .add-service-btn {
-        width: auto;
-    }
-
     .dropdown-content {
         left: 0;
         width: 12rem;
@@ -172,11 +168,7 @@ input[type="checkbox"] {
 }
 
 .service-card {
-    @apply block p-4 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-blue-600 dark:hover:border-blue-600 transition-colors duration-200;
-}
-
-.service-card:hover {
-    @apply bg-gray-50;
+    border-bottom-color: rgb(46, 46, 50);
 }
 
 .grid {
@@ -551,7 +543,7 @@ const services = [
     {
         name: 'Deno KV',
         slug: 'denokv',
-        icon: '/docs/images/services/denokv.svg',
+        icon: '/docs/images/services/deno-looking-up.svg',
         description: 'Deno\'s built-in key-value database service.',
         category: 'Development'
     },
@@ -652,6 +644,13 @@ const services = [
         icon: '/docs/images/services/emby-stat.svg',
         description: 'A simple and easy-to-use Emby statistics dashboard.',
         category: 'Media'
+    },
+    {
+        name: 'Ente',
+        slug: 'ente',
+        icon: '/public/images/services/ente.webp',
+        description: 'A fully open-source, end-to-end encrypted platform for you to store data in the cloud without needing to trust the service provider.',
+        category: 'Productivity'
     },
     {
         name: 'Excalidraw',
@@ -1076,7 +1075,7 @@ const services = [
     {
         name: 'Mautic',
         slug: 'mautic',
-        icon: '/docs/images/services/mautic5.svg',
+        icon: '/docs/images/services/mautic.svg',
         description: 'Open-source marketing automation platform.',
         category: 'Marketing'
     },
@@ -2087,10 +2086,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                     </div>
                 </div>
                 <a href='https://github.com/coollabsio/coolify/blob/v4.x/CONTRIBUTING.md'
-                    class="add-service-btn text-gray-900 dark:text-white px-6 py-3 sm:px-4 sm:py-2 rounded-lg transition-colors text-sm sm:text-base w-full"
-                    style="background-color: rgba(101, 117, 133, 0.16);"
-                    onmouseover="this.style.backgroundColor='rgba(75, 85, 99, 0.25)'"
-                    onmouseout="this.style.backgroundColor='rgba(101, 117, 133, 0.16)'">
+                    class="text-gray-900 dark:text-white px-6 py-3 sm:px-4 sm:py-2 text-sm sm:text-base hover:dark:text-white w-auto hover:dark:border-purple-400 hover:dark:bg-purple-400/10">
                     Add Service
                 </a>
             </div>
@@ -2099,24 +2095,13 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
             <template v-if="selectedCategories.includes('All')">
                 <div v-if="filteredCategories.length === 0">
                     <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">No results found</h2>
-                    <div class="services-grid not-found-grid grid grid-cols-1 gap-6">
-                        <div
-                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
-                            <div class="w-full flex flex-col dark:default-soft rounded-b-xl p-3">
-                                <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">Service not found
-                                </div>
-                                <div class="text-gray-500 dark:text-gray-400 text-xs">Try adjusting your search or
-                                    category filter.</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div v-else v-for="category in filteredCategories" :key="category">
                     <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">{{ category }}</h2>
                     <div class="services-grid grid grid-cols-1 gap-6 rounded-lg">
                         <a v-for="service in filteredServicesByCategory(category)" :key="service.name"
                             :href="`/docs/services/${service.slug}`"
-                            class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
+                            class="service-card ark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                             <div class="w-full h-full flex flex-col dark:default-soft rounded-t-xl p-3">
                                 <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{ service.name }}
                                 </div>
@@ -2142,7 +2127,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                         <div class="services-grid not-found-grid grid grid-cols-1 gap-6 mb-8">
                             <template v-if="filteredServicesByCategory(category).length === 0">
                                 <div
-                                    class="dark:default-soft h-auto rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
+                                    class="dark:default-soft h-auto rounded-lg rounded-b-none shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col">
                                     <div class="w-full flex flex-col dark:default-soft rounded-b-xl p-3">
                                         <div class="font-bold text-md mb-1 text-gray-900 dark:text-gray-100">No services
                                             found</div>
@@ -2154,7 +2139,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                             <template v-else>
                                 <a v-for="service in filteredServicesByCategory(category)" :key="service.name"
                                     :href="`/docs/services/${service.slug}`"
-                                    class="dark:default-soft rounded-lg shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
+                                    class="dark:default-soft rounded-lg rounded-b-none shadow border border-gray-300 hover:border-purple-500 dark:hover:border-purple-400 transition-colors hover:cursor-pointer flex flex-col no-underline">
                                     <div class="w-full h-full flex flex-col dark:default-soft rounded-b-xl p-3">
                                         <div class="font-bold text-md text-gray-900 mb-1 dark:text-gray-100">{{
                                             service.name }}</div>
@@ -2162,7 +2147,7 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
                                         </div>
                                     </div>
                                     <div class="p-4">
-                                        <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg flex items-center justify-center"
+                                        <div class="bg-white dark:default-soft w-full h-full min-h-[100px] rounded-lg rounded-b-none flex items-center justify-center"
                                             style="background-color: rgba(101, 117, 133, 0.16);">
                                             <img :src="isImageLoading(service.icon) ? getLoadingSpinner() : (hasImageError(service.icon) ? getFallbackImage() : service.icon)"
                                                 :alt="service.name"

@@ -1,5 +1,6 @@
 ---
 title: MySQL
+description: Deploy MySQL databases on Coolify with ACID compliance, replication, partitioning, full-text indexing, and automated backup features.
 ---
 
 # MySQL

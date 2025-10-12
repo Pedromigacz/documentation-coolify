@@ -39,6 +39,14 @@ If automatic certificate issuance from Let's Encrypt fails, Coolify will provide
 If you see a certificate warning in your browser or your application shows a self-signed certificate, see the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.
 :::
 
+## Catch Multiple Domains
+
+Multitenancy is supported with Coolify. When using [Traefik](/knowledge-base/proxy/traefik/overview), you can automatically catch multiple domains, by editing the `Container Labels` of your Application or Service and define a [`HostRegexp`](https://doc.traefik.io/traefik/reference/routing-configuration/http/routing/rules-and-priority/#host-and-hostregexp) rule.
+
+::: warning Catch-All & SSL Certificates
+The proxy won't be able to issue SSL certificates for catch-all domains. For subdomains of a specific domain, you have the option to generate a [Wildcard SSL certificate](/knowledge-base/proxy/traefik/wildcard-certs).
+:::
+
 ## Wildcard Domain
 
 You can set a wildcard domain (`example: http://example.com`) to your server, so you can easily assign generated domains to all the resources connected to this server. [More details](/knowledge-base/server/introduction#wildcard-domain)

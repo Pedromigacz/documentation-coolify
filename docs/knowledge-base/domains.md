@@ -47,4 +47,4 @@ You can set a wildcard domain (`example: http://example.com`) to your server, so
 
 Since version `beta.191`, Coolify will validates DNS records for your domains with `1.1.1.1` Cloudflare DNS server.
 
-If you want to use different DNS server, go to your `Settings` page and change the `DNS Servers` field (comma separated list).
+If you want to use different DNS server, go to your `Settings > Advanced` page and change the `Custom DNS Servers` field (comma separated list).

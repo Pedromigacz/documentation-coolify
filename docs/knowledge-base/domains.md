@@ -33,7 +33,7 @@ You don't need to do anything special to enable HTTPS. Simply use `https://` whe
 
 ### Self-Signed Certificates as Fallback
 
-If automatic certificate issuance from Let's Encrypt fails, Coolify will provide a self-signed certificate to keep your application accessible. This means your application will still be reachable, but browsers will show a security warning.
+If automatic certificate issuance from [Let's Encrypt ↗](https://letsencrypt.org?utm_source=coolify.io) fails, the Coolify Proxy will provide a self-signed certificate to keep your application accessible. This means your application will still be reachable, but browsers will show a security warning.
 
 ::: warning TROUBLESHOOTING
 If you see a certificate warning in your browser or your application shows a self-signed certificate, see the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.
@@ -44,7 +44,7 @@ If you see a certificate warning in your browser or your application shows a sel
 Multitenancy is supported with Coolify. When using [Traefik](/knowledge-base/proxy/traefik/overview), you can automatically catch multiple domains, by editing the `Container Labels` of your Application or Service and define a [`HostRegexp`](https://doc.traefik.io/traefik/reference/routing-configuration/http/routing/rules-and-priority/#host-and-hostregexp) rule.
 
 ::: warning Catch-All & SSL Certificates
-The proxy won't be able to issue SSL certificates for catch-all domains. For subdomains of a specific domain, you have the option to generate a [Wildcard SSL certificate](/knowledge-base/proxy/traefik/wildcard-certs).
+The Coolify Proxy won't be able to issue SSL certificates for catch-all domains. For subdomains of a specific domain, you have the option to generate a [Wildcard SSL certificate](/knowledge-base/proxy/traefik/wildcard-certs).
 :::
 
 ## Wildcard Domain

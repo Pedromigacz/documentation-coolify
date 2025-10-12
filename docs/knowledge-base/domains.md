@@ -4,6 +4,7 @@ description: "Add custom domains to Coolify with FQDN format, multiple domain su
 ---
 
 # Domains
+
 You can easily add your own domains to Coolify or your resources.
 
 All domain fields are capable to generate your proxy configurations based on the following rules:
@@ -33,13 +34,6 @@ You don't need to do anything special to enable HTTPS. Simply use `https://` whe
 ### Self-Signed Certificates as Fallback
 
 If automatic certificate issuance from Let's Encrypt fails, Coolify will provide a self-signed certificate to keep your application accessible. This means your application will still be reachable, but browsers will show a security warning.
-
-Common reasons for automatic certificate issuance failure:
-
-- DNS records are not properly configured or not yet propagated
-- Required ports (80 for HTTP challenge, 443 for TLS-ALPN challenge) are not accessible from the internet
-- Server firewall is blocking Let's Encrypt validation requests
-- Domain ownership validation fails due to proxy interference (e.g., Cloudflare with certain settings)
 
 ::: warning TROUBLESHOOTING
 If you see a certificate warning in your browser or your application shows a self-signed certificate, see the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.

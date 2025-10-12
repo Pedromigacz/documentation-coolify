@@ -31,7 +31,7 @@ When you enter a domain using the `https://` protocol (for example, `https://exa
 You don't need to do anything special to enable HTTPS. Simply use `https://` when entering your domain, and Coolify takes care of the rest.
 :::
 
-### Self-Signed Certificates as Fallback
+### Self-Signed Certificates
 
 If automatic certificate issuance from [Let's Encrypt ↗](https://letsencrypt.org?utm_source=coolify.io) fails, the Coolify Proxy will provide a self-signed certificate to keep your application accessible. This means your application will still be reachable, but browsers will show a security warning.
 

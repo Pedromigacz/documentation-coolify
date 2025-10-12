@@ -211,14 +211,6 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Services',
-        collapsed: true,
-        items: [
-          { text: 'Introduction', link: '/services/introduction' },
-          { text: 'All Services', link: '/services/overview' }
-        ]
-      },
-      {
         text: 'Integrations',
         collapsed: true,
         items: [

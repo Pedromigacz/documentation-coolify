@@ -1248,6 +1248,13 @@ const services = [
         category: 'AI'
     },
     {
+        name: 'Once Campfire',
+        slug: 'once-campfire',
+        icon: '/docs/images/services/once-campfire.png',
+        description: 'Web-based chat application.',
+        category: 'Communication'
+    },
+    {
         name: 'OneDev',
         slug: 'onedev',
         icon: '/docs/images/services/onedev.svg',

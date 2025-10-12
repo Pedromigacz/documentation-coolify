@@ -7,15 +7,16 @@ description: "Here you can find the documentation for hosting Once Campfire with
 
 ## What is Once Campfire?
 
-Once Campfire is a simple web-based real-time group chat application from 37signals.
+Once Campfire is a web-based chat application. It supports many of the features you'd
+expect, including:
 
-Once Campfire provides:
-- **Real-time group chat** - Instant messaging with your team
-- **Multiple chat rooms** - Organize conversations by topic or team
-- **File sharing** - Share files directly in chat rooms
-- **Simple interface** - Clean, distraction-free design
-- **Self-hosted** - Complete control over your data and conversations
-- **No subscriptions** - One-time purchase, own it forever
+- Multiple rooms, with access controls
+- Direct messages
+- File attachments with previews
+- Search
+- Notifications (via Web Push)
+- @mentions
+- API, with support for bot integrations
 
 ## Links
 
@@ -38,27 +39,3 @@ Once Campfire requires minimal configuration to get started:
 - **SSL_DOMAIN** - Your domain for SSL configuration
 - **SKIP_TELEMETRY** - Set to `true` to disable telemetry (default: `true`)
 - **SENTRY_DSN** - For error reporting
-
-## Setup Instructions
-
-1. **Deploy the service** - Use the one-click deployment from Coolify's service templates
-2. **Access the application** - Once deployed, access your Campfire instance through the generated URL
-3. **Create your account** - Follow the setup wizard to create your first admin account
-4. **Create chat rooms** - Set up your first chat rooms for your team
-5. **Invite users** - Share your Campfire URL with team members to get started
-
-## Storage
-
-Once Campfire uses persistent storage for:
-- Application data and chat history
-- Uploaded files and attachments
-- User accounts and settings
-
-The storage is automatically configured by Coolify and persists across container restarts.
-
-## Notes
-
-- Once Campfire is designed to be simple and lightweight
-- No complex configuration or database setup required
-- Perfect for small to medium teams looking for straightforward group chat
-- Part of the "Once" philosophy - buy once, own forever

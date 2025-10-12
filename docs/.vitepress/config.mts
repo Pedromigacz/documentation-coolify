@@ -410,6 +410,7 @@ export default defineConfig({
                   },
                 ]
               },
+              { text: 'FAQ', link: '/knowledge-base/faq' },
             ]
           }
         ],

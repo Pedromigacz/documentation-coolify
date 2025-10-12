@@ -3,7 +3,7 @@ title: "Elastic Search"
 description: "Here you can find the documentation for hosting Elastic Search with Coolify."
 ---
 
-<ZoomableImage src="/docs/images/services/elasticsearch.svg" />
+![ElasticSearch](/docs/images/services/elasticsearch.svg)
 
 ## What is Elastic Search?
 
@@ -22,7 +22,7 @@ There are two ways to deploy Elastic Search on Coolify:
 
 1. Create a new resource on Coolify and select **Elastic Search with Kibana** from the service list.
 2. Click the **Deploy** button to pull the Docker images and start the containers.
-3. Once the `Elastic Search` service shows as healthy, you can access it via its assigned domain.  
+3. Once the `Elastic Search` service shows as healthy, you can access it via its assigned domain.
    > ⚠️ Note: This version does not include a GUI—you’ll need to interact with it via CLI tools or APIs.
 
 ---
@@ -48,11 +48,11 @@ If any of the above steps are unclear, you can refer to [this Pull Request](http
 ### Notes for Elastic Search with Kibana
 
 1. It can take over **2 minutes** for all services to fully start (depending on your server’s performance).
-2. The JVM heap size is set to **512MB** by default to prevent Elasticsearch from exhausting server memory.  
+2. The JVM heap size is set to **512MB** by default to prevent Elasticsearch from exhausting server memory.
    > To increase this value, modify the environment variable:  
-   `ES_JAVA_OPTS=-Xms512m -Xmx512m` in the Docker Compose file.
+   > `ES_JAVA_OPTS=-Xms512m -Xmx512m` in the Docker Compose file.
 3. The `Kibana Token Generator` service is designed to **run once and then exit**. This is expected behavior and does not impact the health of the Elastic or Kibana services.
-4. Clustering is **disabled by default** via the `discovery.type=single-node` environment variable.  
+4. Clustering is **disabled by default** via the `discovery.type=single-node` environment variable.
    > Update this setting if clustering is required.
 
 ---

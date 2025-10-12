@@ -1,17 +1,63 @@
 ---
-title: "Elasticsearch"
-description: "Deploy Elasticsearch on Coolify for distributed search engine, log analytics, full-text search, and real-time data indexing at scale."
+title: "Elastic Search"
+description: "Here you can find the documentation for hosting Elastic Search with Coolify."
 ---
 
-# Elasticsearch
+![ElasticSearch](/docs/images/services/elasticsearch.svg)
 
-<ZoomableImage src="/docs/images/services/elasticsearch.svg" alt="Elasticsearch dashboard" />
+## What is Elastic Search?
 
-## What is Elasticsearch?
+Elasticsearch is an open-source search and analytics engine designed for fast, scalable data retrieval—ideal for handling large volumes of both structured and unstructured data.
 
-Elasticsearch is a free and open-source distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is commonly used for log analytics, real-time application monitoring, and click stream analytics use cases.
+## How to Deploy Elastic Search on Coolify
 
-## Links
+There are two ways to deploy Elastic Search on Coolify:
 
-- [The official website ›](https://www.elastic.co/products/elasticsearch?utm_source=coolify.io)
-- [GitHub ›](https://github.com/elastic/elasticsearch?utm_source=coolify.io)
+- **Elastic Search as a standalone service** (no GUI)
+- **Elastic Search with Kibana** (GUI)
+
+---
+
+## Elastic Search as a Standalone Service
+
+1. Create a new resource on Coolify and select **Elastic Search with Kibana** from the service list.
+2. Click the **Deploy** button to pull the Docker images and start the containers.
+3. Once the `Elastic Search` service shows as healthy, you can access it via its assigned domain.
+   > ⚠️ Note: This version does not include a GUI—you’ll need to interact with it via CLI tools or APIs.
+
+---
+
+## Deploy Elastic Search with Kibana
+
+1. Create a new resource on Coolify and select **Elastic Search with Kibana** from the service list.
+2. Click the **Deploy** button to pull the Docker images and start the containers.
+3. Once the `Elastic Search` service is running and the `Kibana Token Generator` shows an **exited** status:
+   - Open the logs of the `Kibana Token Generator` service.
+   - Copy the **Service Token** from the logs.
+   - Paste the token into the `ELASTICSEARCH_SERVICEACCOUNTTOKEN` environment variable.
+   - Restart the service (click the **Restart** button).
+4. After both `Elastic Search` and `Kibana` services are running healthy, visit the domain assigned to the service.
+   - You’ll be presented with the Elastic login page.
+   - **Username:** `elastic`  
+     **Password:** value of the `SERVICE_PASSWORD_ELASTICSEARCH` environment variable.
+
+If any of the above steps are unclear, you can refer to [this Pull Request](https://github.com/coollabsio/coolify/pull/6470), which includes a video walkthrough of the entire deployment process.
+
+---
+
+### Notes for Elastic Search with Kibana
+
+1. It can take over **2 minutes** for all services to fully start (depending on your server’s performance).
+2. The JVM heap size is set to **512MB** by default to prevent Elasticsearch from exhausting server memory.
+   > To increase this value, modify the environment variable:  
+   > `ES_JAVA_OPTS=-Xms512m -Xmx512m` in the Docker Compose file.
+3. The `Kibana Token Generator` service is designed to **run once and then exit**. This is expected behavior and does not impact the health of the Elastic or Kibana services.
+4. Clustering is **disabled by default** via the `discovery.type=single-node` environment variable.
+   > Update this setting if clustering is required.
+
+---
+
+## Useful Links
+
+- [Official Website ›](https://www.elastic.co/?utm_source=coolify.io)
+- [Official Documentation ›](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-kibana-with-docker?utm_source=coolify.io)

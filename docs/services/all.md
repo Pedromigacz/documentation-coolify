@@ -161,6 +161,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Pocketbase](/services/pocketbase) - Open Source backend for your next SaaS and Mobile app
 - [Portainer](/services/portainer) - Container management platform
 - [Prefect](/services/prefect) - Open source workflow management platform
+- [Proxyscotch](/services/proxyscotch) - Tiny open-source CORS proxy made by Hoppscotch
 - [PrivateBin](/services/privatebin) - Minimalist, open-source online pastebin
 - [RabbitMQ](/services/rabbitmq) - Open source message broker
 - [Shlink](/services/shlink) - The open source URL shortener

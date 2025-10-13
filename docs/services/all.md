@@ -101,6 +101,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [GoWa](/services/gowa) - Golang WhatsApp - Built with Go for efficient memory use
 - [Matrix](/services/matrix) - Chat securely with your family, friends, community
 - [Mattermost](/services/mattermost) - Open-source messaging platform for teams
+- [Once Campfire](/services/once-campfire) - Web-based chat application with rooms, direct messages, and file attachments
 - [Rocket.Chat](/services/rocketchat) - Open source team chat software
 
 ## Crypto

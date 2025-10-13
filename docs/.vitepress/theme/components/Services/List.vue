@@ -786,6 +786,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'Gotify',
+        slug: 'gotify',
+        icon: '/docs/images/services/gotify.svg',
+        description: 'Open-source push notifications for web and mobile apps.',
+        category: 'Notifications'
+    },
+    {
         name: 'GoWa',
         slug: 'gowa',
         icon: '/docs/images/services/gowa.svg',

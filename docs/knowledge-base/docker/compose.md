@@ -126,8 +126,8 @@ Type may be one of:
 Every generated variable can be reused and will always have the same value for every service.
 All generated variables are displayed in Coolify's UI for environment variables and can be edited there (except FQDN and URl).
 
-::: info Service Naming
-Service names with underscores (`_`) cannot use ports in environment variables. Use hyphens (`-`) instead to avoid this limitation.
+::: info Naming
+Names with underscores (`_`) cannot use ports in environment variables. Use hyphens (`-`) instead to avoid this limitation.
 
 ```
 SERVICE_URL_APPWRITE_SERVICE_3000 ❌

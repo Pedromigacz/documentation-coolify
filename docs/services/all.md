@@ -33,6 +33,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [LobeChat](/services/lobe-chat) - Open-source, modern AI chat framework with multi-provider support and knowledge base management
 - [LiteLLM](/services/litellm) - Open source LLM Gateway to manage authentication, loadbalancing, and spend tracking across 100+ LLMs
 - [MindsDB](/services/mindsdb) - Machine learning platform that brings AI to databases
+- [NewAPI](/services/newapi) - The next-generation LLM gateway and AI asset management system supports multiple languages.
 - [Ollama](/services/ollama) - A lightweight and efficient server for running large language models (LLMs) on your local machine or in the cloud
 - [Open WebUI](/services/open-webui) - User-friendly WebUI for LLMs, formerly Ollama WebUI
 - [Qdrant](/services/qdrant) - Open source, AI-native vector database

@@ -30,6 +30,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Langfuse](/services/langfuse) - Open source LLM engineering platform
 - [LibreChat](/services/librechat) - Self-hosted, powerful, and privacy-focused chat UI for multiple AI models
 - [LibreTranslate](/services/libretranslate) - Free and open-source machine translation API
+- [LobeChat](/services/lobe-chat) - Open-source, modern AI chat framework with multi-provider support and knowledge base management
 - [LiteLLM](/services/litellm) - Open source LLM Gateway to manage authentication, loadbalancing, and spend tracking across 100+ LLMs
 - [MindsDB](/services/mindsdb) - Machine learning platform that brings AI to databases
 - [Ollama](/services/ollama) - A lightweight and efficient server for running large language models (LLMs) on your local machine or in the cloud

@@ -1010,6 +1010,13 @@ const services = [
         category: 'AI'
     },
     {
+        name: 'LobeChat',
+        slug: 'lobe-chat',
+        icon: '/docs/images/services/lobe-chat.webp',
+        description: 'Open-source, modern AI chat framework with multi-provider support and knowledge base management.',
+        category: 'AI'
+    },
+    {
         name: 'LibreTranslate',
         slug: 'libretranslate',
         icon: '/docs/images/services/libretranslate.svg',

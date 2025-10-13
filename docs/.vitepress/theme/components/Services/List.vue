@@ -828,6 +828,13 @@ const services = [
         category: 'Monitoring'
     },
     {
+        name: 'Gramps Web',
+        slug: 'gramps-web',
+        icon: '/docs/images/services/gramps-web.svg',
+        description: 'The free, open-source genealogy system.',
+        category: 'Family'
+    },
+    {
         name: 'Grocy',
         slug: 'grocy',
         icon: '/docs/images/services/grocy.svg',

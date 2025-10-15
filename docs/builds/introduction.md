@@ -1,8 +1,9 @@
 ---
 title: Introduction to Builds
+description: Deploy applications as Docker containers with Coolify using build packs like Nixpacks, Dockerfile, Docker Compose, or pre-built registry images.
 ---
 
-<ZoomableImage src="/docs/images/builds/introduction/builds-banner.webp" />
+<ZoomableImage src="/docs/images/builds/introduction/builds-banner.webp" alt="Coolify builds banner" />
 
 <br />
 

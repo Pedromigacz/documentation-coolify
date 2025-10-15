@@ -1,5 +1,6 @@
 ---
 title: KeyDB
+description: Deploy KeyDB on Coolify with high-performance multithreading, Redis compatibility, active replication, and FLASH storage support.
 ---
 
 # KeyDB

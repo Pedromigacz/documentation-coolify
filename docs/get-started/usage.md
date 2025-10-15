@@ -1,8 +1,9 @@
 ---
 title: Usage
+description: Compare Coolify Cloud managed service starting at $5/month versus free self-hosted deployment with maintenance, support, and backup differences.
 ---
 
-<ZoomableImage src="/docs/images/get-started/usage-banner.webp" />
+<ZoomableImage src="/docs/images/get-started/usage-banner.webp" alt="Coolify usage banner" />
 
 <br />
 

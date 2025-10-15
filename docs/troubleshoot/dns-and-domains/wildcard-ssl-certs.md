@@ -1,5 +1,6 @@
 ---
 title: Coolify not using Wildcard SSL Certificates
+description: Fix wildcard SSL certificate issues in Coolify by verifying installation, checking proxy configuration, and clearing browser cache.
 ---
 
 # Coolify not using Wildcard SSL Certificates

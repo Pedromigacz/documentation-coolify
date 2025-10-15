@@ -1620,6 +1620,13 @@ const services = [
         category: 'Security'
     },
     {
+        name: 'Swetrix',
+        slug: 'swetrix',
+        icon: '/docs/images/services/swetrix.svg',
+        description: 'Privacy-friendly and cookieless European web analytics alternative to Google Analytics.',
+        category: 'Analytics'
+    },
+    {
         name: 'Syncthing',
         slug: 'syncthing',
         icon: '/docs/images/services/syncthing.svg',

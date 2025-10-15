@@ -49,6 +49,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Plausible](/services/plausible) - A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies
 - [Sequin](/services/sequin) - The fastest Postgres change data capture
 - [Superset](/services/superset) - Open-source data visualization and exploration platform
+- [Swetrix](/services/swetrix) - Privacy-friendly and cookieless European web analytics alternative to Google Analytics
 - [Umami](/services/umami) - A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies
 
 ## Automation

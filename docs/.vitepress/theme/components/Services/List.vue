@@ -275,6 +275,13 @@ const services = [
         ignore: true
     },
     {
+        name: 'Rybbit',
+        slug: 'rybbit',
+        icon: '/public/images/services/rybbit.svg',
+        description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
+        category: 'Analytics'
+    },
+    {
         name: 'Activepieces',
         slug: 'activepieces',
         icon: '/docs/images/services/activepieces.svg?url',

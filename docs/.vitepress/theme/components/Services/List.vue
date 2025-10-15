@@ -275,6 +275,13 @@ const services = [
         ignore: true
     },
     {
+        name: 'Rybbit',
+        slug: 'rybbit',
+        icon: '/public/images/services/rybbit.svg',
+        description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
+        category: 'Analytics'
+    },
+    {
         name: 'Activepieces',
         slug: 'activepieces',
         icon: '/docs/images/services/activepieces-logo.png',
@@ -1618,6 +1625,13 @@ const services = [
         icon: '/docs/images/services/supertokens-logo.svg',
         description: 'Open-source authentication solution.',
         category: 'Security'
+    },
+    {
+        name: 'Swetrix',
+        slug: 'swetrix',
+        icon: '/docs/images/services/swetrix.svg',
+        description: 'Privacy-friendly and cookieless European web analytics alternative to Google Analytics.',
+        category: 'Analytics'
     },
     {
         name: 'Syncthing',

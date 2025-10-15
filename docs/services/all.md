@@ -47,6 +47,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [OpenPanel](/services/openpanel) - Open source alternative to Mixpanel and Plausible for product analytics
 - [PostHog](/services/posthog) - Open source product analytics
 - [Plausible](/services/plausible) - A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies
+- [Rybbit](/services/rybbit) - Next-gen, open source, lightweight, cookieless web & product analytics for everyone
 - [Sequin](/services/sequin) - The fastest Postgres change data capture
 - [Superset](/services/superset) - Open-source data visualization and exploration platform
 - [Swetrix](/services/swetrix) - Privacy-friendly and cookieless European web analytics alternative to Google Analytics

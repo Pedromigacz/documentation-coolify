@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-description: "Connect GitLab repositories to Coolify with deploy keys, automatic webhooks, and merge request deployments for CI/CD automation"
+description: "Connect GitLab repositories to Coolify with deploy keys, Gitlab container registry with deploy token, automatic webhooks, and merge request deployments for CI/CD automation"
 ---
 
 # GitLab Integration
@@ -41,6 +41,30 @@ You need to use the SSH URL, so the one that starts with `git@`.
 :::
 
 4. That's it! Coolify will automatically pull the latest version of your repository and deploy it.
+
+## Public Container Registry
+
+You can use public container registry without any additional setup.
+
+1. Select the `Docker Image` option in the Coolify when you create a new resource.
+2. Add your public container registry URL and also the tag to the input field, for example: `registry.gitlab.com/username/repository:latest`.
+3. Press the `Deploy` button.
+4. That's it! Coolify will automatically pull the latest version of your container registry and deploy it.
+
+## Private Container Registry
+
+Private container registry require a few more steps to setup.
+
+1. Add a `Deploy Token` in your GitLab repository in the `Settings` / `Repository` / `Deploy Token` with scope `read_registry`. This step will generate credentials `username` and `token`
+2. login docker with that credentials in your coolify server
+```
+echo "token-xxx" | docker login registry.gitlab.com -u gitlab+deploy-token-xxx --password-stdin
+```
+3. Select the `Docker Image` option in the Coolify when you create a new resource.
+4. Add your private container registry URL and also the tag to the input field, for example: `registry.gitlab.com/username/repository:latest`.
+5. Press the `Deploy` button.
+6. That's it! Coolify will automatically pull the latest version of your container registry and deploy it.
+
 
 ## Automatic commit deployments with webhooks (Optional)
 

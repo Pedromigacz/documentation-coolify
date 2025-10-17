@@ -1473,6 +1473,13 @@ const services = [
         category: 'Media'
     },
     {
+        name: 'Proxyscotch',
+        slug: 'proxyscotch',
+        icon: '/docs/images/services/proxyscotch.png',
+        description: 'Tiny open-source CORS proxy made by Hoppscotch.',
+        category: 'Development'
+    },
+    {
         name: 'qBittorrent',
         slug: 'qbittorrent',
         icon: '/docs/images/services/qbittorrent-logo.svg',

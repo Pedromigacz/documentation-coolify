@@ -133,6 +133,8 @@ services:
 
 3. Define the variable explicitly in the applications Environment Variables referencing your shared variable created in step 1;
 
+::: v-pre
+
 If in developer view, you can enter it like so;
 
 ```
@@ -140,6 +142,8 @@ SOME_VARIABLE_IN_COOLIFY_UI={{environment.SOME_SHARED_VARIABLE}}
 ```
 
 Or in the normal view, the Name is what's referenced in the Docker Compose file `SOME_VARIABLE_IN_COOLIFY_UI` with the Value being the referenced environment variable `{{environment.SOME_SHARED_VARIABLE}}` as seen below. Once saved if correct, you'll see there's a third text box, if you reveal this, you should be able to see the true value, in this case `SOME_VALUE`.
+
+:::
 
 <ZoomableImage src="/docs/images/knowledge-base/compose/2.webp" />
 

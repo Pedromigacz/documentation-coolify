@@ -4,6 +4,7 @@ description: "Connect GitLab repositories to Coolify with deploy keys, Gitlab co
 ---
 
 # GitLab Integration
+
 ## Public Repositories
 
 You can use public repositories without any additional setup.
@@ -24,14 +25,15 @@ Private repositories require a few more steps to setup.
 1. Add a private key (aka `Deploy Keys`) to Coolify and to your GitLab repository in the `Settings` / `Repository` / `Deploy Keys` menu.
 
 ::: warning Caution
-  - You can generate a new key pair with the following command: 
-  
-  ```bash
-  ssh-keygen -t rsa -b 4096 -C "deploy_key" 
-  ```
 
-  - Or you can also use Coolify to generate a new key for you in the `Keys & Tokens` menu.
-:::
+- You can generate a new key pair with the following command:
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "deploy_key"
+```
+
+- Or you can also use Coolify to generate a new key for you in the `Keys & Tokens` menu.
+  :::
 
 2. Create a new resource and select the `Private Repository (with deploy key)`
 3. Add your repository URL to the input field, for example: `git@gitlab.com:andrasbacsai/coolify-examples.git`
@@ -57,14 +59,15 @@ Private container registry require a few more steps to setup.
 
 1. Add a `Deploy Token` in your GitLab repository in the `Settings` / `Repository` / `Deploy Token` with scope `read_registry`. This step will generate credentials `username` and `token`
 2. login docker with that credentials in your coolify server
+
 ```
-echo "token-xxx" | docker login registry.gitlab.com -u gitlab+deploy-token-xxx --password-stdin
+echo "token-xxx" | docker login registry.privategitlab.com -u gitlab+deploy-token-xxx --password-stdin
 ```
+
 3. Select the `Docker Image` option in the Coolify when you create a new resource.
-4. Add your private container registry URL and also the tag to the input field, for example: `registry.gitlab.com/username/repository:latest`.
+4. Add your private container registry URL and also the tag to the input field, for example: `registry.privategitlab.com/username/repository:latest`.
 5. Press the `Deploy` button.
 6. That's it! Coolify will automatically pull the latest version of your container registry and deploy it.
-
 
 ## Automatic commit deployments with webhooks (Optional)
 

@@ -8,10 +8,11 @@ description: "Deploy multi-container Docker Compose stacks in Coolify with magic
 If you are using `Docker Compose` based deployments, you need to understand how Docker Compose works with Coolify.
 
 In all cases the Docker Compose (`docker-compose.y[a]ml`) file is the single source of truth.
+This means various settings you would normally configure in the Coolify UI (like environment variables, storage, etc.) need to be defined in the compose file itself.
 
 ## Making services available to the outside world
 
-When Coolify deploys via Docker Compose, it creates a network for the services in the deployment. In addition, it adds the proxy service so that it can make services available from within the new network.
+When Coolify deploys a Docker Compose, it creates a network for the services in the deployment. In addition, it adds the proxy service so that it can make services available from within the new network.
 
 That means that there are a few ways to make your services available:
 
@@ -25,9 +26,9 @@ If your app is listening on (container) port 3000, however, you'll enter `http:/
 
 If you want to customize this domain-based routing further, see [Coolify's magic environment variables](#coolify-s-magic-environment-variables) below.
 
-### Service Ports
+### Service Port Mapping
 
-If you want to do something custom, add a `ports` definition in your compose file. For example, to expose container port `3000` directly to the external network of the server:
+If you want to make your service accessible via it's port on the host, add the [ports attribute](https://docs.docker.com/reference/compose-file/services/#ports) in your compose file. For example, to map container port `3000` directly to the host machine:
 
 ```yaml
 services:
@@ -39,7 +40,17 @@ services:
 
 Be aware that if you do this, **your service will be available on your server at port 3000, outside the control of any proxy configuration.** This may not be what you want! If you use the same Docker Compose file for development and deployment, this may expose the ports of private services that you did not intend.
 
-Refer to [the Docker Compose docs on using multiple compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/) for ways around this. Essentially, you may want to create a compose file that does not expose any ports by default for use with Coolify along with a separate file for use in development.
+Optionally, you can pass an IP address to bind the port to a specific interface on the host machine:
+
+```yaml
+services:
+  backend:
+    image: your-backend:latest
+    ports:
+      - "127.0.0.1:3000:3000"
+```
+
+This will make your service only available on `localhost:3000` of your server.
 
 ### Private or Internal Services
 
@@ -133,8 +144,6 @@ services:
 
 3. Define the variable explicitly in the applications Environment Variables referencing your shared variable created in step 1;
 
-::: v-pre
-
 If in developer view, you can enter it like so;
 
 ```
@@ -142,8 +151,6 @@ SOME_VARIABLE_IN_COOLIFY_UI={{environment.SOME_SHARED_VARIABLE}}
 ```
 
 Or in the normal view, the Name is what's referenced in the Docker Compose file `SOME_VARIABLE_IN_COOLIFY_UI` with the Value being the referenced environment variable `{{environment.SOME_SHARED_VARIABLE}}` as seen below. Once saved if correct, you'll see there's a third text box, if you reveal this, you should be able to see the true value, in this case `SOME_VALUE`.
-
-:::
 
 <ZoomableImage src="/docs/images/knowledge-base/compose/2.webp" />
 
@@ -175,20 +182,19 @@ It uses a compose file deploying Appwrite on the [wildcard](/knowledge-base/serv
 
 This will do the following:
 
-- `SERVICE_URL_APPWRITE`: 'http://appwrite-vgsco4o.example.com'
-- `SERVICE_FQDN_APPWRITE`: appwrite-vgsco4o.example.com
-
 ```yaml
 services:
   appwrite:
     environment:
+      # http://appwrite-vgsco4o.example.com
+      - SERVICE_URL_APPWRITE
       # http://appwrite-vgsco4o.example.com/v1/realtime
       - SERVICE_URL_APPWRITE=/v1/realtime
       # _APP_URL will have the FQDN because SERVICE_URL_APPWRITE is just a simple environment variable
       - _APP_URL=$SERVICE_URL_APPWRITE
       # http://appwrite-vgsco4o.example.com/ will be proxied to port 3000
       - SERVICE_URL_APPWRITE_3000
-      # DOMAIN_URL will have the FQDN because SERVICE_FQDN_APPWRITE generates the full FQDN. No need to add 3000 at the end of the variable
+      # DOMAIN_URL will have the FQDN (appwrite-vgsco4o.example.com) because SERVICE_FQDN_APPWRITE generates the full FQDN. No need to add 3000 at the end of the variable
       - DOMAIN_NAME=${SERVICE_FQDN_APPWRITE}
       # http://api-vgsco4o.example.com/api will be proxied to port 2000
       - SERVICE_URL_API_2000=/api
@@ -204,7 +210,7 @@ services:
       - SERVICE_URL_API=/api
 ```
 
-:::Warning
+::: warning
 Support for Magic Environment Variables in Compose files based on Git sources requires Coolify v4.0.0-beta.411 and above.
 :::
 

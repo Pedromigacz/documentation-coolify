@@ -1,5 +1,6 @@
 ---
 title: MongoDB
+description: Deploy MongoDB NoSQL databases on Coolify with flexible document storage, horizontal scalability, and automated backup solutions.
 ---
 
 # MongoDB

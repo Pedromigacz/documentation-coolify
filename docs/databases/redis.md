@@ -1,5 +1,6 @@
 ---
 title: Redis
+description: Deploy Redis in-memory databases on Coolify with caching, vector database, document storage, streaming, and message broker capabilities.
 ---
 
 # Redis

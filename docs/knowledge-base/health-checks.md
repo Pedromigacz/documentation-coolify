@@ -1,6 +1,6 @@
 ---
 title: Health checks
-description: Learn how to manage health checks in Coolify for your applications and services.
+description: "Configure application health checks in Coolify with Dockerfile or UI settings for Traefik routing, rolling updates, and troubleshooting 404 errors."
 keywords: ["Healthchecks", "Not Found", "No available server", "404", "503"]
 ---
 
@@ -18,6 +18,10 @@ If your resource has health checks _enabled_, Traefik will only route traffic to
 
 **It will cause the resource to return a `404 Not Found` or `No available server` error.**
 
+::: tip Troubleshooting Failed Health Checks
+If you're experiencing "No available server" errors, check our comprehensive [troubleshooting guide](/troubleshoot/applications/no-available-server) which covers the most common causes and solutions.
+:::
+
 ### Disabled
 
 If your resource has health checks _disabled_, Traefik will route traffic to it regardless of the health check status.
@@ -28,7 +32,7 @@ If your resource has health checks _disabled_, Traefik will route traffic to it 
 
 There are two ways to configure health checks for your applications:
 
-<ZoomableImage src="/docs/images/knowledge-base/resources/healthcheck.webp" />
+<ZoomableImage src="/docs/images/knowledge-base/resources/healthcheck.webp" alt="Healthcheck configuration" />
 
 1. **Using the UI**: You can set up health checks directly in the Coolify UI when creating or editing an application. You can specify the path to check, the expected response code, and the interval for checking. It will be required that the container has either `curl` or `wget` installed to perform the health checks.
 

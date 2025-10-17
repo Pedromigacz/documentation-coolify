@@ -1,5 +1,6 @@
 ---
 title: PostgreSQL
+description: Deploy PostgreSQL databases on Coolify with advanced features, automated backups, import/restore capabilities, and 30+ years of reliability.
 ---
 
 # PostgreSQL

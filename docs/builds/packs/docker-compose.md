@@ -1,8 +1,9 @@
 ---
 title: Docker Compose Build Packs
+description: Deploy multi-container applications with Docker Compose using custom domains, magic environment variables, storage volumes, and service networking.
 ---
 
-<ZoomableImage src="/docs/images/builds/packs/compose/banner.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/banner.webp" alt="Coolify banner" />
 <br />
 
 Docker Compose lets you deploy multiple Docker containers and configure them easily.
@@ -15,11 +16,11 @@ With the Docker Compose build pack, you can use your own Docker Compose file (i.
 
 On the Coolify dashboard, open your project and click the **Create New Resource** button.
 
-<ZoomableImage src="/docs/images/builds/packs/compose/1.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/1.webp" alt="Coolify dashboard screenshot" />
 
 ### 2. Choose Your Deployment Option
 
-<ZoomableImage src="/docs/images/builds/packs/compose/2.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/2.webp" alt="Coolify dashboard screenshot" />
 
 **A.** If your Git repository is public, choose the **Public Repository** option.
 
@@ -29,17 +30,17 @@ On the Coolify dashboard, open your project and click the **Create New Resource*
 
 If you are using a public repository, paste the URL of your GitHub repository when prompted. The steps are very similar for all other options.
 
-<ZoomableImage src="/docs/images/builds/packs/compose/3.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/3.webp" alt="Coolify dashboard screenshot" />
 
 ### 4. Choose the Build Pack
 
 Coolify defaults to using Nixpacks. Click the Nixpacks option and select **Docker Compose** as your build pack from the dropdown menu.
 
-<ZoomableImage src="/docs/images/builds/packs/compose/4.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/4.webp" alt="Coolify dashboard screenshot" />
 
 ### 5. Configure the Build Pack
 
-<ZoomableImage src="/docs/images/builds/packs/compose/5.webp" />
+<ZoomableImage src="/docs/images/builds/packs/compose/5.webp" alt="Coolify dashboard screenshot" />
 
 - **Branch:** Coolify will automatically detect the branch in your repository.
 - **Base Directory:** Enter the directory that Coolify should use as the root. Use `/` if your files are at the root or specify a subfolder (like `/backend` for a monorepo).

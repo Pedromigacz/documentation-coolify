@@ -1536,6 +1536,13 @@ const services = [
         category: 'Social Media'
     },
     {
+        name: 'Rivet Engine',
+        slug: 'rivet-engine',
+        icon: '/docs/images/services/rivet-logo.svg',
+        description: 'Backend engine for running stateful actors at scale with automatic scaling and distributed state management.',
+        category: 'Development'
+    },
+    {
         name: 'Rocket.Chat',
         slug: 'rocketchat',
         icon: '/docs/images/services/rocketchat-logo.svg',

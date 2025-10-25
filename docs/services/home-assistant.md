@@ -11,13 +11,18 @@ description: "Run Home Assistant on Coolify—your open-source home automation p
 
 Home Assistant is an open‑source home automation platform focused on local control and privacy. It connects lights, sensors, cameras, media players, and more—so you can automate routines, build dashboards, and control everything from a single place.
 
-- 1,000+ integrations and device support
-- Local-first: runs privately in your environment
-- Powerful automations with YAML and UI
-- Mobile apps, dashboards, voice control, and remote access options
+## Features
+
+- **1,000+ Integrations**: Support for thousands of smart home devices and services
+- **Local Control**: Runs privately in your environment without cloud dependencies
+- **Powerful Automations**: Create complex routines with YAML configuration or visual UI
+- **Multi-Platform Access**: Mobile apps, web dashboards, voice control, and remote access
+- **Privacy-Focused**: Your data stays on your server with no tracking or telemetry
+- **Extensible**: Add-ons, custom integrations, and active community support
 
 ## Links
 
-- Official website: https://www.home-assistant.io/
-- Documentation: https://www.home-assistant.io/docs/
-- GitHub: https://github.com/home-assistant/core
+- [Official Website](https://www.home-assistant.io/?utm_source=coolify.io)
+- [Documentation](https://www.home-assistant.io/docs/?utm_source=coolify.io)
+- [GitHub](https://github.com/home-assistant/core?utm_source=coolify.io)
+- [Community Forums](https://community.home-assistant.io/?utm_source=coolify.io)

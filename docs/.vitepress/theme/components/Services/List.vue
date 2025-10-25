@@ -898,6 +898,13 @@ const services = [
         category: 'Home'
     },
     {
+        name: 'Home Assistant',
+        slug: 'home-assistant',
+        icon: '/docs/images/services/homeassistant-logo.svg',
+        description: 'Open-source home automation platform focused on local control and privacy.',
+        category: 'Home'
+    },
+    {
         name: 'Homepage',
         slug: 'homepage',
         icon: '/docs/images/services/homepage-logo.png',

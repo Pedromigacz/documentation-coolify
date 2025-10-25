@@ -29,5 +29,5 @@ Due to trademark issues, we can't provide a fully automated one-click Service in
 
 ## Links
 
-- [The official website ›](https://plausible.io/)
-- [GitHub ›](https://github.com/plausible/analytics)
+- [The official website](https://plausible.io/)
+- [GitHub](https://github.com/plausible/analytics)

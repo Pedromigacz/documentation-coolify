@@ -169,6 +169,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Proxyscotch](/services/proxyscotch) - Tiny open-source CORS proxy made by Hoppscotch
 - [PrivateBin](/services/privatebin) - Minimalist, open-source online pastebin
 - [RabbitMQ](/services/rabbitmq) - Open source message broker
+- [Rivet Engine](/services/rivet-engine) - Backend engine for building and scaling stateful workloads with long-lived processes and durable state
 - [Shlink](/services/shlink) - The open source URL shortener
 - [Soketi](/services/soketi) - Open-source WebSocket server
 - [Supabase](/services/supabase) - Open source Firebase alternative

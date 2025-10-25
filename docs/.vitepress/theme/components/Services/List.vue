@@ -263,7 +263,7 @@ const services = [
         name: 'Siyuan',
         slug: 'siyuan',
         icon: '/docs/images/services/siyuan.svg',
-        description: '"A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.',
+        description: 'A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.',
         category: 'Productivity'
     },
     {

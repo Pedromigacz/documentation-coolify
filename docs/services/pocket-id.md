@@ -5,7 +5,7 @@ description: "Deploy Pocket ID on Coolify for simple OIDC provider with password
 
 # Pocket ID
 
-<ZoomableImage src="/docs/images/services/pocket-id_screenshot.png" alt="Pocket ID Banner" />
+<ZoomableImage src="/docs/images/services/pocket-id_screenshot.webp" alt="Pocket ID Banner" />
 
 ## What is Pocket ID?
 
@@ -16,7 +16,7 @@ Pocket ID is a simple OIDC provider for passwordless authentication using [passk
 - **Passwordless Authentication**: Uses passkeys instead of passwords for better security
 - **OIDC Provider**: Integrates with applications that support OpenID Connect
 - **Simple Setup**: Easy to install and configure compared to complex alternatives
-- **List of Supported Clients**: Works with [various services](https://pocket-id.org/docs/client-examples?utm_source=coolify.io) like Nextcloud, GitLab, and more
+- **Wide Compatibility**: Works with [various services](https://pocket-id.org/docs/client-examples?utm_source=coolify.io) like Nextcloud, GitLab, and more
 - **Passkey Support**: Full support for hardware security keys like Yubikey
 - **Self-Hosted**: Maintain complete control over your authentication infrastructure
 
@@ -32,8 +32,11 @@ Follow the Pocket ID setup wizard to configure your instance and create your fir
 
 ## Demo
 
-To see Pocket ID in action, visit pocket-id's [live demo](https://demo.pocket-id.org/).
-(this is not affiliated with Coolify)
+To see Pocket ID in action, visit the [live demo](https://demo.pocket-id.org/).
+
+:::info
+This demo is not affiliated with Coolify.
+:::
 
 ## Links
 

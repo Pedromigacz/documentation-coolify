@@ -1397,7 +1397,7 @@ const services = [
     {
         name: 'Pocket ID',
         slug: 'pocket-id',
-        icon: '/docs/images/services/pocketid-logo.png',
+        icon: '/docs/images/services/pocketid-logo.webp',
         description: 'A simple OIDC provider for passwordless authentication with passkeys.',
         category: 'Security'
     },

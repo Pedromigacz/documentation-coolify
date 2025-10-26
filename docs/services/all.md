@@ -236,10 +236,12 @@ Complete directory of all one-click services available in Coolify, organized by 
 ## Health
 
 - [Baby Buddy](/services/babybuddy) - It helps parents track their baby's daily activities, growth, and health with ease
+- [SparkyFitness](/services/sparkyfitness) - A comprehensive fitness tracking and management application designed to help users monitor their nutrition, exercise, and body measurements
 
 ## Home
 
 - [Grocy](/services/grocy) - A self-hosted groceries & household management solution for your home
+- [Home Assistant](/services/home-assistant) - Open‑source home automation platform focused on local control and privacy
 - [Homebox](/services/homebox) - Inventory and organization system built for the Home User
 - [Mealie](/services/mealie) - Self-hosted recipe manager and meal planner
 
@@ -258,6 +260,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 - [Audiobookshelf](/services/audiobookshelf) - Self-hosted audiobook and podcast server
 - [Calibre-web](/services/calibre-web) - Web app for browsing, reading and downloading eBooks from a Calibre database
+- [Cap](/services/cap) - Open source alternative to Loom for screen recording and sharing
 - [Castopod](/services/castopod) - Open-source podcast hosting platform
 - [Emby](/services/emby) - A media server to organize, play, and stream audio and video to a variety of devices
 - [Emby Stat](/services/emby-stat) - A simple and easy-to-use Emby statistics dashboard
@@ -312,6 +315,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Reactive Resume](/services/reactive-resume) - A free and open source resume builder
 - [Readeck](/services/readeck) - Web article reader and bookmark manager
 - [Ryot](/services/ryot) - Self-hosted platform for tracking various facets of your life
+- [Siyuan](/services/siyuan) - A privacy-first, self-hosted, fully open source personal knowledge management software.
 - [Slash](/services/slash) - Open-source, self-hosted links and notes manager
 - [TriliumNext](/services/triliumnext) - Build your personal knowledge base with TriliumNext Notes
 - [Vikunja](/services/vikunja) - The open-source to-do app
@@ -345,6 +349,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Logto](/services/logto) - Logto is an Auth0 alternative designed for modern apps and SaaS products
 - [Passbolt](/services/passbolt) - Open source password manager for teams
 - [Pi-hole](/services/pi-hole) - Network-wide ad blocker that acts as a DNS sinkhole
+- [Pocket ID](/services/pocket-id) - A simple OIDC provider for passwordless authentication with passkeys
 - [SuperTokens](/services/supertokens) - Open-source authentication solution
 - [Vaultwarden](/services/vaultwarden) - Unofficial Bitwarden compatible server
 - [WireGuard Easy](/services/wireguard-easy) - Easy-to-use WireGuard VPN server

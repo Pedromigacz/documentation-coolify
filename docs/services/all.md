@@ -260,6 +260,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 - [Audiobookshelf](/services/audiobookshelf) - Self-hosted audiobook and podcast server
 - [Calibre-web](/services/calibre-web) - Web app for browsing, reading and downloading eBooks from a Calibre database
+- [Cap](/services/cap) - Open source alternative to Loom for screen recording and sharing
 - [Castopod](/services/castopod) - Open-source podcast hosting platform
 - [Emby](/services/emby) - A media server to organize, play, and stream audio and video to a variety of devices
 - [Emby Stat](/services/emby-stat) - A simple and easy-to-use Emby statistics dashboard

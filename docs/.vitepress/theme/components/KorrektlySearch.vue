@@ -25,9 +25,9 @@ const searchError = ref<string | null>(null)
 
 // Korrektly SDK configuration
 const korrektlyConfig = {
-  baseUrl: 'https://korrektly.com',
-  apiToken: 'kly_pub_iUEPNafSehwGUVKpG4hW2OTj9qwFFn5CYTjaQLFo',
-  datasetId: '019a220d-e4f3-733f-b405-f8457b7bc8ac',
+  baseUrl: import.meta.env.VITE_KORREKTLY_BASE_URL,
+  apiToken: import.meta.env.VITE_KORREKTLY_API_TOKEN,
+  datasetId: import.meta.env.VITE_KORREKTLY_DATASET_ID,
 }
 
 // Initialize Korrektly SDK

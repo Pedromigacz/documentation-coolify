@@ -58,7 +58,6 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/docs/coolify-logo-transparent.png', alt: "Coolify's Logo" }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['script', { defer: 'true', src: 'https://analytics.coollabs.io/js/script.tagged-events.js', 'data-domain': env.VITE_ANALYTICS_DOMAIN ?? 'coolify.io/docs' }],
-    ['script', { async: 'true', src: '/docs/trieve-user-script.js' }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -567,6 +566,11 @@ export default defineConfig({
       }),
     ],
     assetsInclude: ['**/*.yml'],
+    define: {
+      'import.meta.env.VITE_KORREKTLY_BASE_URL': JSON.stringify(env.KORREKTLY_BASE_URL || env.VITE_KORREKTLY_BASE_URL || ''),
+      'import.meta.env.VITE_KORREKTLY_API_TOKEN': JSON.stringify(env.KORREKTLY_API_TOKEN || env.VITE_KORREKTLY_API_TOKEN || ''),
+      'import.meta.env.VITE_KORREKTLY_DATASET_ID': JSON.stringify(env.KORREKTLY_DATASET_ID || env.VITE_KORREKTLY_DATASET_ID || ''),
+    },
     build: {
       chunkSizeWarningLimit: 5000
     },

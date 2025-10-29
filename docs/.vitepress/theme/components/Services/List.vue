@@ -259,6 +259,13 @@ img:hover {
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 const services = [
+     {
+        name: 'Siyuan',
+        slug: 'siyuan',
+        icon: '/docs/images/services/siyuan.svg',
+        description: 'A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.',
+        category: 'Productivity'
+    },
     {
         name: 'Umami',
         slug: 'umami',
@@ -426,6 +433,12 @@ const services = [
         slug: 'calibre-web',
         icon: '/docs/images/services/calibreweb-logo.svg',
         description: 'Web app for browsing, reading and downloading eBooks from a Calibre database.',
+        category: 'Media'
+    },
+    {
+        name: 'Cap',
+        icon: '/public/images/services/cap.svg',
+        description: 'Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.',
         category: 'Media'
     },
     {
@@ -888,6 +901,13 @@ const services = [
         slug: 'homebox',
         icon: '/docs/images/services/homebox-logo.svg',
         description: 'Inventory and organization system built for the Home User.',
+        category: 'Home'
+    },
+    {
+        name: 'Home Assistant',
+        slug: 'home-assistant',
+        icon: '/docs/images/services/homeassistant-logo.svg',
+        description: 'Open-source home automation platform focused on local control and privacy.',
         category: 'Home'
     },
     {
@@ -1388,6 +1408,13 @@ const services = [
         category: 'Security'
     },
     {
+        name: 'Pocket ID',
+        slug: 'pocket-id',
+        icon: '/docs/images/services/pocketid-logo.webp',
+        description: 'A simple OIDC provider for passwordless authentication with passkeys.',
+        category: 'Security'
+    },
+    {
         name: 'phpMyAdmin',
         slug: 'phpmyadmin',
         icon: '/docs/images/services/phpmyadmin-logo.svg',
@@ -1536,6 +1563,13 @@ const services = [
         category: 'Social Media'
     },
     {
+        name: 'Rivet Engine',
+        slug: 'rivet-engine',
+        icon: '/docs/images/services/rivet-logo.svg',
+        description: 'Backend engine for running stateful actors at scale with automatic scaling and distributed state management.',
+        category: 'Development'
+    },
+    {
         name: 'Rocket.Chat',
         slug: 'rocketchat',
         icon: '/docs/images/services/rocketchat-logo.svg',
@@ -1590,6 +1624,13 @@ const services = [
         icon: '/docs/images/services/sonarr-logo.svg',
         description: 'A internet PVR for Usenet and Torrents.',
         category: 'Media'
+    },
+    {
+        name: 'SparkyFitness',
+        slug: 'sparkyfitness',
+        icon: '/docs/images/services/sparkyfitness.webp',
+        description: 'A comprehensive fitness app that helps users track nutrition, exercise, and body metrics.',
+        category: 'Health'
     },
     {
         name: 'Statusnook',

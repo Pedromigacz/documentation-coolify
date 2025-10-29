@@ -96,6 +96,6 @@ minio/mc ls myminio
 
 ## Links
 
-- [The official website ›](https://ente.io?utm_source=coolify.io)
-- [Documentation ›](https://help.ente.io?utm_source=coolify.io)
-- [GitHub ›](https://github.com/ente-io/ente?utm_source=coolify.io)
+- [The official website](https://ente.io?utm_source=coolify.io)
+- [Documentation](https://help.ente.io?utm_source=coolify.io)
+- [GitHub](https://github.com/ente-io/ente?utm_source=coolify.io)

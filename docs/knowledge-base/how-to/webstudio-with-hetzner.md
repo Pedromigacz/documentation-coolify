@@ -52,7 +52,6 @@ Skip to [Step 6](#_6-configure-your-project-on-coolify) if your server is alread
 :::
 Follow these steps to prepare your Hetzner server:
 
-<<<<<<< HEAD:docs/knowledge-base/how-to/webstudio-with-hetzner.md
 1. **Create a New Server:** Log into [Hetzner Cloud Dashboard ↗](https://console.hetzner.cloud/) and create a new server.
   <ZoomableImage src="/docs/images/knowledge-base/how-tos/webstudio-with-hetzner/1.webp" />
 
@@ -67,22 +66,7 @@ Follow these steps to prepare your Hetzner server:
 
 1. **Allocate an IPv4 Address:** Make sure your server has a dedicated IPv4 address.
   <ZoomableImage src="/docs/images/knowledge-base/how-tos/webstudio-with-hetzner/5.webp" />
-=======
-1. **Create a New Server:** Log into [Hetzner Cloud Dashboard](https://console.hetzner.cloud/) and create a new server.
-   <ZoomableImage src="/docs/images/resources/integrations/1.webp" alt="Coolify dashboard screenshot" />
 
-1. **Choose Your Region:** Select the region that best suits your needs.
-   <ZoomableImage src="/docs/images/resources/integrations/2.webp" alt="Coolify dashboard screenshot" />
-
-1. **Select Ubuntu:** Pick an Ubuntu image (make sure it’s a Docker-supported version, check the [Docker Ubuntu requirements](https://docs.docker.com/engine/install/ubuntu/#os-requirements)).
-   <ZoomableImage src="/docs/images/resources/integrations/3.webp" alt="Coolify dashboard screenshot" />
-
-1. **Configure Resources:** A shared CPU with at least 2 GB RAM is recommended.
-   <ZoomableImage src="/docs/images/resources/integrations/4.webp" alt="Coolify dashboard screenshot" />
-
-1. **Allocate an IPv4 Address:** Make sure your server has a dedicated IPv4 address.
-   <ZoomableImage src="/docs/images/resources/integrations/5.webp" alt="Coolify dashboard screenshot" />
->>>>>>> next:docs/integrations/webstudio.md
 
 1. **Finalize Setup:** Click **Create and Buy Now** and wait until your server is provisioned.
 

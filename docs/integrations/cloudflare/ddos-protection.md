@@ -252,7 +252,7 @@ This step is completely optional but recommended.
 
 
 ## Credits
-The header image is designed using icons from [Flaticon ↗](https://www.flaticon.com/). 
+The origin-cert-illustration image is designed using icons from [Flaticon ↗](https://www.flaticon.com/). 
 Links to each icon can be found below:
 - [Medal icon ↗](https://www.flaticon.com/free-icon/medal_14468558) by [Vlad Szirka ↗](https://www.flaticon.com/authors/vlad-szirka)
 - [Award icon ↗](https://www.flaticon.com/free-icon/award_15218157) by [explanaicon ↗](https://www.flaticon.com/authors/explanaicon)

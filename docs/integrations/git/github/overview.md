@@ -1,38 +1,21 @@
 ---
 title: "Overview"
+description: "Integrate GitHub with Coolify to deploy applications from repositories, enable automatic deployments, and manage pull requests seamlessly."
 ---
 
-# Manually Setup GitHub App
-This guide will show you how to manually setup an existing Github App or how to change a currently configured one.
+# GitHub Integration
+Coolify simplifies deploying applications from your GitHub repositories or Docker images hosted on GitHub Container Registry.
 
-Since `4.0.0-beta.399` you are able to change all the Github App details inside Coolify.
-
-
-## On Github
-1. Generate a Private Key on your Github App configuration page (if you already have one, ignore this).
-2. Set the `Homepage URL` to `https://app.coolify.io`.
-3. Set the `Setup URL` to the following: `https://app.coolify.io/webhooks/source/github/install?source=<source_uuid>` where `source_uuid` will be the newly created source in Coolify.
-4. Activate `Webhook` and set the `Webhook URL` to `https://app.coolify.io/webhooks/source/github/events`
-5. Set the `Webhook Secret`.
-6. In the `Install App` section, Install the app to the organization you want to use.
-7. Copy the `Installation ID` from the URL of the page after you installed the Github App.
-8. In the `Permissions` section, set the following permissions:
-   Repository permissions:
-    - Contents: read
-    - Metadata: read
-    - Pull Request: read & write (optional, if you want to use the pull request feature)
-   Account permissions:
-    - Email addresses: read
-9. In the `Subscribe to events` section, enable tho following events:
-    - Push
-    - Pull Request (optional, if you want to use the pull request feature)
+GitHub integration with Coolify supports deploying from both private and public repositories, automatic deployments on new commits, and pull request deployments.
 
 
-## On Coolify
-0. Add the `Private Key` generated in the previous step as a new `Private Key` in the `Keys & Tokens` section.
-1. Go to the `Sources` page and click on the `+` button or edit the existing one.
-2. Fill the name and the organization name (optional). Press `Continue`.
-3. Click on the `Continue` button on the `Manual Installation` section.
-4. Enter the `Github App Name`, `App ID`, `Installation ID`, `Client ID`, `Client Secret` , `Webhook Secret` from the GitHub App configuration page.
-5. Select the `Private Key` you added in step 0 and `Save`.
-6. If you filled everything correctly, click on the `Sync Name` button. If no errors, then you are done.
+## Ways to Use GitHub with Coolify
+
+You can integrate GitHub with Coolify in several ways, depending on your needs. Below are the available options, each linked to a detailed guide for easy setup:
+
+1. [Public Repository]() - Deploy applications directly using the URL of a public repository.
+2. [Private Repository using GitHub App]() - Install the GitHub App on your personal account or organization to deploy both private and public repositories.
+3. [Private Repository using Deploy Key]() - Deploy applications from private repositories using a deploy key.
+4. [Automatic Deployments on New Commits]() - Automatically deploy new versions of your application when commits are pushed to a specific branch in your GitHub repository.
+5. [Build and Deploy Using GitHub Actions]() - Build your application on GitHub using GitHub Actions as part of your CI/CD pipeline, push it to any Docker registry (such as GHCR or Docker Hub), and automatically deploy on Coolify.
+6. [Pull Request Deployments]() - Automatically deploy new versions of your application based on pull requests.

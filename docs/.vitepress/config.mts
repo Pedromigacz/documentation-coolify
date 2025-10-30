@@ -239,11 +239,11 @@ export default defineConfig({
               {
                 text: 'Github', collapsed: true, items: [
                   { text: 'Overview', link: '/integrations/git/github/overview' },
-                  { text: 'Getting Started', link: '/integrations/git/github/getting-started' },
-                  { text: 'Auto Deploy', link: '/integrations/git/github/auto-deploy' },
                   { text: 'Actions', link: '/integrations/git/github/actions' },
-                  { text: 'Setup App', link: '/integrations/git/github/setup-app' },
-                  { text: 'Switch Apps', link: '/integrations/git/github/switch-apps' },
+                  { text: 'Auto Deploy', link: '/integrations/git/github/auto-deploy' },
+                  { text: 'Setup Deploy Key', link: '/integrations/git/github/deploy-key' },
+                  { text: 'Setup Github App', link: '/integrations/git/github/setup-app' },
+                  { text: 'Switch Github Apps', link: '/integrations/git/github/switch-apps' },
                 ]
               },
               {

@@ -241,6 +241,7 @@ export default defineConfig({
                   { text: 'Overview', link: '/integrations/git/github/overview' },
                   { text: 'Actions', link: '/integrations/git/github/actions' },
                   { text: 'Auto Deploy', link: '/integrations/git/github/auto-deploy' },
+                  { text: 'Deploy Public Repository', link: '/integrations/git/github/public-repository' },
                   { text: 'Setup Deploy Key', link: '/integrations/git/github/deploy-key' },
                   { text: 'Setup Github App', link: '/integrations/git/github/setup-app' },
                   { text: 'Switch Github Apps', link: '/integrations/git/github/switch-apps' },

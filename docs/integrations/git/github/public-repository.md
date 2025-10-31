@@ -10,10 +10,8 @@ You can deploy applications from any public GitHub repository by simply providin
 ## 1. Create a New Resource on Coolify
 <ZoomableImage src="/docs/images/integrations/git/github/public-repository/1.webp" />
 
-1. Select your project.
-2. Select your environment.
-3. Click on **+ New Resource**.
-
+1. Select your project from the Coolify dashboard.
+2. Click the **+ New** button to create a new resource.
 
 ## 2. Select Public Repository as Resource Type
 <ZoomableImage src="/docs/images/integrations/git/github/public-repository/2.webp" />

@@ -1,98 +1,125 @@
 ---
-title: "Integration"
-description: "Deploy public and private GitHub repositories with Coolify using GitHub App integration, deploy keys, or automated webhooks for commits and pull requests."
+title: GitHub Deploy Key
+description: Deploy applications from private GitHub repositories using deploy keys in Coolify.
 ---
 
-# Github Integration
-This guide will show you how to use GitHub based repositories with Coolify.
+# GitHub Deploy Key
+Deploy keys allow you to grant read-only access to a single private GitHub repository without using a personal access token or SSH key tied to your account.
 
-## Public Repositories
+When using deploy keys, Coolify can clone and deploy from private repositories securely, ensuring that only the specified repository is accessible.
 
-You can use public repositories without any additional setup.
 
-1. Select the `Public repository` option in the Coolify when you create a new resource.
-2. Add your repository URL to the input field, for example: `https://github.com/coollabsio/coolify-examples`
+### Why Use Deploy Keys with Coolify?
+1. **Secure Access**: Grant read-only access to a single repository without sharing to many repositories.
+2. **Repository-Specific**: Deploy keys are scoped to one repository.
+3. **No Account Exposure**: Prevents potential security risks if the key is compromised.
+4. **Cannot Install Github App**: Deploy keys can be used when you cannot install a GitHub App to your organization.
 
-::: warning Caution
-You can only use the https URL.
+
+### When Not to Use Deploy Keys
+1. **Multiple Repositories**: If you need access to multiple private repositories, consider using a GitHub App.
+
+
+::: info Example Data
+The following data is used as an example in this guide. Please replace it with your actual data when following the steps:
+
+- **Repository Owner:** ShadowArcanist
+- **Repository Name:** coolify-dev
+- **Deploy Key Name:** Deploy Key Tutorial
+- **SSH URL:** git@github.com:ShadowArcanist/coolify-dev.git
 :::
 
-3. That's it! Coolify will automatically pull the latest version of your repository and deploy it.
 
-## Private Repositories
+## 1. Create a Private Key on Coolify
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/1.webp" />
 
-### With GitHub App (Recommended)
+1. In your Coolify dashboard, click on **Keys & Tokens** from the sidebar.
+2. Click the **+ Add** button to create a new private key.
+3. Click **Generate new RSA SSH Key** or **Generate new ED25519 SSH Key** to generate a key pair.
+4. Copy the public key.
+5. Click **Continue** to save the key.
 
-You can use private repositories with the GitHub App integration. You will get full integration with GitHub, like automatic commit deployments and pull request deployments.
+::: success TIP
+You can also generate a key externally using the `ssh-keygen` command and paste the private key into Coolify:
 
-1. Create a new GitHub App in the `Sources` view.
-2. Create a new resource and select the `Private Repository (with GitHub App)`.
-3. Choose your repository from the list.
-4. That's it!
+```sh
+ssh-keygen -t rsa -b 4096 -C "coolify-deploy-key"
+```
 
-:::warning Note for Coolify Cloud Users
-You can make the GitHub App available to all teams on your Coolify instance by enabling the `System Wide` option. 
-
-However, this feature is only available for self-hosted instances, as Coolify Cloud users cannot use the `System Wide` option due to how Coolify Cloud is set up.
+Then, copy the contents of the generated `.pub` file for the next step.
 :::
 
-### With Deploy Keys
 
-1. Add a private key (aka `Deploy Keys`) to Coolify and to your GitHub repository in the `Settings` / `Deploy Keys` menu.
+## 2. Add Deploy Key on GitHub
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/2.webp" />
 
-::: warning Caution
-  - You can generate a new key pair with the following command: 
-  
-  ```bash
-  ssh-keygen -t rsa -b 4096 -C "deploy_key" 
-  ```
+1. Go to your GitHub repository settings.
+2. Navigate to **Deploy keys** in the left sidebar.
+3. Click **Add deploy key**.
 
-  - Or you can also use Coolify to generate a new key for you in the `Keys & Tokens` menu.
+::: info TIP
+You can also access the deploy keys page directly at `https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/settings/keys`.
 :::
 
-2. Create a new resource and select the `Private Repository (with deploy key)`
-3. Add your repository URL to the input field, for example: `git@github.com:coollabsio/coolify-examples.git`
+4. Enter a title for your deploy key (e.g., `Coolify Deploy Key`).
+5. Paste the public key you copied from Coolify.
+6. Ensure **Allow write access** is unchecked (deploy keys should be read-only).
+7. Click **Add key** to save.
 
-::: warning Caution
-You need to use the SSH URL, so the one that starts with `git@`.
+
+## 3. Copy Repository SSH URL
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/3.webp" />
+
+1. Go to your GitHub repository.
+2. Click the **Code** button.
+3. Select the **Local** tab.
+4. Click the **SSH** tab.
+5. Copy the SSH URL (e.g., `git@github.com:ShadowArcanist/coolify-dev.git`).
+
+
+## 4. Create a New Resource on Coolify
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/4.webp" />
+
+1. Select your project from the Coolify dashboard.
+2. Click the **+ New** button to create a new resource.
+
+
+## 5. Select Private Repository (with Deploy Key) as Resource Type
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/5.webp" />
+
+Select **Private Repository (with Deploy Key)** from the available resource types.
+
+
+## 6. Choose Your Server
+::: warning HEADS UP!
+Coolify automatically selects the `localhost` server if you don't have any remote servers connected. In such cases, skip to the next step.
 :::
 
-4. That's it!
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/6.webp" />
 
-## Automatic commit deployments with webhooks (Optional)
-
-You can add a custom webhook URL to your GitHub repository to trigger a new deployment when you push to your repository.
-
-::: warning Caution
-This can be set on either public or private repositories.
-
-Not required if you use GitHub App integration.
-:::
-
-In your resource, there is a `Webhooks` menu. In the `Manual Git Webhooks` section, you can find the URL what you need to set in your GitHub repository.
-<ZoomableImage src="/docs/images/knowledge-base/git/github/manual-git-webhooks.webp" alt="Manual Git Webhooks configuration" />
+Choose the server where you want to deploy the application.
 
 
-1. Set a secret key in the `GitHub Webhook Secret` input field.
-<ZoomableImage src="/docs/images/knowledge-base/git/github/github-webhook-secret.webp" alt="Github Webhook Secret configuration" />
+## 7. Choose Your Deploy Key
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/7.webp" />
 
-2. Go to your repository on GitHub and open the `Settings` / `Webhooks` menu.
-<ZoomableImage src="/docs/images/knowledge-base/git/github/github-settings-webhook.webp" alt="Github Settings Webhook configuration" />
+Select the private key you created in Coolify from the list of available private keys.
 
-3. Add the URL from Coolify to the `URL` input field and the secret token.
-4. Select the `Push events` option.
-<ZoomableImage src="/docs/images/knowledge-base/git/github/event-push.webp" alt="Event Push configuration" />
 
-5. That's it! Now when you push to your repository, GitHub will send a webhook request to Coolify and it will trigger a new deployment.
+## 8. Enter Your Repository SSH URL
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/8.webp" />
 
-## Pull request deployments with webhooks (Optional)
+Paste the SSH URL you copied from GitHub (e.g., `git@github.com:ShadowArcanist/coolify-dev.git`).
 
-You can add a custom webhook URL to your GitHub repository to trigger a new deployment when you create a new merge request.
 
-::: warning Caution
-This can be set on either public or private repositories.
+## 9. Configure the Application and Deploy
+<ZoomableImage src="/docs/images/integrations/git/github/deploy-key/9.webp" />
 
-Not required if you use GitHub App integration.
-:::
+1. Configure the buildpack, ports, environment variables, and other settings as needed.
+2. Refer to our [builds guide](/builds/introduction) for detailed configuration options.
+3. Click **Deploy** to start the deployment process.
 
-The process is the same as the previous one, but you need to select the `Pull Request` events option in the `Settings` / `Webhooks` menu.
+Once deployed, your application will be accessible, and Coolify will handle future deployments from your private repository using the deploy key.
+
+That's it!
+

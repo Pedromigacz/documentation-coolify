@@ -1479,11 +1479,11 @@ const services = [
         category: 'Social Media'
     },
     {
-     name: 'Pterodactly With Wings',
-     slug: 'pterodactly-with-wings', 
-     icon: '/docs/images/services/pterodactyl.png', 
-     description: 'Pterodactyl server control plane for game servers with wings.',
-     category: 'Gaming'
+        name: 'Pterodactyl',
+        slug: 'pterodactyl',
+        icon: '/docs/images/services/pterodactyl_logo_transparent.png',
+        description: 'Game server management panel with Wings daemon for hosting Minecraft, CS:GO, ARK and more.',
+        category: 'Gaming'
     },
     {
         name: 'Prefect',
@@ -1981,13 +1981,6 @@ const services = [
         icon: '/docs/images/services/vert-logo.png',
         description: 'Self-hosted file converter.',
         category: 'Utilities'
-    },
-    {
-        name: 'Wings',
-        slug: 'wings',
-        icon: '/docs/images/services/pterodactyl-logo.png',
-        description: 'Pterodactyl server control plane for game servers.',
-        category: 'Gaming'
     },
     {
         name: 'Yamtrack',

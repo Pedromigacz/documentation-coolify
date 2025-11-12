@@ -42,19 +42,49 @@ export default defineConfig({
     ]
   },
 
+  transformPageData(pageData) {
+    const baseUrl = env.VITE_SITE_URL ?? 'https://coolify.io/docs/'
+    const defaultImage = 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png'
+    const defaultDescription = 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.'
+
+    // Build canonical URL for this page
+    const pageUrl = `${baseUrl}${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
+
+    // Extract values with fallback chain
+    const title = pageData.frontmatter.title || pageData.title || 'Coolify Docs'
+    const description = pageData.frontmatter.description || defaultDescription
+
+    // Handle image with relative to absolute URL conversion
+    const relativeImage = pageData.frontmatter.image
+    const image = relativeImage
+      ? `${baseUrl.replace(/\/$/, '')}${relativeImage.startsWith('/') ? relativeImage : '/' + relativeImage}`.replace(/\/docs\/docs\//, '/docs/')
+      : defaultImage
+
+    // Initialize head array if it doesn't exist
+    pageData.frontmatter.head ??= []
+
+    // Add Open Graph tags
+    pageData.frontmatter.head.push(
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: pageUrl }],
+      ['meta', { property: 'og:image', content: image }]
+    )
+
+    // Add Twitter Card tags
+    pageData.frontmatter.head.push(
+      ['meta', { property: 'twitter:title', content: title }],
+      ['meta', { property: 'twitter:description', content: description }],
+      ['meta', { property: 'twitter:url', content: pageUrl }],
+      ['meta', { property: 'twitter:image', content: image }]
+    )
+  },
+
   head: [
     ['meta', { name: 'theme-color', content: '#000000' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Coolify Docs' }],
-    ['meta', { property: 'og:url', content: env.VITE_SITE_URL ?? 'https://coolify.io/docs/' }],
-    ['meta', { property: 'og:description', content: 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.' }],
-    ['meta', { property: 'og:image', content: 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png' }],
     ['meta', { property: 'twitter:site', content: '@coolifyio' }],
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:title', content: 'Coolify Docs' }],
-    ['meta', { property: 'twitter:description', content: 'Self hosting with superpowers: An open-source & self-hostable Heroku / Netlify / Vercel alternative.' }],
-    ['meta', { property: 'twitter:url', content: env.VITE_SITE_URL ?? 'https://coolify.io/docs/' }],
-    ['meta', { property: 'twitter:image', content: 'https://coolcdn.b-cdn.net/assets/coolify/og-image-docs.png' }],
     ['link', { rel: 'icon', href: '/docs/coolify-logo-transparent.png', alt: "Coolify's Logo" }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['script', { defer: 'true', src: 'https://analytics.coollabs.io/js/script.tagged-events.js', 'data-domain': env.VITE_ANALYTICS_DOMAIN ?? 'coolify.io/docs' }],

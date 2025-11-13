@@ -169,31 +169,15 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Builds',
-        collapsed: true,
-        items: [
-          { text: 'Introduction', link: '/builds/introduction' },
-          {
-            text: 'Build Packs',
-            collapsed: true,
-            items: [
-              { text: 'Overview', link: '/builds/packs/overview' },
-              { text: 'Static', link: '/builds/packs/static' },
-              { text: 'Nixpacks', link: '/builds/packs/nixpacks' },
-              { text: 'Dockerfile', link: '/builds/packs/dockerfile' },
-              { text: 'Docker Compose', link: '/builds/packs/docker-compose' },
-            ]
-          },
-          { text: 'Build Servers', link: '/builds/servers' },
-        ],
-      },
-      {
         text: 'Applications',
         collapsed: true,
         items: [
           {
             text: 'Overview',
             link: '/applications/index',
+          },
+          {
+            text: 'Frameworks',
             items: [
               { text: 'Django', link: '/applications/django' },
               { text: 'Jekyll', link: '/applications/jekyll' },
@@ -207,7 +191,49 @@ export default defineConfig({
               { text: 'Nuxt', link: '/applications/nuxt' },
               { text: 'SvelteKit', link: '/applications/svelte-kit' },
             ]
-          }
+          },
+          {
+            text: 'Build Packs',
+            link: '/applications/build-packs/overview',
+            collapsed: true,
+            items: [
+              { text: 'Static', link: '/applications/build-packs/static' },
+              { text: 'Nixpacks', link: '/applications/build-packs/nixpacks' },
+              { text: 'Dockerfile', link: '/applications/build-packs/dockerfile' },
+              { text: 'Docker Compose', link: '/applications/build-packs/docker-compose' },
+            ]
+          },
+          {
+            text: 'CI/CD',
+            link: '/applications/ci-cd/introduction',
+            collapsed: true,
+            items: [
+              {
+                text: 'Github', collapsed: true, items: [
+                  { text: 'Integrations', link: '/applications/ci-cd/github/integration' },
+                  { text: 'Manually Setup GitHub App', link: '/applications/ci-cd/github/manually-setup-github-app' },
+                  { text: 'Move Between GitHub Apps', link: '/applications/ci-cd/github/move-between-github-apps' },
+                  { text: 'Github Actions', link: '/applications/ci-cd/github/github-actions' },
+                ]
+              },
+              {
+                text: 'Gitlab',
+                link: '/applications/ci-cd/gitlab/integration',
+              },
+              {
+                text: 'Bitbucket',
+                link: '/applications/ci-cd/bitbucket/integration',
+              },
+              {
+                text: 'Gitea',
+                link: '/applications/ci-cd/gitea/integration',
+              },
+              {
+                text: 'Other Providers',
+                link: '/applications/ci-cd/other-providers',
+              },
+            ]
+          },
         ],
       },
       {
@@ -215,7 +241,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Introduction', link: '/services/introduction' },
-          { text: 'All Services', link: '/services/overview' },
+          { text: 'All One-Click Services', link: '/services/overview' },
           { text: 'Services Directory', link: '/services/all' }
         ]
       },
@@ -326,35 +352,6 @@ export default defineConfig({
                   { text: 'Raspberry Pi OS Setup', link: '/knowledge-base/how-to/raspberry-pi-os' },
                   { text: 'Private NPM Registry', link: '/knowledge-base/how-to/private-npm-registry' },
                   { text: 'Ollama with GPU', link: '/knowledge-base/how-to/ollama-with-gpu' },
-                ]
-              },
-              {
-                text: 'Git',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'Github', collapsed: true, items: [
-                      { text: 'Manually Setup GitHub App', link: '/knowledge-base/git/github/manually-setup-github-app' },
-                      { text: 'Move Between GitHub Apps', link: '/knowledge-base/git/github/move-between-github-apps' },
-                      { text: 'Integrations', link: '/knowledge-base/git/github/integration' },
-                      { text: 'Github Actions', link: '/knowledge-base/git/github/github-actions' },
-                    ]
-                  },
-                  {
-                    text: 'Gitlab', collapsed: true, items: [
-                      { text: 'Integrations', link: '/knowledge-base/git/gitlab/integration' },
-                    ]
-                  },
-                  {
-                    text: 'Bitbucket', collapsed: true, items: [
-                      { text: 'Integrations', link: '/knowledge-base/git/bitbucket/integration' },
-                    ]
-                  },
-                  {
-                    text: 'Gitea', collapsed: true, items: [
-                      { text: 'Integrations', link: '/knowledge-base/git/gitea/integration' },
-                    ]
-                  },
                 ]
               },
               {

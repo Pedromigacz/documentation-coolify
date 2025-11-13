@@ -163,6 +163,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Nitropage](/services/nitropage) - Nitropage is an extensible, drag-and-drop website builder based on SolidStart, completely free and open source
 - [OneDev](/services/onedev) - Self-hosted Git server with integrated CI/CD and kanban
 - [Openblocks](/services/openblocks) - Open-source low code platform
+- [pgAdmin](/services/pgadmin) - Web-based database management tool for PostgreSQL
 - [phpMyAdmin](/services/phpmyadmin) - MySQL database management tool
 - [Pocketbase](/services/pocketbase) - Open Source backend for your next SaaS and Mobile app
 - [Portainer](/services/portainer) - Container management platform
@@ -170,6 +171,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Proxyscotch](/services/proxyscotch) - Tiny open-source CORS proxy made by Hoppscotch
 - [PrivateBin](/services/privatebin) - Minimalist, open-source online pastebin
 - [RabbitMQ](/services/rabbitmq) - Open source message broker
+- [Redis Insight](/services/redis-insight) - Official Redis GUI for database interaction
 - [Rivet Engine](/services/rivet-engine) - Backend engine for building and scaling stateful workloads with long-lived processes and durable state
 - [Shlink](/services/shlink) - The open source URL shortener
 - [Soketi](/services/soketi) - Open-source WebSocket server

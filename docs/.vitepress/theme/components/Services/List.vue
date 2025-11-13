@@ -2002,6 +2002,20 @@ const services = [
         icon: '/docs/images/services/marimo.svg',
         description: 'Open-source reactive notebook for Python.',
         category: 'Development'
+    },
+    {
+        name: 'pgAdmin',
+        slug: 'pgadmin',
+        icon: '/docs/images/services/pgadmin-logo.svg',
+        description: 'A web-based database management tool for administering your PostgreSQL databases through a user-friendly interface.',
+        category: 'Development'
+    },
+    {
+        name: 'Redis Insight',
+        slug: 'redis-insight',
+        icon: '/docs/images/services/redisinsight-logo.png',
+        description: 'Official Redis GUI that lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.',
+        category: 'Development'
     }
 ]
 

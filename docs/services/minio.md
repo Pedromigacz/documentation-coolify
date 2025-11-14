@@ -5,7 +5,7 @@ description: "Host MinIO object storage on Coolify as S3-compatible high-perform
 
 # MinIO Community Edition
 
-![MinIO](/docs/images/services/minio-logo.svg)
+![MinIO](/images/services/minio-logo.svg)
 
 ## What is MinIO?
 

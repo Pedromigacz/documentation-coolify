@@ -179,6 +179,60 @@ Make sure the protocol in your domain configuration matches how you want to acce
 
 Ensure that `Rolling Updates` are correctly configured. See [Rolling Updates documentation](/knowledge-base/rolling-updates)
 
+### Solution 5: Update Traefik to Fix Docker API Version Issue
+
+**Symptoms:**
+
+- "No Available Server" error appears
+- Traefik cannot communicate with Docker API
+- Container is running and healthy but Traefik can't route traffic
+
+::: info
+This issue is caused by Traefik hard-coding Docker API versions in older releases. The Traefik team has released a fix in **v2.11.31** and **v3.6.1**.
+:::
+
+**Root Cause:**
+
+The problem happened because Traefik was hard-coding Docker API versions. Starting from v2.11.31 and v3.6.1, Traefik will now auto-negotiate the Docker API version, so this issue shouldn't happen again.
+
+**Solution:**
+
+Coolify won't automatically update Traefik for existing servers. But starting from the next Coolify release (v4.0.0-beta.444), new installations will use Traefik version v3.6 (which also includes the patch as mentioned above).
+
+If you're already using Coolify, you'll need to update Traefik manually:
+
+::: warning Why we don't auto-update for existing servers
+Some users have custom configurations (like DNS challenges) that could break when updating to a newer Traefik version. Please check the [Traefik changelog](https://github.com/traefik/traefik/releases) before updating.
+
+- If you're using the default Coolify Traefik configurations, you're safe to update to v3.6.1 without any issues.
+- If you're currently on Traefik v2 and don't want to upgrade to v3, you can update to the patched v2.11.31 instead.
+  :::
+
+**Steps:**
+
+1. **Navigate to Proxy Configuration:**
+
+   - Go to your Coolify dashboard / Coolify Cloud → Servers → [Your Server] → Proxy → Configuration
+
+2. **Change Traefik Version:**
+
+   - Change the version to: `v3.6.1` (or `v2.11.31` if staying on v2)
+
+3. **Restart Proxy:**
+   - Click `Restart Proxy`
+
+<ZoomableImage src="/docs/public/images/knowledge-base/servers/proxy/1.webp" alt="proxy traefik version update" />
+
+**Notes:**
+
+- You need to do this on every server connected to your Coolify instance
+- This applies to both self-hosted and Coolify Cloud users
+- Cloud users: Traefik runs on your own server not Coolify's, so you'll need to update it yourself
+- We recommend reverting the minimum API version patch some of you might have applied to the Docker daemon configs. This could potentially cause problems in the future.
+- Caddy users can ignore this issue
+
+For more details, see the [GitHub issue discussion](https://github.com/coollabsio/coolify/issues/7193#issuecomment-3532655866).
+
 ## Advanced Debugging
 
 ### Check Traefik Configuration

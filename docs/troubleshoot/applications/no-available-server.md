@@ -221,7 +221,7 @@ Some users have custom configurations (like DNS challenges) that could break whe
 3. **Restart Proxy:**
    - Click `Restart Proxy`
 
-<ZoomableImage src="/docs/public/images/knowledge-base/servers/proxy/1.webp" alt="proxy traefik version update" />
+<ZoomableImage src="/docs/images/troubleshoot/applications/bad-gateway/no-available-server/update-traefik-version.webp" alt="coolify proxy traefik version update" />
 
 **Notes:**
 

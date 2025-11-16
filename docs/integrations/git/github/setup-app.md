@@ -105,7 +105,7 @@ Select the Github App you created in Coolify from the list of available Apps.
 1. Choose Repository and click on "Load Repository" button.
 
 <ZoomableImage src="/docs/images/integrations/git/github/setup-app/14.webp" />
-2. After selecting the repository, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/builds/introduction) for more details.)
+2. After selecting the repository, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/applications/build-packs/overview) for more details.)
 
 Once configured, deploy your application.
 
@@ -288,7 +288,7 @@ Select the Github App you created in Coolify from the list of available Apps.
 1. Choose Repository and click on "Load Repository" button.
 
 <ZoomableImage src="/docs/images/integrations/git/github/setup-app/41.webp" />
-2. After selecting the repository, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/builds/introduction) for more details.)
+2. After selecting the repository, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/applications/build-packs/overview) for more details.)
 
 Once configured, deploy your application.
 

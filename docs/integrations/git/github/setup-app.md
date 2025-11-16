@@ -119,7 +119,7 @@ That's it!
 
 ## Manual Installation
 ### 1. Create a Github App on Coolify
-<ZoomableImage src="/docs/images/integrations/git/github/setup-app/5.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/15.webp" />
 1. In your Coolify dashboard, click on Sources from the sidebar.
 2. Click the + Add button to create a new github app.
 
@@ -136,7 +136,7 @@ That's it!
   
 <ZoomableImage src="/docs/images/integrations/git/github/setup-app/17.webp" />
 5. Click on Continue button
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/18.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/18.webp" />
 6. Save the Source ID of github app somewhere safe (source id is the UUID you see on your url bar after `/github/`)
 
 We will need the following data to setup the github app:
@@ -154,17 +154,17 @@ Creating apps on github slightly varies for personal accounts and organizations 
 
 :::tabs
 == Personal Account
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/19.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/19.webp" />
 
 1. Go to your github account settings
 2. On the sidebar scroll down till you see "developer settings" and click on it
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/20.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/20.webp" />
 3. Click the "New github app" button
 
 
 == Organization
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/21.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/21.webp" />
 
 1. Go to your github Organization settings
 2. On the sidebar scroll down till you see "**developer settings**" and click on it
@@ -174,11 +174,11 @@ Creating apps on github slightly varies for personal accounts and organizations 
 :::
 
 ### 3. Setup the Github App on Github
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/22.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/22.webp" />
 1. Give your app a name
 2. Enter homepage url for your app (this can be anything)
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/23.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/23.webp" />
 3. Scrol down till you see the "**Post Installation**" section
 4. Enter Setup URL: `https://coolboxy.shadowarcanist.internal/webhooks/source/github/install?source=a8000cg0g0ogcc0ggkk8ow4k`
 
@@ -192,7 +192,7 @@ Creating apps on github slightly varies for personal accounts and organizations 
 7. Enter Webhook Secret (this has to be a random string, you can use tools like [Random String Generator](https://getrandomgenerator.com/string))
 8. Enable the option `Enable SSL verification`
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/24.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/24.webp" />
 9. Scrol down till you see the "**Permissions**" section
 10. Set Access to `Read-only` for `Contents`
 11. Set Access to `Read and write` for `Pull Requests` (Only needed if you plan to use Preview deployments feature)
@@ -202,52 +202,52 @@ Creating apps on github slightly varies for personal accounts and organizations 
 On the screenshot above for permissions section we have hidden lot of Permission and only shown the Permission needed to setup Github app for Coolify.
 :::
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/25.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/25.webp" />
 13. Scrol down till you see the "**Subscribe to events**" section
 14. Enable the option `Push`
 15. Enable the option `Pull requests` (Only needed if you plan to use Preview deployments feature)
 16. Select the option `Only on this account` (Prevents others from installing our Github app to their github accounts)
 17. Click the button "**Create Github App**"
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/26.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/26.webp" />
 18. Save the `App ID` and `Client ID` somewhere safe (we have to enter this on Coolify later)
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/27.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/27.webp" />
 19. Click the `Generate a new client secret` button
 20. Save the `client secret` somewhere safe (we have to enter this on Coolify later)
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/28.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/28.webp" />
 21. Scrol down till you see the "**Private keys**" section
 22. Click the `Generate a private key` button (this will automatically download the private key as a `.pem` file)
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/29.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/29.webp" />
 23. Click "Install App" from the sidebar
 24. Click the "**Install**" button
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/30.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/30.webp" />
 25. Select the repositories you want the app to have access to.
 26. Click the "**Install**" button
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/31.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/31.webp" />
 27. Click the Settings icon (this will take you to your account or organization applications page)
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/32.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/32.webp" />
 28. Save the `Installation ID` somewhere safe (Installation ID is the number you see on your url bar after `/installations/`)
 
 
 ### 4. Add Private keys on Coolify
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/33.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/33.webp" />
 1. In your Coolify dashboard, click on **Keys & Tokens** from the sidebar.
 2. Click on **Private keys** tab.
 3. Click the **+ Add** button to add a new private key.
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/34.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/34.webp" />
 4. Give your Private key a name
 5. Paste the content of the `.pem` file which github automatically downloaded to your machine when you setup the Github App on Github
 6. Click on "**Continue**" button
 
-<ZoomableImage src="/docs/images/integrations/git/github/setuqp-app/35.webp" />
+<ZoomableImage src="/docs/images/integrations/git/github/setup-app/35.webp" />
 7. In your Coolify dashboard, click on **Sources** from the sidebar and select your Github app from the list
 8. Enter the details (App ID, Installation ID etc..) you saved on previous steps
 9. On "Private key" select the key you just added to Coolify

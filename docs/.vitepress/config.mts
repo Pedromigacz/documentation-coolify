@@ -210,10 +210,13 @@ export default defineConfig({
             items: [
               {
                 text: 'Github', collapsed: true, items: [
-                  { text: 'Integrations', link: '/applications/ci-cd/github/integration' },
-                  { text: 'Manually Setup GitHub App', link: '/applications/ci-cd/github/manually-setup-github-app' },
-                  { text: 'Move Between GitHub Apps', link: '/applications/ci-cd/github/move-between-github-apps' },
-                  { text: 'Github Actions', link: '/applications/ci-cd/github/github-actions' },
+                  { text: 'Overview', link: '/applications/ci-cd/github/overview' },
+                  { text: 'Actions', link: '/applications/ci-cd/github/actions' },
+                  { text: 'Auto Deploy', link: '/applications/ci-cd/github/auto-deploy' },
+                  { text: 'Deploy Public Repository', link: '/applications/ci-cd/github/public-repository' },
+                  { text: 'Setup Deploy Key', link: '/applications/ci-cd/github/deploy-key' },
+                  { text: 'Setup Github App', link: '/applications/ci-cd/github/setup-app' },
+                  { text: 'Switch Github Apps', link: '/applications/ci-cd/github/switch-apps' },
                 ]
               },
               {
@@ -287,38 +290,6 @@ export default defineConfig({
                 ]
               },
               { text: 'DDoS Protection', link: '/integrations/cloudflare/ddos-protection' },
-            ]
-          },
-          {
-            text: 'Git',
-            collapsed: true,
-            items: [
-              {
-                text: 'Github', collapsed: true, items: [
-                  { text: 'Overview', link: '/integrations/git/github/overview' },
-                  { text: 'Actions', link: '/integrations/git/github/actions' },
-                  { text: 'Auto Deploy', link: '/integrations/git/github/auto-deploy' },
-                  { text: 'Deploy Public Repository', link: '/integrations/git/github/public-repository' },
-                  { text: 'Setup Deploy Key', link: '/integrations/git/github/deploy-key' },
-                  { text: 'Setup Github App', link: '/integrations/git/github/setup-app' },
-                  { text: 'Switch Github Apps', link: '/integrations/git/github/switch-apps' },
-                ]
-              },
-              {
-                text: 'Gitlab', collapsed: true, items: [
-                  { text: 'Integrations', link: '/integrations/git/gitlab/integration' },
-                ]
-              },
-              {
-                text: 'Bitbucket', collapsed: true, items: [
-                  { text: 'Integrations', link: '/integrations/git/bitbucket/integration' },
-                ]
-              },
-              {
-                text: 'Gitea', collapsed: true, items: [
-                  { text: 'Integrations', link: '/integrations/git/gitea/integration' },
-                ]
-              },
             ]
           },
         ],

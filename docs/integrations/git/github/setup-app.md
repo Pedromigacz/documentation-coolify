@@ -52,7 +52,7 @@ The following data is used as an example in this guide. Please replace it with y
 1. Select the endpoint for github to send Webhook when a event (commit, pr) happens on github. If this endpoint is not reachable then automatic deployments won't work so if you decide to close port 8000 on your server you have to set the webhook endpoint as your Coolify dashboard domain
 
 <ZoomableImage src="/docs/images/integrations/git/github/setup-app/4.webp" />
-2. Preview deployments are enabled by enabled by default and you can disable them if you dont want them
+2. Preview deployments are enabled by default and you can disable them if you dont want them
 3. Click on Register now button (this will take you to github)
 
 

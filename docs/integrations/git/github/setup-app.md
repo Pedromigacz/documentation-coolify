@@ -198,7 +198,7 @@ Creating apps on github slightly varies for personal accounts and organizations 
 11. Set Access to `Read and write` for `Pull Requests` (Only needed if you plan to use Preview deployments feature)
 12. Set Access to `Read-only` for `Email addresses`
 
-::: warn HEADS Up!
+::: warning HEADS Up!
 On the screenshot above for permissions section we have hidden lot of Permission and only shown the Permission needed to setup Github app for Coolify.
 :::
 

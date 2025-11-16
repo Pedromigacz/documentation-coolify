@@ -15,7 +15,7 @@ For example, you moved your repositories to a new organization and want to use a
 
 ## Solution
 1. Move the repositories to your new GitHub organization (or to your personal account).
-2. Add the new GitHub App to Coolify, either by creating [manually](/knowledge-base/git/github/manually-setup-github-app) or automatically through Coolify's UI.
+2. Add the new GitHub App to Coolify, either by creating [manually](/applications/ci-cd/github/manually-setup-github-app) or automatically through Coolify's UI.
 3. Make sure the Github App installation has access to the repositories on the new place, for example by opening `https://github.com/organizations/<organization>/settings/installations` and check the added repositories.
 4. Go to your application in Coolify -> `Git Source` tab and select the new Github App.
 5. Make sure you change the repository name to the new one, like from `andrasbacsai/test-repo` to `coollabsio/test-repo`.

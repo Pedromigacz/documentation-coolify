@@ -1479,6 +1479,13 @@ const services = [
         category: 'Social Media'
     },
     {
+        name: 'Pterodactyl',
+        slug: 'pterodactyl',
+        icon: '/docs/images/services/pterodactyl_logo_transparent.png',
+        description: 'Game server management panel with Wings daemon for hosting Minecraft, CS:GO, ARK and more.',
+        category: 'Gaming'
+    },
+    {
         name: 'Prefect',
         slug: 'prefect',
         icon: '/docs/images/services/prefect-logo.png',
@@ -1947,6 +1954,13 @@ const services = [
         description: 'Effortless PostgreSQL backups with a user-friendly web interface.',
         category: 'Database'
     },
+     {
+        name: 'Postgresus',
+        slug: 'postgresus',
+        icon: '/docs/images/services/postgresus-logo.webp',
+        description: 'A free, open source and self-hosted tool to backup PostgreSQL. Make backups with different storages and notifications about progress.',
+        category: 'Backup'
+    },
     {
         name: 'Ryot',
         slug: 'ryot',
@@ -1976,13 +1990,6 @@ const services = [
         category: 'Utilities'
     },
     {
-        name: 'Wings',
-        slug: 'wings',
-        icon: '/docs/images/services/pterodactyl-logo.png',
-        description: 'Pterodactyl server control plane for game servers.',
-        category: 'Gaming'
-    },
-    {
         name: 'Yamtrack',
         slug: 'yamtrack',
         icon: '/docs/images/services/yamtrack-logo.svg',
@@ -1994,6 +2001,20 @@ const services = [
         slug: 'marimo',
         icon: '/docs/images/services/marimo.svg',
         description: 'Open-source reactive notebook for Python.',
+        category: 'Development'
+    },
+    {
+        name: 'pgAdmin',
+        slug: 'pgadmin',
+        icon: '/docs/images/services/pgadmin-logo.svg',
+        description: 'A web-based database management tool for administering your PostgreSQL databases through a user-friendly interface.',
+        category: 'Development'
+    },
+    {
+        name: 'Redis Insight',
+        slug: 'redis-insight',
+        icon: '/docs/images/services/redisinsight-logo.png',
+        description: 'Official Redis GUI that lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.',
         category: 'Development'
     }
 ]
@@ -2269,3 +2290,4 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
         </div>
     </div>
 </template>
+

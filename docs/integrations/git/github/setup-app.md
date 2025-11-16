@@ -15,8 +15,8 @@ Lack of Permission: If you don't have the necessary permissions to install the G
 
 ## Installation Methods
 There are two ways to install Github App on Coolify:
-- [Automated Installation]() (Recommended)
-- [Manual Installation]()
+- [Automated Installation](/integrations/git/github/setup-app#automated-installation) (Recommended)
+- [Manual Installation](/integrations/git/github/setup-app#manual-installation)
 We highly recommend the Automated Installation method as it automates the process and reduces the chance of errors.
 
 

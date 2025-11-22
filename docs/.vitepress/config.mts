@@ -468,6 +468,7 @@ export default defineConfig({
             text: 'Installation',
             collapsed: true,
             items: [
+              { text: 'Coolify Installation Failed', link: '/troubleshoot/installation/install-script-failed' },
               { text: 'Docker Installation Failed', link: '/troubleshoot/installation/docker-install-failed' },
             ]
           },

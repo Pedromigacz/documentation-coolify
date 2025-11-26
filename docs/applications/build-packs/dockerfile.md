@@ -77,16 +77,18 @@ Click on the **Environment Variables** tab to add or update them.
 
 Coolify automatically injects build arguments into your Dockerfile during the build process. These include environment variables you've configured and predefined system values like `SOURCE_COMMIT`.
 
+You can configure these settings in the **Advanced** menu of your application.
+
 #### Inject Build Args to Dockerfile
 
-By default, Coolify injects Docker build arguments (`ARG` statements) into your Dockerfile. If you prefer to manage build arguments manually in your Dockerfile, you can disable this behavior.
+By default, Coolify injects Docker build arguments (`ARG` statements) into your Dockerfile. If you prefer to manage build arguments manually in your Dockerfile, you can disable this behavior in the Advanced menu.
 
 - **Enabled (default):** Coolify automatically injects build arguments
 - **Disabled:** You manage `ARG` statements yourself in the Dockerfile
 
 #### Include Source Commit in Build
 
-The `SOURCE_COMMIT` variable contains the Git commit hash of your source code. By default, this is excluded from the build to preserve Docker's build cache.
+The `SOURCE_COMMIT` variable contains the Git commit hash of your source code. By default, this is excluded from the build to preserve Docker's build cache. You can enable this in the Advanced menu if needed.
 
 - **Disabled (default):** `SOURCE_COMMIT` is not included, improving cache utilization
 - **Enabled:** `SOURCE_COMMIT` is included as a build argument

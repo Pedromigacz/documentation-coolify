@@ -152,18 +152,18 @@ labels:
 
 ### Build Arguments
 
-When building images with Docker Compose, Coolify can inject build arguments into your build process.
+When building images with Docker Compose, Coolify can inject build arguments into your build process. You can configure these settings in the **Advanced** menu of your application.
 
 #### Inject Build Args to Dockerfile
 
-Controls whether Coolify automatically injects build arguments during the build. Disable this if you want full control over build arguments in your Dockerfile.
+Controls whether Coolify automatically injects build arguments during the build. Disable this in the Advanced menu if you want full control over build arguments in your Dockerfile.
 
 - **Enabled (default):** Coolify automatically injects build arguments
 - **Disabled:** You manage `ARG` statements yourself in the Dockerfile
 
 #### Include Source Commit in Build
 
-Controls whether the `SOURCE_COMMIT` variable (Git commit hash) is included in builds. Disabled by default to preserve Docker's build cache between commits.
+Controls whether the `SOURCE_COMMIT` variable (Git commit hash) is included in builds. Disabled by default to preserve Docker's build cache between commits. You can enable this in the Advanced menu if your build process requires the commit hash.
 
 - **Disabled (default):** `SOURCE_COMMIT` is not included, improving cache utilization
 - **Enabled:** `SOURCE_COMMIT` is included as a build argument

@@ -1,6 +1,7 @@
 ---
 title: "Soketi App Manager"
 description: "Manage Soketi apps on Coolify with application configuration, authentication, and WebSocket server administration interface."
+disabled: true
 ---
 
 <ZoomableImage src="/docs/images/services/soketi-app-manager-logo.webp" alt="Soketi App Manager Logo logo" />

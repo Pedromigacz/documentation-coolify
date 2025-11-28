@@ -4,6 +4,10 @@ description: "Share files on Coolify with PingvinShare for temporary file sharin
 disabled: true
 ---
 
+::: warning SERVICE NOT AVAILABLE
+This service is currently not available in Coolify's service catalog.
+:::
+
 # PingvinShare
 
 <ZoomableImage src="/docs/images/services/pingvinshare.svg" alt="Pingvinshare dashboard" />

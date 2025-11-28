@@ -4,6 +4,10 @@ description: "Build apps on Coolify with OpenBlocks low-code platform featuring 
 disabled: true
 ---
 
+::: warning SERVICE NOT AVAILABLE
+This service is currently not available in Coolify's service catalog.
+:::
+
 # What is OpenBlocks?
 
 OpenBlocks is an open source low-code platform.

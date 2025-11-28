@@ -1,39 +1,65 @@
 ---
-title: "Manually Setup GitHub App"
-description: "Manually configure GitHub App integration with Coolify including webhook setup, private key generation, permissions, and installation ID configuration."
+title: "Auto Deploy"
+description: ""
 ---
 
-# Manually Setup GitHub App
-This guide will show you how to manually setup an existing Github App or how to change a currently configured one.
-
-Since `4.0.0-beta.399` you are able to change all the Github App details inside Coolify.
+# Automatic Deployments
+Coolify can automatically deploy new version of your application whenever you push new changes to your github repository
 
 
-## On Github
-1. Generate a Private Key on your Github App configuration page (if you already have one, ignore this).
-2. Set the `Homepage URL` to `https://app.coolify.io`.
-3. Set the `Setup URL` to the following: `https://app.coolify.io/webhooks/source/github/install?source=<source_uuid>` where `source_uuid` will be the newly created source in Coolify.
-4. Activate `Webhook` and set the `Webhook URL` to `https://app.coolify.io/webhooks/source/github/events`
-5. Set the `Webhook Secret`.
-6. In the `Install App` section, Install the app to the organization you want to use.
-7. Copy the `Installation ID` from the URL of the page after you installed the Github App.
-8. In the `Permissions` section, set the following permissions:
-   Repository permissions:
-    - Contents: read
-    - Metadata: read
-    - Pull Request: read & write (optional, if you want to use the pull request feature)
-   Account permissions:
-    - Email addresses: read
-9. In the `Subscribe to events` section, enable tho following events:
-    - Push
-    - Pull Request (optional, if you want to use the pull request feature)
+## Methods
+There are three ways to setup automatic deployments on Coolify:
+- [Github App](#github-app)
+- [Github Actions](#github-actions)
+- [Webhooks](#webhooks)
+
+## Github App
+We have a dedicated guide for setting up a GitHub App, which you can follow here: [/github/setup-app](/applications/ci-cd/github/setup-app)
+
+Coolify automatic enables "auto deploy" after you have setup your github app, but if Coolify didn't enabled is then you can enable it on your application by following these steps:
+
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/github-app/1.webp" />
+
+1. Open your application configuration page
+2. Go to "Advanced" page
+3. Enable "Auto Deploy" under the general section
 
 
-## On Coolify
-0. Add the `Private Key` generated in the previous step as a new `Private Key` in the `Keys & Tokens` section.
-1. Go to the `Sources` page and click on the `+` button or edit the existing one.
-2. Fill the name and the organization name (optional). Press `Continue`.
-3. Click on the `Continue` button on the `Manual Installation` section.
-4. Enter the `Github App Name`, `App ID`, `Installation ID`, `Client ID`, `Client Secret` , `Webhook Secret` from the GitHub App configuration page.
-5. Select the `Private Key` you added in step 0 and `Save`.
-6. If you filled everything correctly, click on the `Sync Name` button. If no errors, then you are done.
+## Github Actions
+We have a dedicated guide for setting up a GitHub action, which you can follow here: [/github/setup-app](/applications/ci-cd/github/setup-app)
+
+
+## Webhooks
+### 1. Enable Auto Deploy
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/1.webp" />
+1. Open your application configuration page
+2. Go to "Advanced" page
+3. Enable "Auto Deploy" under the general section
+
+### 2. Setup Github webhook secret
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/2.webp" />
+1. Enter Github webhook secret (this has to be a random string, you can use tools like [Random String Generator](https://getrandomgenerator.com/string))
+2. Save the webhook url somewhere safe, we will need it later.
+
+::: warning IMPORTANT
+  A webhook secret is like a password. Coolify only accepts the webhook if the secret matches.
+:::
+
+### 3. Setup webhook on Github
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/3.webp" />
+1. Go to your repository settings page
+2. Click on "Webhooks" from the sidebar
+3. Click on "Add webhook" button
+
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/4.webp" />
+4. Enter the previously copied webhook url from Coolify in the "Payload URL" field
+5. Enter the webhook secret you have on Coolify in the "Secret" field
+6. Enable the option "Enable SSL verification"
+7. Select the option "Just the `push` event"
+8. Enable the option "Active"
+9. Click on "Add webhook" button
+
+After you click the "Add webhook" button, you will see a page like shown below:
+<ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/5.webp" />
+
+That's it!, Coolify will automatically redeploy your application whenever you push changes to your repository

@@ -660,14 +660,14 @@ const services = [
     },
     {
         name: 'Emby Stat',
-        slug: 'emby-stat',
+        slug: 'embystat',
         icon: '/docs/images/services/embystat-logo.svg',
         description: 'A simple and easy-to-use Emby statistics dashboard.',
         category: 'Media'
     },
     {
         name: 'Ente',
-        slug: 'ente',
+        slug: 'ente-photos',
         icon: '/docs/images/services/ente-logo.webp',
         description: 'A fully open-source, end-to-end encrypted platform for you to store data in the cloud without needing to trust the service provider.',
         category: 'Productivity'
@@ -716,7 +716,7 @@ const services = [
     },
     {
         name: 'Firefly III',
-        slug: 'firefly-iii',
+        slug: 'firefly',
         icon: '/docs/images/services/firefly-iii-logo.svg',
         description: 'A personal finances manager.',
         category: 'Finance'
@@ -1122,7 +1122,7 @@ const services = [
     },
     {
         name: 'Mautic',
-        slug: 'mautic',
+        slug: 'mautic5',
         icon: '/docs/images/services/mautic-logo.svg',
         description: 'Open-source marketing automation platform.',
         category: 'Marketing'
@@ -1353,7 +1353,7 @@ const services = [
     },
     {
         name: 'Outline',
-        slug: 'outline',
+        slug: 'getoutline',
         icon: '/docs/images/services/outline-logo.svg',
         description: 'Open-source collaboration tool.',
         category: 'Productivity'

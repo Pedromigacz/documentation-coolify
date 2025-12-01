@@ -1,11 +1,15 @@
 ---
 title: "OpnForm"
-description: "Create beautiful forms on Coolify with OpnForm featuring drag-and-drop builder, custom themes, conditional logic, and analytics for data collection."
+description: "Build beautiful forms and share them anywhere with OpnForm, an open-source form builder that's super fast and requires no coding knowledge."
 ---
+
+# OpnForm
+
+![OpnForm](/public/images/services/opnform.svg)
 
 ## What is OpnForm?
 
-OpnForm is an open-source form builder that lets you create beautiful forms and share them anywhere. It's super fast, you don't need to know how to code, and it provides a modern, intuitive interface for building professional forms with advanced features.
+OpnForm is an open-source form builder designed to empower developers and users alike. Create beautiful forms and share them anywhere - it's super fast and you don't need to know how to code. Get started for free with unlimited forms, fields, and submissions.
 
 ## Features
 
@@ -20,4 +24,6 @@ OpnForm is an open-source form builder that lets you create beautiful forms and 
 
 ## Links
 
-- [Official Documentation](https://docs.opnform.com/introduction?utm_source=coolify.io)
+- [Official Website](https://opnform.com/?utm_source=coolify.io)
+- [Documentation](https://docs.opnform.com/introduction?utm_source=coolify.io)
+- [GitHub](https://github.com/opnform/opnform?utm_source=coolify.io)

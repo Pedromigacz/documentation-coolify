@@ -1,12 +1,23 @@
 ---
-title: "Newt Pangolin"
-description: "Deploy Newt Pangolin on Coolify for secure WireGuard tunneling, reverse proxy, and zero-trust network access to your services from anywhere."
+title: "Newt-Pangolin"
+description: "Here you can find the documentation for hosting Newt with Coolify."
 ---
 
-## What is Newt Pangolin?
+![Newt Pangolin](/public/images/services/pangolin_newt.svg)
 
-Pangolin tunnels your services to the internet so you can access anything from anywhere. It provides secure, encrypted connections using WireGuard, offering zero-trust network access and reverse proxy capabilities for your self-hosted services.
+## What is Newt?
+
+Newt is a fully user space WireGuard tunnel client and TCP/UDP proxy, designed to securely expose private resources controlled by Pangolin. By using Newt, you don't need to manage complex WireGuard tunnels and NATing.
+
+## Env Variables
+
+| Name              | Description | Required | Default Value |
+| ----------------- | ----------- | -------- | ------------- |
+| NEWT ID           | -           | yes      |
+| NEWT SECRET       | -           | yes      |
+| PANGOLIN ENDPOINT | -           | yes      | domain.tld    |
 
 ## Links
 
-- [Official Documentation](https://docs.digpangolin.com/manage/sites/install-site?utm_source=coolify.io)
+- [The official website](https://docs.fossorial.io/Newt/overview?utm_source=coolify.io)
+- [GitHub](https://github.com/fosrl/newt?utm_source=coolify.io)

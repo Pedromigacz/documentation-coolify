@@ -117,7 +117,7 @@ export default defineConfig({
     outline: [2, 4],
 
     editLink: {
-      pattern: 'https://github.com/coollabsio/documentation-coolify/tree/main/docs/:path',
+      pattern: 'https://github.com/coollabsio/documentation-coolify/tree/next/docs/:path',
       text: 'Edit this page on GitHub'
     },
 

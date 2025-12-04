@@ -38,7 +38,7 @@ We have a dedicated guide for setting up GitHub Actions, which you can follow he
 <ZoomableImage src="/docs/images/applications/ci-cd/github/auto-deploy/webhooks/2.webp" />
 
 1. Enter a GitHub webhook secret (this must be a random string; you can use tools like [Random String Generator](https://getrandomgenerator.com/string)).
-2. Save the webhook URL somewhere safe—we'll need it later.
+2. Save the webhook URL somewhere safe, we'll need it later.
 
 ::: warning IMPORTANT
 A webhook secret acts like a password. Coolify only accepts the webhook if the secret matches.

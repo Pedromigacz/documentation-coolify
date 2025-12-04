@@ -213,6 +213,7 @@ export default defineConfig({
                   { text: 'Overview', link: '/applications/ci-cd/github/overview' },
                   { text: 'Actions', link: '/applications/ci-cd/github/actions' },
                   { text: 'Auto Deploy', link: '/applications/ci-cd/github/auto-deploy' },
+                  { text: 'Preview Deploy', link: '/applications/ci-cd/github/preview-deploy' },
                   { text: 'Deploy Public Repository', link: '/applications/ci-cd/github/public-repository' },
                   { text: 'Setup Deploy Key', link: '/applications/ci-cd/github/deploy-key' },
                   { text: 'Setup Github App', link: '/applications/ci-cd/github/setup-app' },

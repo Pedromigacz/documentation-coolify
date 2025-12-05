@@ -1,6 +1,6 @@
 ---
 title: Cloudflare DDoS Protection
-description: Coolify is a deployment tool designed to simplify the process of deploying and managing applications.
+description: Learn how to set up Cloudflare DDoS protection for applications deployed with Coolify.
 ---
 
 # Cloudflare DDoS Protection

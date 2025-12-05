@@ -95,13 +95,12 @@ Once logged in, navigate to the Coolify proxy directory:
 $ cd /data/coolify/proxy
 ```
 
-Check if you have a **certs** folder:
-```sh
-$ ls
-> acme.json  docker-compose.yml  dynamic
-```
+Adding certificates slightly varies for Caddy and Traefik proxy so choose the correct one from the below section
 
-If there’s no **certs** folder, create it:
+:::tabs
+
+== Traefik
+Create the `certs` directory:
 ```sh
 $ mkdir certs
 ```
@@ -139,6 +138,48 @@ Do the same for the **shadowarcanist.key** file and paste the private key:
 $ nano shadowarcanist.key 
 ```
 Save and exit.
+
+== Caddy
+Create the `caddy/data/certs` directory:
+```sh
+$ mkdir -p caddy/data/certs
+```
+
+Verify it was created:
+```sh
+$ ls caddy/data
+> certs
+```
+
+Now, navigate into the **certs** directory:
+```sh
+$ cd caddy/data/certs
+```
+
+Create two new files for the certificate and private key:
+```sh
+$ touch shadowarcanist.cert shadowarcanist.key
+```
+
+Verify the files were created:
+```sh
+$ ls
+> shadowarcanist.cert shadowarcanist.key
+```
+
+Open the **shadowarcanist.cert** file and paste the certificate from the Cloudflare dashboard:
+```sh
+$ nano shadowarcanist.cert 
+```
+Save and exit after pasting the certificate.
+
+Do the same for the **shadowarcanist.key** file and paste the private key:
+```sh
+$ nano shadowarcanist.key 
+```
+Save and exit.
+
+:::
 
 Now the origin certificate is installed on your server.
 
@@ -183,15 +224,6 @@ Finally, enable HTTP to HTTPS redirects:
 
 
 ## 4. Configure Coolify proxy to Use the Origin Certificate
-
-::: warning
-In this step, we're focusing on configuring Traefik (Coolify's proxy) to use the Origin Certificate. 
-
-If you're using Caddy instead, please refer to their [official documentation ↗](https://caddyserver.com/docs/caddyfile/directives/tls).
-:::
-
-Now, in your Coolify dashboard:
-
 <ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/8.webp" />
 
 1. Go to the **Server** section in the sidebar.
@@ -201,9 +233,15 @@ Now, in your Coolify dashboard:
 
 You will now be prompted to enter the Dynamic Configuration.
 
+Adding Dynamic Configuration slightly varies for Caddy and Traefik proxy so choose the correct one from the below section
+
+:::tabs
+
+== Traefik
+
 <ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/9.webp" />
 
-1. Choose a name for your configuration.
+1. Choose a name for your configuration (must end with `.yaml`).
 2. Enter the following details in the configuration field:
 ```sh
 tls:
@@ -213,8 +251,9 @@ tls:
       keyFile: /traefik/certs/shadowarcanist.key
 ```
 
-:::details Adding Multiple Certificates (click to view)
- 
+3. Save the configuration
+---
+If you want to add multiple certificates and keys, you can do it like this:
 ```sh
 tls:
   certificates:
@@ -228,9 +267,40 @@ tls:
       certFile: /traefik/certs/name3.cert
       keyFile: /traefik/certs/name3.key
 ```
-:::
+
+== Caddy
+<ZoomableImage src="/docs/images/integrations/cloudflare/ddos-protection/10.webp" />
+
+1. Choose a name for your configuration (must end with `.caddy`).
+2. Enter the following details in the configuration field:
+```sh
+*.shadowarcanist.com, shadowarcanist.com {
+    tls /data/certs/shadowarcanist.cert /data/certs/shadowarcanist.key
+}
+```
+
+> Note: The wildcard `*.shadowarcanist.com` provides coverage for all subdomains, exclude it if you’re only securing a single domain (i.e, `shadowarcanist.com`).
 
 3. Save the configuration
+
+---
+
+If you want to add multiple certificates and keys, you can do it like this:
+```sh
+*.shadowarcanist.com, shadowarcanist.com {
+    tls /data/certs/shadowarcanist.cert /data/certs/shadowarcanist.key
+}
+
+*.name2.com, name2.com {
+    tls /data/certs/name2.cert /data/certs/name2.key
+}
+
+*.name3.com, name3.com {
+    tls /data/certs/name3.cert /data/certs/name3.key
+}
+```
+:::
+
 
 From now on, Coolify will use the origin certificate for requests matching the hostname.
 

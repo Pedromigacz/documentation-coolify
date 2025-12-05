@@ -45,7 +45,7 @@ The branch will be **automatically selected** based on the provided URL.
 ## 5. Configure the Application and Deploy
 <ZoomableImage src="/docs/images/applications/ci-cd/github/public-repository/5.webp" />
 
-After entering the repository link, click **Check Repository**. Then, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/builds/introduction) for more details.)
+After entering the repository link, click **Check Repository**. Then, configure the buildpack, ports, and other settings. (Refer to our dedicated guide on [builds](/applications/build-packs/overview) for more details.)
 
 
 Once configured, deploy your application.

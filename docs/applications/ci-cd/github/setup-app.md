@@ -186,7 +186,7 @@ Creating apps on github slightly varies for personal accounts and organizations 
 6. Enter Webhook URL: `https://coolboxy.shadowarcanist.internal/source/github/events`
 
 ::: info
-  You have to replace `https://coolboxy.shadowarcanist.internal` with your Coolify dashboard url and replace `a8000cg0g0ogcc0ggkk8ow4k` with the Source ID [Step 1]()
+  You have to replace `https://coolboxy.shadowarcanist.internal` with your Coolify dashboard url and replace `a8000cg0g0ogcc0ggkk8ow4k` with the Source ID [Step 1](#_1-create-a-github-app-on-coolify-1)
 :::
 
 7. Enter Webhook Secret (this has to be a random string, you can use tools like [Random String Generator](https://getrandomgenerator.com/string))

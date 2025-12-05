@@ -210,10 +210,14 @@ export default defineConfig({
             items: [
               {
                 text: 'Github', collapsed: true, items: [
-                  { text: 'Integrations', link: '/applications/ci-cd/github/integration' },
-                  { text: 'Manually Setup GitHub App', link: '/applications/ci-cd/github/manually-setup-github-app' },
-                  { text: 'Move Between GitHub Apps', link: '/applications/ci-cd/github/move-between-github-apps' },
-                  { text: 'Github Actions', link: '/applications/ci-cd/github/github-actions' },
+                  { text: 'Overview', link: '/applications/ci-cd/github/overview' },
+                  { text: 'Actions', link: '/applications/ci-cd/github/actions' },
+                  { text: 'Auto Deploy', link: '/applications/ci-cd/github/auto-deploy' },
+                  { text: 'Preview Deploy', link: '/applications/ci-cd/github/preview-deploy' },
+                  { text: 'Deploy Public Repository', link: '/applications/ci-cd/github/public-repository' },
+                  { text: 'Setup Deploy Key', link: '/applications/ci-cd/github/deploy-key' },
+                  { text: 'Setup Github App', link: '/applications/ci-cd/github/setup-app' },
+                  { text: 'Switch Github Apps', link: '/applications/ci-cd/github/switch-apps' },
                 ]
               },
               {
@@ -271,7 +275,24 @@ export default defineConfig({
         text: 'Integrations',
         collapsed: true,
         items: [
-          { text: 'Webstudio', link: '/integrations/webstudio.md' },
+          {
+            text: 'Cloudflare',
+            collapsed: true,
+            items: [
+              {
+                text: 'Tunnels',
+                collapsed: true,
+                items: [
+                  { text: 'Overview', link: '/integrations/cloudflare/tunnels/overview' },
+                  { text: 'All Resources', link: '/integrations/cloudflare/tunnels/all-resource' },
+                  { text: 'Single Resource', link: '/integrations/cloudflare/tunnels/single-resource' },
+                  { text: 'Server SSH Access', link: '/integrations/cloudflare/tunnels/server-ssh' },
+                  { text: 'Full TLS/HTTPS', link: '/integrations/cloudflare/tunnels/full-tls' },
+                ]
+              },
+              { text: 'DDoS Protection', link: '/integrations/cloudflare/ddos-protection' },
+            ]
+          },
         ],
       },
       {
@@ -352,6 +373,7 @@ export default defineConfig({
                   { text: 'Raspberry Pi OS Setup', link: '/knowledge-base/how-to/raspberry-pi-os' },
                   { text: 'Private NPM Registry', link: '/knowledge-base/how-to/private-npm-registry' },
                   { text: 'Ollama with GPU', link: '/knowledge-base/how-to/ollama-with-gpu' },
+                  { text: 'Webstudio with Hetzner', link: '/knowledge-base/how-to/webstudio-with-hetzner' },
                 ]
               },
               {
@@ -389,24 +411,6 @@ export default defineConfig({
                   { text: 'Docker Commands', link: '/knowledge-base/docker/custom-commands' },
                   { text: 'Registry', link: '/knowledge-base/docker/registry' },
                   { text: 'Swarm', link: '/knowledge-base/docker/swarm' },
-                ]
-              },
-              {
-                text: 'Cloudflare',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'Tunnels',
-                    collapsed: true,
-                    items: [
-                      { text: 'Overview', link: '/knowledge-base/cloudflare/tunnels/overview' },
-                      { text: 'All Resources', link: '/knowledge-base/cloudflare/tunnels/all-resource' },
-                      { text: 'Single Resource', link: '/knowledge-base/cloudflare/tunnels/single-resource' },
-                      { text: 'Server SSH Access', link: '/knowledge-base/cloudflare/tunnels/server-ssh' },
-                      { text: 'Full TLS/HTTPS', link: '/knowledge-base/cloudflare/tunnels/full-tls' },
-                    ]
-                  },
-                  { text: 'Origin Certificate', link: '/knowledge-base/cloudflare/origin-cert' },
                 ]
               },
               {

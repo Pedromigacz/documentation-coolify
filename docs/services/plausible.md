@@ -1,7 +1,6 @@
 ---
 title: "Plausible Analytics"
 description: "Deploy Plausible Analytics on Coolify for lightweight, cookieless, GDPR-compliant web analytics with privacy-first visitor insights."
-disabled: true
 ---
 
 <ZoomableImage src="/docs/images/services/plausible-logo.svg" alt="Plausible dashboard" />

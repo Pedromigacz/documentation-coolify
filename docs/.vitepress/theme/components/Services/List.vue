@@ -551,7 +551,8 @@ const services = [
         slug: 'dashboard',
         icon: '/docs/images/services/dashboard-logo.svg',
         description: 'A simple dashboard for your server.',
-        category: 'Administration'
+        category: 'Administration',
+        ignore: true
     },
     {
         name: 'Dashy',
@@ -887,7 +888,8 @@ const services = [
         slug: 'hoarder',
         icon: '/docs/images/services/hoarder-logo.png',
         description: 'Self-hosted bookmark manager with AI-powered tagging.',
-        category: 'Bookmarks'
+        category: 'Bookmarks',
+        ignore: true
     },
     {
         name: 'Homarr',
@@ -1328,7 +1330,8 @@ const services = [
         slug: 'openblocks',
         icon: '/docs/images/services/openblocks-logo.svg',
         description: 'Open-source low code platform.',
-        category: 'Development'
+        category: 'Development',
+        ignore: true
     },
     {
         name: 'Organizr',
@@ -1426,7 +1429,8 @@ const services = [
         slug: 'pingvinshare',
         icon: '/docs/images/services/pingvinshare-logo.svg',
         description: 'Self-hosted file sharing platform that combines lightness and beauty.',
-        category: 'File Sharing'
+        category: 'File Sharing',
+        ignore: true
     },
     {
         name: 'Plane',

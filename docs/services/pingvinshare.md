@@ -1,7 +1,6 @@
 ---
 title: "PingvinShare"
 description: "Share files on Coolify with PingvinShare for temporary file sharing, expiring links, password protection, and self-hosted file transfer."
-disabled: true
 ---
 
 # PingvinShare

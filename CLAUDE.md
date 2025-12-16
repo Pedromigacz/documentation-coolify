@@ -7,6 +7,7 @@ This file provides important context for AI assistants (like Claude) working on 
 The Coolify documentation is built with **VitePress 1.6.3**, **Vue 3**, and **Tailwind CSS**. It provides comprehensive guides for deploying applications, services, and databases on Coolify.
 
 ### Technology Stack
+
 - **VitePress 1.6.3** - Static site generator
 - **Vue 3.5.13** - Component framework
 - **Tailwind CSS 3.2.4** - Utility-first CSS
@@ -58,6 +59,7 @@ Service documentation files in `docs/services/` must follow these conventions:
 ### Source of Truth
 
 The authoritative source for service names is:
+
 ```
 https://raw.githubusercontent.com/coollabsio/coolify/refs/heads/v4.x/templates/service-templates-latest.json
 ```
@@ -72,20 +74,33 @@ When renaming a service documentation file, you must update **all three location
 2. **docs/.vitepress/theme/components/Services/List.vue** - Update the `slug` property to match new filename
 3. Any internal links in other documentation files
 
-### Disabled Services
+### Hidden/Disabled Services
 
-Services that are deprecated or temporarily unavailable should:
-- Keep their documentation file
-- Add `disabled: true` to the frontmatter
-- Optionally include a warning message in the content
+Services that are deprecated, temporarily unavailable, or removed from Coolify should:
 
-Example:
-```yaml
----
-title: "Service Name"
-description: "Service description"
-disabled: true
----
+- Keep their documentation file (for SEO and users who find it via search)
+- Add `ignore: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`
+- Add a warning callout in the markdown content explaining why it's not available
+
+Example in List.vue:
+
+```javascript
+{
+    name: 'Service Name',
+    slug: 'service-name',
+    icon: '/docs/images/services/service-logo.svg',
+    description: 'Service description',
+    category: 'Category',
+    ignore: true  // This hides the service from the listing
+},
+```
+
+Example warning in the markdown file:
+
+```markdown
+::: warning SERVICE NOT AVAILABLE
+This service is currently not available in Coolify's service catalog.
+:::
 ```
 
 ### Service Documentation Template
@@ -123,18 +138,19 @@ Brief description of the service and its purpose.
 
 ```yaml
 ---
-title: "Page Title"              # Required - browser tab and h1
-description: "Page description"  # Required - SEO and social sharing meta tags
-tags: ["tag1", "tag2"]          # Optional - categorization
-outline: [2, 4]                 # Optional - header levels in outline (default: 2-4)
-disabled: true                  # Optional - for deprecated services
+title: "Page Title" # Required - browser tab and h1
+description: "Page description" # Required - SEO and social sharing meta tags
+tags: ["tag1", "tag2"] # Optional - categorization
+outline: [2, 4] # Optional - header levels in outline (default: 2-4)
 ---
 ```
 
 ### Custom Vue Components
 
 #### ZoomableImage
+
 Use for all screenshots and images:
+
 ```markdown
 <ZoomableImage
   src="/docs/images/path/to/image.webp"
@@ -143,7 +159,9 @@ Use for all screenshots and images:
 ```
 
 #### Callout
+
 Use for tips, warnings, and important information:
+
 ```markdown
 <Callout type="warning" title="Important">
   Warning content with **markdown** support
@@ -153,7 +171,9 @@ Use for tips, warnings, and important information:
 Types: `tip`, `warning`, `danger`, `info`, `success`
 
 #### Card & CardGroup
+
 Use for service listings or feature showcases:
+
 ```markdown
 <CardGroup>
   <Card
@@ -192,10 +212,11 @@ Additional information
 
 Always specify language for syntax highlighting:
 
-```markdown
+````markdown
 ```bash
 npm install
 ```
+````
 
 ```yaml
 key: value
@@ -206,8 +227,9 @@ FROM ubuntu
 ```
 
 ```javascript
-console.log('example')
+console.log("example");
 ```
+
 ```
 
 ## Image Management
@@ -230,17 +252,19 @@ console.log('example')
 ### Image Directory Structure
 
 ```
+
 docs/public/images/
-├── services/           # Service logos and screenshots
-├── troubleshoot/       # Troubleshooting screenshots
-│   ├── applications/
-│   ├── dashboard/
-│   └── dns-and-domains/
-├── knowledge-base/     # KB article images
-├── database/           # Database guides
-├── get-started/        # Setup guides
-└── aws-s3/            # Integration screenshots
-```
+├── services/ # Service logos and screenshots
+├── troubleshoot/ # Troubleshooting screenshots
+│ ├── applications/
+│ ├── dashboard/
+│ └── dns-and-domains/
+├── knowledge-base/ # KB article images
+├── database/ # Database guides
+├── get-started/ # Setup guides
+└── aws-s3/ # Integration screenshots
+
+````
 
 ## Common Tasks
 
@@ -257,7 +281,8 @@ docs/public/images/
        description: 'Brief description',
        category: 'Category Name'
    }
-   ```
+````
+
 4. Verify service name matches the JSON template
 
 ### Renaming a Service
@@ -276,23 +301,26 @@ docs/public/images/
    ```
 4. Search for internal links referencing the old name
 
-### Disabling a Service
+### Disabling/Hiding a Service
 
-1. Add `disabled: true` to frontmatter:
-   ```yaml
-   ---
-   title: "Service Name"
-   description: "Description"
-   disabled: true
-   ---
+1. Add `ignore: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`:
+   ```javascript
+   {
+       name: 'Service Name',
+       slug: 'service-name',
+       icon: '/docs/images/services/service-logo.svg',
+       description: 'Service description',
+       category: 'Category',
+       ignore: true  // Add this line to hide from listing
+   },
    ```
-2. Optionally add warning message in content:
+2. Add a warning callout at the top of the markdown content:
    ```markdown
-   ::: danger SERVICE TEMPORARILY DISABLED
-   This service is currently disabled in Coolify due to known bugs.
+   ::: warning SERVICE NOT AVAILABLE
+   This service is currently not available in Coolify's service catalog.
    :::
    ```
-3. **Keep the file** - do not delete it
+3. **Keep the documentation file** - do not delete it (users may still find it via search)
 4. **Keep nginx redirects** pointing to it
 
 ### Adding Documentation Pages
@@ -333,12 +361,14 @@ docs/public/images/
 ### Content Structure
 
 **Step-by-Step Guides:**
+
 - Use numbered headers: `## 1. Step Name`
 - Include ZoomableImages at each step
 - Use Callout for tips and warnings
 - Provide external support link at end
 
 **Configuration Guides:**
+
 - Brief description of tool
 - Prerequisites section
 - Setup instructions with code blocks
@@ -346,6 +376,7 @@ docs/public/images/
 - External resource links
 
 **Troubleshooting Articles:**
+
 - Clear problem statement
 - Step-by-step resolution with screenshots
 - Alternative solutions if applicable
@@ -407,24 +438,28 @@ VITE_KORREKTLY_DATASET_ID  # Korrektly dataset ID
 ## Important Notes
 
 ### Service Documentation
+
 - **Never use camelCase** for filenames, even if the JSON template does
 - **Always check the JSON template** before naming services
 - **Update all three locations** when renaming: file, List.vue, redirects.conf
 - **Maintain redirect rules** even for deleted services to prevent 404 errors
 
 ### Images
+
 - Always use `<ZoomableImage>` for screenshots
 - Use absolute paths: `/docs/images/...`
 - Use `.webp` format for optimization
 - Include descriptive alt text
 
 ### Content
+
 - All pages must have `title` and `description` in frontmatter
 - Use UTM parameters for external links: `?utm_source=coolify.io`
 - Internal links should be absolute: `/path/to/page`
 - Test all links before committing
 
 ### Redirects
+
 - Add redirects in `nginx/redirects.conf` when renaming pages
 - Keep redirects even for deleted pages (prevent 404s)
 - Format: `location = /old/path { return 301 /new/path; }`
@@ -432,6 +467,7 @@ VITE_KORREKTLY_DATASET_ID  # Korrektly dataset ID
 ## Common Patterns
 
 ### Callout Usage Patterns
+
 - `type="tip"` - Helpful hints and best practices
 - `type="warning"` - Important notes, prerequisites
 - `type="danger"` - Critical information, breaking changes
@@ -439,15 +475,17 @@ VITE_KORREKTLY_DATASET_ID  # Korrektly dataset ID
 - `type="success"` - Success states, confirmation messages
 
 ### Code Example Patterns
-```markdown
+
+````markdown
 ```bash
 # Command with explanation
 coolify deploy
 ```
+````
 
 ```yaml
 # Configuration example
-version: '3'
+version: "3"
 services:
   app:
     image: nginx
@@ -455,8 +493,9 @@ services:
 
 ```javascript
 // Code example with comments
-const config = { port: 3000 }
+const config = { port: 3000 };
 ```
+
 ```
 
 ## Troubleshooting
@@ -474,3 +513,4 @@ const config = { port: 3000 }
 - Review similar files for examples
 - Test locally with `npm run dev` before committing
 - Verify all links work after changes
+```

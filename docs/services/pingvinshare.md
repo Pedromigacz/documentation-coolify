@@ -6,8 +6,6 @@ disabled: true
 
 # PingvinShare
 
-<ZoomableImage src="/docs/images/services/pingvinshare.svg" alt="Pingvinshare dashboard" />
-
 ::: danger SERVICE REMOVED FROM COOLIFY
 This service has been removed from Coolify’s one-click service catalog because it is no longer maintained by the original author. You can find more information about the project being archived [here](https://github.com/stonith404/pingvin-share?tab=readme-ov-file#%EF%B8%8F-project-archived)
 

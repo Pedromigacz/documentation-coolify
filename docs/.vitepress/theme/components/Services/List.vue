@@ -279,7 +279,7 @@ const services = [
         icon: '/docs/images/services/plausible-logo.svg',
         description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
         category: 'Analytics',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Rybbit',
@@ -552,7 +552,7 @@ const services = [
         icon: '/docs/images/services/dashboard-logo.svg',
         description: 'A simple dashboard for your server.',
         category: 'Administration',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Dashy',
@@ -889,7 +889,7 @@ const services = [
         icon: '/docs/images/services/hoarder-logo.png',
         description: 'Self-hosted bookmark manager with AI-powered tagging.',
         category: 'Bookmarks',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Homarr',
@@ -1331,7 +1331,7 @@ const services = [
         icon: '/docs/images/services/openblocks-logo.svg',
         description: 'Open-source low code platform.',
         category: 'Development',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Organizr',
@@ -1430,7 +1430,7 @@ const services = [
         icon: '/docs/images/services/pingvinshare-logo.svg',
         description: 'Self-hosted file sharing platform that combines lightness and beauty.',
         category: 'File Sharing',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Plane',
@@ -1473,7 +1473,7 @@ const services = [
         icon: '/docs/images/services/posthog-logo.svg',
         description: 'Open source product analytics.',
         category: 'Analytics',
-        ignore: true
+        disabled: true
     },
     {
         name: 'Postiz',
@@ -2067,7 +2067,7 @@ onUnmounted(() => {
 
 const filteredServicesByCategory = (category: string) => {
     return services.filter(s =>
-        !s.ignore &&
+        !s.disabled &&
         s.category === category &&
         (search.value === '' || s.name.toLowerCase().includes(search.value.toLowerCase()) || s.description.toLowerCase().includes(search.value.toLowerCase()))
     )

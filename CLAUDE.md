@@ -79,7 +79,7 @@ When renaming a service documentation file, you must update **all three location
 Services that are deprecated, temporarily unavailable, or removed from Coolify should:
 
 - Keep their documentation file (for SEO and users who find it via search)
-- Add `ignore: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`
+- Add `disabled: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`
 - Add a warning callout in the markdown content explaining why it's not available
 
 Example in List.vue:
@@ -91,7 +91,7 @@ Example in List.vue:
     icon: '/docs/images/services/service-logo.svg',
     description: 'Service description',
     category: 'Category',
-    ignore: true  // This hides the service from the listing
+    disabled: true  // This hides the service from the listing
 },
 ```
 
@@ -303,7 +303,7 @@ docs/public/images/
 
 ### Disabling/Hiding a Service
 
-1. Add `ignore: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`:
+1. Add `disabled: true` to the service entry in `docs/.vitepress/theme/components/Services/List.vue`:
    ```javascript
    {
        name: 'Service Name',
@@ -311,7 +311,7 @@ docs/public/images/
        icon: '/docs/images/services/service-logo.svg',
        description: 'Service description',
        category: 'Category',
-       ignore: true  // Add this line to hide from listing
+       disabled: true  // Add this line to hide from listing
    },
    ```
 2. Add a warning callout at the top of the markdown content:

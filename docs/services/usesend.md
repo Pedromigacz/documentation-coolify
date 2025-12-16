@@ -4,7 +4,7 @@ description: "Send emails on Coolify with UseSend for developer-focused email AP
 ---
 
 # UseSend
-![UseSend logo](/docs/images/services/usesend-logo.svg){ width=64px; }
+<ZoomableImage src="/docs/images/services/usesend-logo.svg" alt="UseSend logo" />
 
 
 ## What is UseSend

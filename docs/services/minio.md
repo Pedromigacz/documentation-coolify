@@ -12,7 +12,7 @@ This service has been removed from Coolify’s one-click service catalog because
 
 The last Docker image published by the original author does not include a fix for the following security vulnerability: https://github.com/minio/minio/security/advisories/GHSA-jjjj-jwhf-8rgr
 
-We recommend using the **Community-maintained MinIO service on Coolify**, which provides automated Docker builds based on the official MinIO codebase. You can learn more about using the Community version [here]()
+We recommend using the **Community-maintained MinIO service on Coolify**, which provides automated Docker builds based on the official MinIO codebase. You can learn more about using the Community version [here](/services/minio-community-edition)
 :::
 
 ## What is MinIO?

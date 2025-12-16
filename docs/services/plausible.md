@@ -6,8 +6,8 @@ disabled: true
 
 <ZoomableImage src="/docs/images/services/plausible-logo.svg" alt="Plausible dashboard" />
 
-::: danger SERVICE TEMPORARILY DISABLED
-This service is currently disabled in Coolify due to known bugs. The installation is not available until these issues are resolved. Please check the [GitHub repository](https://github.com/coollabsio/coolify) for updates on when this service will be re-enabled.
+::: warning SERVICE HIDDEN ON COOLIFY
+This service is not available as a one-click deployment on Coolify due to legal (trademark) restrictions. To use it with Coolify, you’ll need to deploy it manually by following the installation steps below.
 :::
 
 ## What is Plausible Analytics?

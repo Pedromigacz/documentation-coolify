@@ -94,7 +94,7 @@ More environment variables are [available to use](https://signoz.io/docs/manage/
 
 The issue is mostly due to Coolify re-apply its user' ownership & chmod to the files mounted in the container. 
 
-The solution here would be to make the files readable by everyone. Open a terminal on your server, go to /data/coolify/services/<SERVICE ID>/clickhouse and run the command `chmod o+r *`. This should allow Clickhouse to access the files as needed.
+The solution here would be to make the files readable by everyone. Open a terminal on your server, go to `/data/coolify/services/<SERVICE ID>/` clickhouse and run the command `chmod o+r *`. This should allow Clickhouse to access the files as needed.
 
 ## Links
 

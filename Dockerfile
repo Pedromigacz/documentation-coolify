@@ -17,7 +17,7 @@ RUN apk add --no-cache nodejs npm
 WORKDIR /app
 
 # Copy package files first for better caching
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 # Install Git and dependencies
 RUN --mount=type=cache,target=/var/cache/apk \

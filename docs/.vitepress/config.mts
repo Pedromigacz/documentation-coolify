@@ -1,7 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import yaml from 'vite-plugin-yaml'
 import llmstxt from 'vitepress-plugin-llms'
-import coolbotPlugin from './plugins/vitepress-plugin-coolbot';
 import { defineConfig } from 'vitepress'
 import { useSidebar } from 'vitepress-openapi'
 import spec from './theme/openapi.json' with { type: 'json' }
@@ -567,22 +566,12 @@ export default defineConfig({
   vite: {
     plugins: [
       yaml as any,
-      llmstxt({
-        ignoreFiles: [
-          '/docs/api-reference/api/**/*',
-          '**/api-reference/api/**/*'
-        ],
-      }),
-      coolbotPlugin({
-        docsDir: 'docs',
-        writeRawOutput: false,
-        ignoreFolders: [
-          'vitepress',
-          'api-reference',
-          'node_modules',
-          'dist'
-        ],
-      }),
+       llmstxt({
+         ignoreFiles: [
+           '/docs/api-reference/api/**/*',
+           '**/api-reference/api/**/*'
+         ],
+       }),
       groupIconVitePlugin({
         customIcon: {
           bruno: 'vscode-icons:file-type-bruno',

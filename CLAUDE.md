@@ -433,7 +433,6 @@ VITE_KORREKTLY_DATASET_ID  # Korrektly dataset ID
 3. **vitepress-plugin-group-icons** - Icon grouping for code samples
 4. **vite-plugin-yaml** - YAML file support
 5. **vitepress-openapi** - OpenAPI spec documentation
-6. **vitepress-plugin-coolbot** - Markdown to text for RAG chains
 
 ## Important Notes
 

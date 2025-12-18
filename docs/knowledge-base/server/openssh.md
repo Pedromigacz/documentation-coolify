@@ -36,6 +36,20 @@ dnf install -y openssh-server
 systemctl enable --now sshd
 ```
 
+== SLES/openSUSE
+
+```bash
+zypper install -y openssh
+systemctl enable --now sshd
+```
+
+== Arch Linux
+
+```bash
+pacman -Sy --noconfirm openssh
+systemctl enable --now sshd
+```
+
 == Alpine Linux
 
 ```bash
@@ -98,37 +112,48 @@ rc-service sshd restart
 ::: info Note
 The following steps are handled automatically by the Coolify installation script. Manual configuration is only needed if the automatic setup fails.
 :::
-### 1. Generate SSH Key for Coolify
 
-Run the following commands **on the server**:
-1. Generate SSH Key
-```bash
-ssh-keygen -t ed25519 -a 100 \
-  -f /data/coolify/ssh/keys/id.root@host.docker.internal \
-  -q -N "" -C root@coolify
-```
+### 1. Install OpenSSH Server
 
-2. Change ownership:
+::: tabs
+== Debian / Ubuntu / PopOS
 
 ```bash
-chown 9999 /data/coolify/ssh/keys/id.root@host.docker.internal
+apt update && apt install -y openssh-server
+systemctl enable --now ssh
 ```
 
-### 2. Authorize the Public Key
+== CentOS / RHEL / Rocky / Fedora
 
-1. Add public key to `authorized_keys` file:
 ```bash
-mkdir -p ~/.ssh
-cat /data/coolify/ssh/keys/id.root@host.docker.internal.pub >> ~/.ssh/authorized_keys
+dnf install -y openssh-server
+systemctl enable --now sshd
 ```
 
-2. Change permissions:
+== SLES/openSUSE
+
 ```bash
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
+zypper install -y openssh
+systemctl enable --now sshd
 ```
 
-### 3. Configure SSH
+== Arch Linux
+
+```bash
+pacman -Sy --noconfirm openssh
+systemctl enable --now sshd
+```
+
+== Alpine Linux
+
+```bash
+apk add openssh
+rc-update add sshd
+rc-service sshd start
+```
+:::
+
+### 2. Configure SSH
 
 1. Edit SSH config:
 
@@ -173,8 +198,37 @@ rc-service sshd restart
 ```
 :::
 
+### 3. Generate SSH Key for Coolify
 
-### 4. Add private key to Coolify
+Run the following commands **on the server**:
+1. Generate SSH Key
+```bash
+ssh-keygen -t ed25519 -a 100 \
+  -f /data/coolify/ssh/keys/id.root@host.docker.internal \
+  -q -N "" -C root@coolify
+```
+
+2. Change ownership:
+
+```bash
+chown 9999 /data/coolify/ssh/keys/id.root@host.docker.internal
+```
+
+### 4. Authorize the Public Key
+
+1. Add public key to `authorized_keys` file:
+```bash
+mkdir -p ~/.ssh
+cat /data/coolify/ssh/keys/id.root@host.docker.internal.pub >> ~/.ssh/authorized_keys
+```
+
+2. Change permissions:
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
+### 5. Add private key to Coolify
 
 1. Copy the content of private key:
 ```bash
@@ -194,7 +248,7 @@ cat /data/coolify/ssh/keys/id.root@host.docker.internal
 4. Navigate to "Private key" page and select the Private key you added in the previous step.
   <ZoomableImage src="/docs/images/knowledge-base/servers/openssh/4.webp" />
 
-### 5. Validate Server
+### 6. Validate Server
 Navigate to "General" page and Click **Validate Server & Install Docker Engine**.
   <ZoomableImage src="/docs/images/knowledge-base/servers/openssh/5.webp" />
 

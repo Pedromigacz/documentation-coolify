@@ -1,6 +1,6 @@
 ---
-name: disable-service
-description: Hide or disable a service from the documentation listing while keeping the page for SEO. Use when deprecating services, removing unavailable services, or hiding services temporarily.
+name: disabling-services
+description: Hides or disables a service from the documentation listing while preserving the page for SEO and bookmarks. Use when deprecating services, marking services unavailable, adding disabled:true to List.vue, or adding warning callouts to service pages. Keeps docs/services/ pages accessible via direct URL.
 allowed-tools: Read, Grep, Glob, Write, Edit
 ---
 
@@ -179,5 +179,5 @@ Legacy Service was a tool for... [rest of documentation]
 
 ## Related Skills
 
-- `add-service-documentation` - For creating new service docs
-- `rename-service` - For renaming services
+- `adding-service-documentation` - For creating new service docs
+- `renaming-services` - For renaming services

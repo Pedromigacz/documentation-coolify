@@ -1,6 +1,6 @@
 ---
-name: add-documentation-page
-description: Create documentation pages for guides, tutorials, knowledge base articles, and troubleshooting content. Use when adding how-to guides, writing KB articles, creating troubleshooting docs, or adding non-service pages. NOT for service pages in docs/services/.
+name: adding-documentation-pages
+description: Creates documentation pages for guides, tutorials, knowledge base articles, and troubleshooting content in docs/. Use when adding how-to guides, writing KB articles, creating troubleshooting docs, adding pages to get-started/, applications/, databases/, knowledge-base/, or integrations/. NOT for service pages - use adding-service-documentation for docs/services/.
 allowed-tools: Read, Grep, Glob, Write, Edit
 ---
 
@@ -10,7 +10,7 @@ Create new documentation pages for the Coolify docs (guides, tutorials, KB artic
 
 ## When NOT to Use This Skill
 
-**Use `add-service-documentation` instead for:**
+**Use `adding-service-documentation` instead for:**
 - Service pages in `docs/services/`
 - One-click services from Coolify's catalog
 
@@ -80,6 +80,6 @@ description: "SEO-friendly description (used in meta tags)."
 
 ## Related Skills
 
-- `add-service-documentation` - For `docs/services/` pages
-- `rename-service` - Renaming service docs
-- `disable-service` - Deprecating services
+- `adding-service-documentation` - For `docs/services/` pages
+- `renaming-services` - Renaming service docs
+- `disabling-services` - Deprecating services

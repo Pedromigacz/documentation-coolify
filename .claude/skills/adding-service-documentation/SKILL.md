@@ -1,6 +1,6 @@
 ---
-name: add-service-documentation
-description: Document new Coolify services by creating markdown files, copying logos, and updating the services list. Use when adding service documentation, creating service pages, or updating the services catalog.
+name: adding-service-documentation
+description: Documents new Coolify one-click services by creating markdown pages in docs/services/, downloading logos to docs/public/images/services/, and updating List.vue catalog. Use when adding service documentation, creating service pages, onboarding services from templates/compose/, or updating the services catalog with new entries.
 allowed-tools: Read, Grep, Glob, Write, Bash
 ---
 

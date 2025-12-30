@@ -1,6 +1,6 @@
 ---
-name: rename-service
-description: Rename a service documentation file and update all references. Use when renaming services, changing service slugs, or when a service name in the Coolify repository changes.
+name: renaming-services
+description: Renames a service documentation file and updates all references across docs/services/, List.vue, and nginx/redirects.conf. Use when renaming services, changing service slugs, fixing camelCase to kebab-case, or when service names change in the Coolify repository templates/compose/.
 allowed-tools: Read, Grep, Glob, Write, Edit, Bash
 ---
 
@@ -145,5 +145,5 @@ When compound names are required:
 
 ## Related Skills
 
-- `add-service-documentation` - For creating new service docs
-- `disable-service` - For hiding deprecated services
+- `adding-service-documentation` - For creating new service docs
+- `disabling-services` - For hiding deprecated services

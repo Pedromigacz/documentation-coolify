@@ -197,7 +197,14 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Static', link: '/applications/build-packs/static' },
-              { text: 'Nixpacks', link: '/applications/build-packs/nixpacks' },
+              {
+                text: 'Nixpacks',
+                link: '/applications/build-packs/nixpacks',
+                collapsed: true,
+                items: [
+                  { text: 'Node Versioning', link: '/applications/build-packs/nixpacks/node-versioning' },
+                ]
+              },
               { text: 'Dockerfile', link: '/applications/build-packs/dockerfile' },
               { text: 'Docker Compose', link: '/applications/build-packs/docker-compose' },
             ]

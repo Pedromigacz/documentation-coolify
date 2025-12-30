@@ -1756,10 +1756,10 @@ const services = [
         category: 'Development'
     },
     {
-        name: 'UseSend',
+        name: 'Usesend',
         slug: 'usesend',
         icon: '/docs/images/services/usesend-logo.svg',
-        description: 'Open-source email platform.',
+        description: 'Open-source email recall service.',
         category: 'Email'
     },
     {

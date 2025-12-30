@@ -5,7 +5,7 @@ description: "Host your own Terraria game server on Coolify for multiplayer adve
 
 # Terraria Server
 
-![Terraria Server](/docs/images/services/terraria.svg)
+<ZoomableImage src="/docs/images/services/terraria.svg" alt="Terraria Server" />
 
 ## What is Terraria?
 

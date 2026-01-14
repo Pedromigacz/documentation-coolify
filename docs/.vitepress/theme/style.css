@@ -577,7 +577,6 @@
 .VPSidebar .VPNavBarSearch .DocSearch-Button-Container {
   flex: 1 !important;
   display: flex !important;
-  justify-content: space-between !important;
   align-items: center !important;
 }
 

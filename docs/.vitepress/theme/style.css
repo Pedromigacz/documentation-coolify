@@ -282,7 +282,17 @@
   --vp-c-text-1: #F2F2F2;
   --vp-c-text-2: #9A989D;
   --vp-c-text-3: #9A989D;
-  
+
+  /* Make main content text more gray and easier on eyes in dark mode - EXCLUDING CALLOUTS */
+  .vp-doc > div > p,
+  .vp-doc > div > ul > li,
+  .vp-doc > div > ol > li,
+  .vp-doc > div > li,
+  .vp-doc > div > table td,
+  .vp-doc > div > table th {
+    color: #d6d3d1 !important;
+  }
+
   /* Lighter code background in dark mode */
   --vp-code-bg: #161b22 !important;  /* Darker background in dark mode */
   

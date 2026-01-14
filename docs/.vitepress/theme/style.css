@@ -3,6 +3,39 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
+/* CoolLabs UI compatible background colors for callouts */
+:root {
+  --coollabs-bg-blue-300-5: rgba(147, 197, 253, 0.08);
+  --coollabs-bg-emerald-300-5: rgba(110, 231, 183, 0.08);
+  --coollabs-bg-red-300-5: rgba(252, 165, 165, 0.08);
+  --coollabs-bg-yellow-400-5: rgba(250, 204, 21, 0.08);
+  --coollabs-bg-green-300-5: rgba(134, 239, 172, 0.08);
+  --coollabs-bg-zinc-300-5: rgba(212, 212, 216, 0.08);
+
+  --coollabs-border-blue-300-20: rgba(147, 197, 253, 0.3);
+  --coollabs-border-emerald-300-20: rgba(110, 231, 183, 0.3);
+  --coollabs-border-red-300-20: rgba(252, 165, 165, 0.3);
+  --coollabs-border-yellow-400-20: rgba(250, 204, 21, 0.3);
+  --coollabs-border-green-300-20: rgba(134, 239, 172, 0.3);
+  --coollabs-border-zinc-300-20: rgba(212, 212, 216, 0.3);
+}
+
+.dark {
+  --coollabs-bg-blue-950-20: rgba(30, 58, 138, 0.2);
+  --coollabs-bg-emerald-950-20: rgba(6, 78, 59, 0.2);
+  --coollabs-bg-red-950-20: rgba(127, 29, 29, 0.2);
+  --coollabs-bg-yellow-950-20: rgba(113, 63, 18, 0.2);
+  --coollabs-bg-green-950-20: rgba(20, 83, 45, 0.2);
+  --coollabs-bg-zinc-950-20: rgba(39, 39, 42, 0.2);
+
+  --coollabs-border-blue-700: rgba(59, 130, 246, 0.7);
+  --coollabs-border-emerald-700: rgba(16, 185, 129, 0.7);
+  --coollabs-border-red-700: rgba(239, 68, 68, 0.7);
+  --coollabs-border-yellow-700: rgba(234, 179, 8, 0.7);
+  --coollabs-border-green-700: rgba(34, 197, 94, 0.7);
+  --coollabs-border-zinc-700: rgba(161, 161, 170, 0.7);
+}
+
 /**
  * Colors
  *

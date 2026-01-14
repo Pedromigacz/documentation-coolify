@@ -536,6 +536,7 @@ export default defineConfig({
 
   markdown: {
     config: (md) => {
+      // Success callout
       md.use(container, 'success', {
         validate: (params) => {
           return params.trim().match(/^success\s*(.*)$/)
@@ -543,12 +544,79 @@ export default defineConfig({
         render: (tokens, idx) => {
           const m = tokens[idx].info.trim().match(/^success\s+(.*)$/)
           if (tokens[idx].nesting === 1) {
-            // opening tag
-            return `<div class="custom-block success">${m ? `<p class="custom-block-title">${m[1]}</p>` : ''
-              }\n`
+            return `<Callout type="success" title="${m ? m[1] : ''}">`
           } else {
-            // closing tag
-            return '</div>\n'
+            return '</Callout>'
+          }
+        }
+      })
+      // Tip callout
+      md.use(container, 'tip', {
+        validate: (params) => {
+          return params.trim().match(/^tip\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^tip\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="tip" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Warning callout
+      md.use(container, 'warning', {
+        validate: (params) => {
+          return params.trim().match(/^warning\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^warning\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="warning" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Danger callout
+      md.use(container, 'danger', {
+        validate: (params) => {
+          return params.trim().match(/^danger\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^danger\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="danger" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Info callout
+      md.use(container, 'info', {
+        validate: (params) => {
+          return params.trim().match(/^info\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^info\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="info" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Neutral callout
+      md.use(container, 'neutral', {
+        validate: (params) => {
+          return params.trim().match(/^neutral\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^neutral\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="neutral" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
           }
         }
       })

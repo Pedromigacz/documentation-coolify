@@ -620,6 +620,20 @@ export default defineConfig({
           }
         }
       })
+      // Details accordion
+      md.use(container, 'details', {
+        validate: (params) => {
+          return params.trim().match(/^details\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^details\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+             return `<details class="text-sm rounded-xl border px-6 py-0 last:[&>*]:mb-4 my-4 text-zinc-600 dark:text-zinc-300" style="background-color: var(--coollabs-bg-zinc-300-5); border-color: var(--coollabs-border-zinc-300-20);"><summary class="font-semibold mb-2 cursor-pointer select-none text-zinc-800 dark:text-zinc-100">${m ? m[1] : ''}</summary>`
+          } else {
+            return '</details>'
+          }
+        }
+      })
       md.use(tabsMarkdownPlugin)
     },
     theme: {

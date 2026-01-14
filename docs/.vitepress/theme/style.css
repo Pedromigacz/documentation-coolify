@@ -275,8 +275,8 @@
 
 
 .dark {
-  --vp-c-bg: #0D0B0F;
-  --vp-c-bg-alt: #0D0B0F;
+  --vp-c-bg: #0a0d0d;
+  --vp-c-bg-alt: #0a0d0d;
   --vp-c-bg-elv: #202127;
   --vp-c-bg-soft: #161b22 !important;
   --vp-c-text-1: #F2F2F2;
@@ -381,6 +381,7 @@
   padding: 32px 32px 96px !important;
   max-width: var(--vp-sidebar-width) !important;
   width: var(--vp-sidebar-width) !important;
+  background-color: var(--vp-c-bg) !important;
 }
 
 @media (min-width: 960px) {
@@ -388,6 +389,7 @@
     padding: 32px 32px 96px !important;
     max-width: var(--vp-sidebar-width) !important;
     width: var(--vp-sidebar-width) !important;
+    background-color: var(--vp-c-bg) !important;
   }
 }
 
@@ -396,6 +398,7 @@
     padding: 32px 32px 96px !important;
     max-width: var(--vp-sidebar-width) !important;
     width: var(--vp-sidebar-width) !important;
+    background-color: var(--vp-c-bg) !important;
   }
 }
 

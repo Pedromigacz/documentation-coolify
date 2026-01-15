@@ -7,14 +7,14 @@
 :root {
   --coollabs-bg-blue-300-5: rgba(147, 197, 253, 0.08);
   --coollabs-bg-emerald-300-5: rgba(110, 231, 183, 0.08);
-  --coollabs-bg-red-300-5: rgba(252, 165, 165, 0.08);
+  --coollabs-bg-red-300-5: rgba(255, 115, 146, 0.12);
   --coollabs-bg-yellow-400-5: rgba(250, 204, 21, 0.08);
   --coollabs-bg-green-300-5: rgba(134, 239, 172, 0.08);
   --coollabs-bg-zinc-300-5: rgba(212, 212, 216, 0.08);
 
   --coollabs-border-blue-300-20: rgba(147, 197, 253, 0.3);
   --coollabs-border-emerald-300-20: rgba(110, 231, 183, 0.3);
-  --coollabs-border-red-300-20: rgba(252, 165, 165, 0.3);
+  --coollabs-border-red-300-20: rgba(255, 125, 165, 0.4);
   --coollabs-border-yellow-400-20: rgba(250, 204, 21, 0.3);
   --coollabs-border-green-300-20: rgba(134, 239, 172, 0.3);
   --coollabs-border-zinc-300-20: rgba(212, 212, 216, 0.3);

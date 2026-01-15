@@ -26,7 +26,7 @@ const activeType = computed(() => {
     case 'danger': {
       return {
         icon: 'lucide:circle-x',
-        class: 'text-red-700 dark:text-red-400',
+        class: 'text-red-700 dark:text-red-500',
         style: 'background-color: var(--coollabs-bg-red-300-5); border-color: var(--coollabs-border-red-300-20);'
       }
     }

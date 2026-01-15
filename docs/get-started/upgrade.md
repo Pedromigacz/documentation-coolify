@@ -17,7 +17,7 @@ For those who **self-host** Coolify, there are three ways to upgrade your instan
 
 ::: danger Backup First!
 
-> **Always back up your Coolify data before starting an upgrade.**
+- Always back up your Coolify data before starting an upgrade.
 :::
 
 ## 1. Automatic Upgrade

@@ -4,7 +4,4 @@ module.exports = {
 		'./docs/**/*.md',
 	],
 	darkMode: 'class',
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
 }

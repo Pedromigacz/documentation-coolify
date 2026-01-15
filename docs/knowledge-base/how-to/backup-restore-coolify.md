@@ -40,7 +40,7 @@ For details, refer to the [Application Migration Guide](https://coolify.io/docs/
    - **Download:** Saves the backup file to your local computer.
    - **Copy Path:** You can use this path with a tool like SCP to transfer the backup file directly to your new server.
 
-::: info **Note:**
+::: info Note
 If you are using S3-compatible storage for backups, download the backup file from your S3 provider instead
 :::
 
@@ -58,7 +58,7 @@ Before you restore the backup, you need to obtain the `APP_KEY` from your curren
    ```
    Copy the value of `APP_KEY` and save it securely. This key is important for the restoration process.
 
-::: danger **IMPORTANT**
+::: danger IMPORTANT
 Save this `APP_KEY` safely. Without it, you cannot restore your backup.
 :::
 

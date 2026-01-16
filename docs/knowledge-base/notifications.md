@@ -226,21 +226,24 @@ You can configure which events trigger notifications in your notification settin
 ### Deployments
   - Deployment Success
   - Deployment Failure
-  - Container Status changes
+  - Container Status Changes
 
 ### Backups
   - Backup Success
   - Backup Failure
 
 ### Scheduled Tasks
-  - Task Success
-  - Task Failure
+  - Scheduled Task Success
+  - Scheduled Task Failure
 
-### Server Events
+### Server
   - Docker Cleanup Success
   - Docker Cleanup Failure
-  - High Disk Usage Alerts
-  - Server Status Updates
+  - Server Disk Usage
+  - Server Reachable
+  - Server Unreachable
+  - Server Patching
+  - Traefik Proxy Outdated
 
 ::: success Multiple Channels
   You can configure different events for each notification channel. For example, you can send deployment failure notifications to Email and successes to Slack.

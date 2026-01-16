@@ -5,7 +5,7 @@ description: "GLPI (Gestionnaire Libre de Parc Informatique) is a free, open-sou
 
 # GLPI
 
-<ZoomableImage src="/docs/images/services/glpi.svg" alt="GLPI (Gestionnaire Libre de Parc Informatique)" />
+<ZoomableImage src="/docs/images/services/glpi-logo.svg" alt="GLPI (Gestionnaire Libre de Parc Informatique)" />
 
 ## What is GLPI
 
@@ -25,4 +25,6 @@ After deploying the template, GLPI will automatically complete an installation p
 
 ## Links
 
+- [Official website](https://glpi-project.org/?utm_source=coolify.io)
 - [Official Documentation](https://help.glpi-project.org/documentation/?utm_source=coolify.io)
+- [GitHub](https://github.com/glpi-project/glpi?utm_source=coolify.io)

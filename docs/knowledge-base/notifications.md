@@ -1,6 +1,6 @@
 ---
 title: "Notifications"
-description: "Configure multi-channel notifications in Coolify with Email, Telegram, Discord, Slack, and Pushover for deployments, backups, and server monitoring alerts."
+description: "Configure multi-channel notifications in Coolify with Email, Telegram, Discord, Slack, Mattermost, Pushover, and Webhooks for deployments, backups, and server monitoring alerts."
 ---
 
 # Notifications
@@ -214,6 +214,19 @@ Slack webhooks in Coolify are fully compatible with Mattermost.
 ::: info
   Pushover allows you to receive notifications on multiple devices including iOS, Android, and desktop.
 :::
+
+### Webhook
+
+Webhook notifications allow you to send notifications to any custom endpoint that accepts HTTP requests.
+
+1. Configure in Coolify:
+   - Go to **Notifications** → **Webhook**
+   - Enter a `HTTP` or `HTTPS` URL in the Webhook URL field
+   - Save the settings
+   - Enable the Webhook channel
+   - Send a `Test notification`
+
+Coolify will send `POST` requests to your specified endpoint when events occur. You can use this to integrate with custom applications, automation tools, or any service that accepts webhooks.
 
 ## Notification Events
 

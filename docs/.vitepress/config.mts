@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import yaml from 'vite-plugin-yaml'
 import llmstxt from 'vitepress-plugin-llms'
 import { defineConfig } from 'vitepress'
 import { useSidebar } from 'vitepress-openapi'
@@ -654,8 +653,7 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      yaml as any,
-       llmstxt({
+      llmstxt({
          ignoreFiles: [
            '/docs/api-reference/api/**/*',
            '**/api-reference/api/**/*'
@@ -676,7 +674,6 @@ export default defineConfig({
         ],
       }),
     ],
-    assetsInclude: ['**/*.yml'],
     define: {
       'import.meta.env.VITE_KORREKTLY_BASE_URL': JSON.stringify(env.KORREKTLY_BASE_URL || env.VITE_KORREKTLY_BASE_URL || ''),
       'import.meta.env.VITE_KORREKTLY_API_TOKEN': JSON.stringify(env.KORREKTLY_API_TOKEN || env.VITE_KORREKTLY_API_TOKEN || ''),

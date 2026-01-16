@@ -5,7 +5,7 @@ description: "An observability platform native to OpenTelemetry with logs, trace
 
 # SigNoz
 
-<ZoomableImage src="/docs/images/services/signoz.svg" alt="SigNoz logo" />
+<ZoomableImage src="/docs/images/services/signoz-logo.svg" alt="SigNoz logo" />
 
 ## What is SigNoz
 

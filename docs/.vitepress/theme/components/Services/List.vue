@@ -366,6 +366,13 @@ const services = [
         category: 'Security'
     },
     {
+        name: 'Autobase',
+        slug: 'autobase',
+        icon: '/docs/images/services/autobase-logo.svg',
+        description: 'Open-source alternative to cloud-managed databases for PostgreSQL (self-hosted DBaaS).',
+        category: 'Database'
+    },
+    {
         name: 'Baby Buddy',
         slug: 'babybuddy',
         icon: '/docs/images/services/babybuddy-logo.png',
@@ -399,6 +406,13 @@ const services = [
         icon: '/docs/images/services/bookstack-logo.png',
         description: 'Self-hosted wiki-style documentation platform.',
         category: 'Documentation'
+    },
+    {
+        name: 'Booklore',
+        slug: 'booklore',
+        icon: '/docs/images/services/booklore-logo.svg',
+        description: 'Open-source library management system for your digital book collection.',
+        category: 'Media'
     },
     {
         name: 'Browserless',
@@ -440,6 +454,13 @@ const services = [
         slug: 'calibre-web',
         icon: '/docs/images/services/calibreweb-logo.svg',
         description: 'Web app for browsing, reading and downloading eBooks from a Calibre database.',
+        category: 'Media'
+    },
+    {
+        name: 'Calibre Web Automated with Downloader',
+        slug: 'calibre-web-automated-with-downloader',
+        icon: '/docs/images/services/calibre-web-automated-with-downloader.png',
+        description: 'Intuitive web interface for searching and requesting book downloads with Calibre-Web-Automated.',
         category: 'Media'
     },
     {
@@ -485,6 +506,13 @@ const services = [
         category: 'Business'
     },
     {
+        name: 'Chibisafe',
+        slug: 'chibisafe',
+        icon: '/docs/images/services/chibisafe-logo.svg',
+        description: 'A beautiful and performant vault to save all your files in the cloud.',
+        category: 'File Management'
+    },
+    {
         name: 'Checkmate',
         slug: 'checkmate',
         icon: '/docs/images/services/checkmate-logo.png',
@@ -511,6 +539,13 @@ const services = [
         icon: '/docs/images/services/cloudflared-logo.svg',
         description: 'Cloudflare Tunnel client.',
         category: 'Networking'
+    },
+    {
+        name: 'Cloudreve',
+        slug: 'cloudreve',
+        icon: '/docs/images/services/cloudreve-logo.svg',
+        description: 'A self-hosted file management and sharing system.',
+        category: 'Storage'
     },
     {
         name: 'Cockpit',
@@ -553,6 +588,13 @@ const services = [
         icon: '/docs/images/services/cyberchef-logo.jpeg',
         description: 'Data analysis and manipulation tool for cybersecurity.',
         category: 'Security'
+    },
+    {
+        name: 'Databasus',
+        slug: 'databasus',
+        icon: '/docs/images/services/databasus-logo.svg',
+        description: 'Free, open source tool to backup PostgreSQL, MySQL and MongoDB with multiple storage backends.',
+        category: 'Backup'
     },
     {
         name: 'Dashboard',
@@ -682,6 +724,13 @@ const services = [
         category: 'Productivity'
     },
     {
+        name: 'ESPHome',
+        slug: 'esphome',
+        icon: '/docs/images/services/esphome-logo.svg',
+        description: 'Open-source firmware framework for WiFi-enabled microcontrollers.',
+        category: 'IoT'
+    },
+    {
         name: 'Excalidraw',
         slug: 'excalidraw',
         icon: '/docs/images/services/excalidraw-logo.svg',
@@ -722,6 +771,13 @@ const services = [
         icon: '/docs/images/services/fileflows-logo.svg',
         description: 'A automatic file processing service.',
         category: 'File Management'
+    },
+    {
+        name: 'Fizzy',
+        slug: 'fizzy',
+        icon: '/docs/images/services/fizzy-logo.png',
+        description: 'Kanban tracking tool for issues and ideas by 37signals.',
+        category: 'Project Management'
     },
     {
         name: 'Firefly III',
@@ -787,6 +843,13 @@ const services = [
         category: 'RSS'
     },
     {
+        name: 'Garage',
+        slug: 'garage',
+        icon: '/docs/images/services/garage-logo.svg',
+        description: 'S3-compatible distributed object storage service designed for self-hosting.',
+        category: 'Storage'
+    },
+    {
         name: 'Ghost',
         slug: 'ghost',
         icon: '/docs/images/services/ghost-logo.svg',
@@ -850,6 +913,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'GLPI',
+        slug: 'glpi',
+        icon: '/docs/images/services/glpi-logo.svg',
+        description: 'Free, open-source IT Service Management platform for asset management, helpdesk, and service desk operations.',
+        category: 'Business'
+    },
+    {
         name: 'Gotenberg',
         slug: 'gotenberg',
         icon: '/docs/images/services/gotenberg-logo.png',
@@ -876,6 +946,13 @@ const services = [
         icon: '/docs/images/services/grocy-logo.svg',
         description: 'A self-hosted groceries & household management solution for your home.',
         category: 'Home'
+    },
+    {
+        name: 'Hatchet',
+        slug: 'hatchet',
+        icon: '/docs/images/services/hatchet-logo.svg',
+        description: 'Platform for running background tasks and durable workflows built on Postgres.',
+        category: 'Development'
     },
     {
         name: 'Heimdall',
@@ -1038,6 +1115,13 @@ const services = [
         icon: '/docs/images/services/langfuse-logo.svg',
         description: 'Open source LLM engineering platform.',
         category: 'AI'
+    },
+    {
+        name: 'Linkding',
+        slug: 'linkding',
+        icon: '/docs/images/services/linkding-logo.svg',
+        description: 'A self-hosted bookmark manager designed to be minimal, fast, and easy to set up.',
+        category: 'Bookmarks'
     },
     {
         name: 'LibreOffice',
@@ -1285,6 +1369,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'NocoBase',
+        slug: 'nocobase',
+        icon: '/docs/images/services/nocobase-logo.png',
+        description: 'The most extensible AI-powered no-code platform with total control and infinite extensibility.',
+        category: 'Development'
+    },
+    {
         name: 'NocoDB',
         slug: 'nocodb',
         icon: '/docs/images/services/nocodb-logo.svg',
@@ -1332,6 +1423,20 @@ const services = [
         icon: '/docs/images/services/onedev-logo.svg',
         description: 'Self-hosted Git server with integrated CI/CD and kanban.',
         category: 'Development'
+    },
+    {
+        name: 'Onetime Secret',
+        slug: 'onetimesecret',
+        icon: '/docs/images/services/onetimesecret-logo.svg',
+        description: 'Share secrets securely with self-destructing links that can only be viewed once.',
+        category: 'Security'
+    },
+    {
+        name: 'Open Archiver',
+        slug: 'open-archiver',
+        icon: '/docs/images/services/openarchiver-logo.svg',
+        description: 'Self-hosted, open-source email archiving solution with full-text search.',
+        category: 'Email'
     },
     {
         name: 'Open WebUI',
@@ -1396,6 +1501,13 @@ const services = [
         icon: '/docs/images/services/pairdrop-logo.png',
         description: 'Local file sharing in your browser.',
         category: 'File Sharing'
+    },
+    {
+        name: 'Palworld',
+        slug: 'palworld',
+        icon: '/docs/images/services/palworld-logo.webp',
+        description: 'Dedicated server for Palworld multiplayer survival game with creature collection and base building.',
+        category: 'Gaming'
     },
     {
         name: 'Paperless',
@@ -1589,6 +1701,13 @@ const services = [
         category: 'Social Media'
     },
     {
+        name: 'Redmine',
+        slug: 'redmine',
+        icon: '/docs/images/services/redmine-logo.svg',
+        description: 'Flexible project management web application.',
+        category: 'Project Management'
+    },
+    {
         name: 'Rivet Engine',
         slug: 'rivet-engine',
         icon: '/docs/images/services/rivet-logo.svg',
@@ -1624,6 +1743,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'SigNoz',
+        slug: 'signoz',
+        icon: '/docs/images/services/signoz-logo.svg',
+        description: 'Open source observability platform native to OpenTelemetry with logs, traces, and metrics.',
+        category: 'Monitoring'
+    },
+    {
         name: 'SilverBullet',
         slug: 'silverbullet',
         icon: '/docs/images/services/silverbullet.png',
@@ -1650,6 +1776,13 @@ const services = [
         icon: '/docs/images/services/soketi-logo.jpeg',
         description: 'Open-source WebSocket server.',
         category: 'Development'
+    },
+    {
+        name: 'Soketi App Manager',
+        slug: 'soketi-app-manager',
+        icon: '/docs/images/services/soketi-app-manager-logo.webp',
+        description: 'Manage Soketi apps with application configuration and WebSocket server administration interface.',
+        category: 'Development',
     },
     {
         name: 'Sonarr',
@@ -1722,6 +1855,13 @@ const services = [
         category: 'File Management'
     },
     {
+        name: 'Tailscale Client',
+        slug: 'tailscale-client',
+        icon: '/docs/images/services/tailscale-logo.svg',
+        description: 'Zero-config WireGuard VPN client for secure mesh networking and encrypted connections.',
+        category: 'Networking'
+    },
+    {
         name: 'Teable',
         slug: 'teable',
         icon: '/docs/images/services/teable-logo.png',
@@ -1764,11 +1904,25 @@ const services = [
         category: 'Productivity'
     },
     {
+        name: 'TrailBase',
+        slug: 'trailbase',
+        icon: '/docs/images/services/trailbase-logo.svg',
+        description: 'Blazingly fast Rust/SQLite/Wasmtime app server with type-safe APIs.',
+        category: 'Development'
+    },
+    {
         name: 'Trigger',
         slug: 'trigger',
         icon: '/docs/images/services/trigger-logo.png',
         description: 'Open-source workflow automation tool.',
         category: 'Automation'
+    },
+    {
+        name: 'Twenty',
+        slug: 'twenty',
+        icon: '/docs/images/services/twenty-logo.svg',
+        description: 'Open-source CRM designed to fit your unique business needs.',
+        category: 'Business'
     },
     {
         name: 'Unleash',
@@ -1867,6 +2021,13 @@ const services = [
         icon: '/docs/images/services/windmill-logo.svg',
         description: 'Open-source developer platform.',
         category: 'Development'
+    },
+    {
+        name: 'Wings',
+        slug: 'wings',
+        icon: '/docs/images/services/pterodactyl_logo_transparent.png',
+        description: 'Pterodactyl server control daemon for standalone game server node deployments.',
+        category: 'Gaming'
     },
     {
         name: 'WireGuard Easy',
@@ -2002,10 +2163,10 @@ const services = [
         category: 'Database'
     },
      {
-        name: 'Postgresus',
-        slug: 'postgresus',
-        icon: '/docs/images/services/postgresus-logo.webp',
-        description: 'A free, open source and self-hosted tool to backup PostgreSQL. Make backups with different storages and notifications about progress.',
+        name: 'Databasus',
+        slug: 'databasus',
+        icon: '/docs/images/services/databasus-logo.webp',
+        description: 'A free, open source and self-hosted tool to backup PostgreSQL, MySQL and MongoDB with multiple storage backends.',
         category: 'Backup'
     },
     {
@@ -2021,6 +2182,34 @@ const services = [
         icon: '/docs/images/services/seafile-logo.svg',
         description: 'High-performance file syncing and sharing with knowledge management features.',
         category: 'Storage'
+    },
+    {
+        name: 'SeaweedFS',
+        slug: 'seaweedfs',
+        icon: '/docs/images/services/seaweedfs-logo.svg',
+        description: 'Simple and highly scalable distributed file system compatible with S3.',
+        category: 'Storage'
+    },
+    {
+        name: 'Sessy',
+        slug: 'sessy',
+        icon: '/docs/images/services/sessy-logo.svg',
+        description: 'Email observability platform for monitoring Amazon SES deliveries, bounces, and more.',
+        category: 'Email'
+    },
+    {
+        name: 'SFTPGo',
+        slug: 'sftpgo',
+        icon: '/docs/images/services/sftpgo-logo.png',
+        description: 'Event-driven SFTP, FTP/S, HTTP/S and WebDAV server.',
+        category: 'File Management'
+    },
+    {
+        name: 'Soju',
+        slug: 'soju',
+        icon: '/docs/images/services/soju-logo.svg',
+        description: 'User-friendly IRC bouncer with modern features.',
+        category: 'Communication'
     },
     {
         name: 'Typesense',

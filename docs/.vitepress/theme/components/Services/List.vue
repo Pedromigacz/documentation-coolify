@@ -1138,7 +1138,7 @@ const services = [
     },
     {
         name: 'Mautic',
-        slug: 'mautic5',
+        slug: 'mautic',
         icon: '/docs/images/services/mautic-logo.svg',
         description: 'Open-source marketing automation platform.',
         category: 'Marketing'

@@ -284,7 +284,7 @@ const services = [
     {
         name: 'Rybbit',
         slug: 'rybbit',
-        icon: '/public/images/services/rybbit.svg',
+        icon: '/docs/images/services/rybbit.svg',
         description: 'A lightweight, open-source web analytics tool that prioritizes user privacy by not using cookies.',
         category: 'Analytics'
     },
@@ -1891,7 +1891,7 @@ const services = [
     {
         name: 'MetaMCP',
         slug: 'metamcp',
-        icon: '/public/images/services/metamcp.png',
+        icon: '/docs/images/services/metamcp.png',
         description: 'MCP Aggregator, Orchestrator, Middleware, Gateway in one application.',
         category: 'AI'
     },
@@ -1961,7 +1961,7 @@ const services = [
     {
         name: 'Newt Pangolin',
         slug: 'newt-pangolin',
-        icon: '/public/images/services/pangolin_newt.svg',
+        icon: '/docs/images/services/pangolin_newt.svg',
         description: 'User space WireGuard tunnel client and TCP/UDP proxy for securely exposing private resources.',
         category: 'Networking'
     },

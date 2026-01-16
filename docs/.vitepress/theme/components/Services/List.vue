@@ -1616,6 +1616,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'SilverBullet',
+        slug: 'silverbullet',
+        icon: '/docs/images/services/silverbullet.png',
+        description: 'An open source personal productivity platform built on Markdown.',
+        category: 'Productivity'
+    },
+    {
         name: 'Slash',
         slug: 'slash',
         icon: '/docs/images/services/slash-logo.svg',

@@ -444,7 +444,8 @@ const services = [
     },
     {
         name: 'Cap',
-        icon: '/public/images/services/cap.svg',
+        slug: 'cap',
+        icon: '/docs/images/services/cap.svg',
         description: 'Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.',
         category: 'Media'
     },

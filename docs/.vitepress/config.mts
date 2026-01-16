@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import yaml from 'vite-plugin-yaml'
 import llmstxt from 'vitepress-plugin-llms'
 import { defineConfig } from 'vitepress'
 import { useSidebar } from 'vitepress-openapi'
@@ -536,6 +535,7 @@ export default defineConfig({
 
   markdown: {
     config: (md) => {
+      // Success callout
       md.use(container, 'success', {
         validate: (params) => {
           return params.trim().match(/^success\s*(.*)$/)
@@ -543,12 +543,93 @@ export default defineConfig({
         render: (tokens, idx) => {
           const m = tokens[idx].info.trim().match(/^success\s+(.*)$/)
           if (tokens[idx].nesting === 1) {
-            // opening tag
-            return `<div class="custom-block success">${m ? `<p class="custom-block-title">${m[1]}</p>` : ''
-              }\n`
+            return `<Callout type="success" title="${m ? m[1] : ''}">`
           } else {
-            // closing tag
-            return '</div>\n'
+            return '</Callout>'
+          }
+        }
+      })
+      // Tip callout
+      md.use(container, 'tip', {
+        validate: (params) => {
+          return params.trim().match(/^tip\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^tip\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="tip" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Warning callout
+      md.use(container, 'warning', {
+        validate: (params) => {
+          return params.trim().match(/^warning\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^warning\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="warning" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Danger callout
+      md.use(container, 'danger', {
+        validate: (params) => {
+          return params.trim().match(/^danger\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^danger\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="danger" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Info callout
+      md.use(container, 'info', {
+        validate: (params) => {
+          return params.trim().match(/^info\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^info\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="info" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Neutral callout
+      md.use(container, 'neutral', {
+        validate: (params) => {
+          return params.trim().match(/^neutral\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^neutral\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            return `<Callout type="neutral" title="${m ? m[1] : ''}">`
+          } else {
+            return '</Callout>'
+          }
+        }
+      })
+      // Details accordion
+      md.use(container, 'details', {
+        validate: (params) => {
+          return params.trim().match(/^details\s*(.*)$/)
+        },
+        render: (tokens, idx) => {
+          const m = tokens[idx].info.trim().match(/^details\s+(.*)$/)
+          if (tokens[idx].nesting === 1) {
+             return `<details class="text-sm rounded-xl border px-6 py-0 last:[&>*]:mb-4 my-4 text-zinc-600 dark:text-zinc-300" style="background-color: var(--coollabs-bg-zinc-300-5); border-color: var(--coollabs-border-zinc-300-20);"><summary class="font-semibold mb-2 cursor-pointer select-none text-zinc-800 dark:text-zinc-100">${m ? m[1] : ''}</summary>`
+          } else {
+            return '</details>'
           }
         }
       })
@@ -572,8 +653,7 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      yaml as any,
-       llmstxt({
+      llmstxt({
          ignoreFiles: [
            '/docs/api-reference/api/**/*',
            '**/api-reference/api/**/*'
@@ -594,7 +674,6 @@ export default defineConfig({
         ],
       }),
     ],
-    assetsInclude: ['**/*.yml'],
     define: {
       'import.meta.env.VITE_KORREKTLY_BASE_URL': JSON.stringify(env.KORREKTLY_BASE_URL || env.VITE_KORREKTLY_BASE_URL || ''),
       'import.meta.env.VITE_KORREKTLY_API_TOKEN': JSON.stringify(env.KORREKTLY_API_TOKEN || env.VITE_KORREKTLY_API_TOKEN || ''),

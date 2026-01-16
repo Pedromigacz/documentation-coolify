@@ -1,17 +1,21 @@
 ---
 title: Usesend
-description: "Send emails on Coolify with Usesend for developer-focused email API, templates, testing, and transactional email delivery service."
+description: "useSend is an open source alternative to Resend, Sendgrid, Mailgun and Postmark etc."
 ---
 
 # Usesend
-<br/>
-<ZoomableImage src="/docs/images/services/usesend-hero-dark.webp" alt="Usesend dashboard" />
+
+<ZoomableImage src="/docs/images/services/usesend-logo.svg" alt="Usesend logo" />
 
 ## What is Usesend
 
-Usesend is an open-source alternative to Resend, Sendgrid, Mailgun and Postmark etc.
+Usesend is an open-source alternative to Resend, Sendgrid, Mailgun and Postmark etc. Previously known as unsend.
 
 There are some setup to be made, please refer to the [official documentation](https://docs.usesend.com/self-hosting/overview?utm_source=coolify.io) for more information.
+
+## Screenshots
+
+<ZoomableImage src="/docs/images/services/usesend-screenshot.webp" alt="Usesend screenshot" />
 
 ## SMTP Configuration
 

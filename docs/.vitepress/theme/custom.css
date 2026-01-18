@@ -9,7 +9,7 @@
 
 /* Style tabs to match table appearance with complete border and rounded corners */
 .plugin-tabs {
-  border: 2px solid var(--coollabs-border-zinc-300-20) !important;
+  border: 2px solid var(--vp-c-divider) !important;
   border-radius: 8px !important;
   overflow: hidden !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
@@ -17,7 +17,7 @@
 }
 
 .plugin-tabs--tab-list {
-  background: var(--coollabs-bg-zinc-300-5) !important;
+  background: var(--vp-c-bg-soft) !important;
   border-bottom: 1.5px solid var(--vp-c-divider) !important;
 }
 
@@ -31,13 +31,62 @@
 }
 
 .dark .plugin-tabs--tab-list {
-  background: var(--coollabs-bg-zinc-300-5) !important;
+  background: var(--vp-c-bg-soft) !important;
   border-bottom: 1px solid var(--vp-c-divider) !important;
 }
 
 .dark .plugin-tabs--content {
   background-color: var(--vp-c-bg) !important;
   border: none !important;
+}
+
+/* Improve codeblock styling */
+.vp-doc div[class*='language-'],
+.vp-doc [class*='language-'],
+.vp-doc pre[class*='language-'] {
+  background-color: var(--coollabs-bg-zinc-300-5) !important;
+  border: 0.5px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 0 0 0 0.850rem !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.vp-doc div[class*='language-'] code,
+.vp-doc [class*='language-'] code,
+.vp-doc pre[class*='language-'] code {
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  padding-left: 0 !important;
+}
+
+.dark .vp-doc div[class*='language-'],
+.dark .vp-doc [class*='language-'],
+.dark .vp-doc pre[class*='language-'] {
+  background-color: var(--coollabs-bg-zinc-300-5) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 0 0 0 0.850rem !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.dark .vp-doc div[class*='language-'] code,
+.dark .vp-doc [class*='language-'] code,
+.dark .vp-doc pre[class*='language-'] code {
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  padding-left: 0 !important;
+}
+
+/* Right-align copy button at the end of codeblocks */
+.vp-doc div[class*='language-'] > button.copy,
+.vp-doc div[class*='language-'] > button.copy-code,
+.vp-doc [class*='language-'] > button.copy,
+.vp-doc [class*='language-'] > button.copy-code,
+.vp-doc pre[class*='language-'] > button.copy,
+.vp-doc pre[class*='language-'] > button.copy-code {
+  right: 8px !important;
 }
 
 @media (min-width: 1440px) {

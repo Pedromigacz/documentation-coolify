@@ -293,6 +293,16 @@
     color: #d6d3d1 !important;
   }
 
+  /* Make bold text stand out more in dark mode */
+  .vp-doc > div > p strong,
+  .vp-doc > div > ul > li strong,
+  .vp-doc > div > ol > li strong,
+  .vp-doc > div > li strong,
+  .vp-doc > div > table td strong,
+  .vp-doc > div > table th strong {
+    color: #efefef !important;
+  }
+
   /* Lighter code background in dark mode */
   --vp-code-bg: #161b22 !important;  /* Darker background in dark mode */
   
@@ -358,6 +368,16 @@
   /* Enhanced code highlighting, especially for Safari */
   --vp-code-color: #F2F2F2;
   --vp-code-bg: #161b22 !important;  /* Darker background in dark mode */
+}
+
+/* Make bold text stand out more in light mode */
+.vp-doc > div > p strong,
+.vp-doc > div > ul > li strong,
+.vp-doc > div > ol > li strong,
+.vp-doc > div > li strong,
+.vp-doc > div > table td strong,
+.vp-doc > div > table th strong {
+  color: #000000 !important;
 }
 
 /* Container padding override - updated for reasonable width layout */
@@ -1049,4 +1069,110 @@ pre[class*='language-'] *:hover {
 
 .title {
   @apply border-0 !important;
+}
+
+/* Modern Table Styling */
+.vp-doc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--coollabs-border-zinc-300-20);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+}
+
+.vp-doc th {
+  font-weight: 600;
+  background: var(--coollabs-bg-zinc-300-5);
+  color: var(--vp-c-text-1);
+  position: relative;
+}
+
+.vp-doc th:first-child,
+.vp-doc td:first-child {
+  width: 200px;
+  min-width: 200px;
+  vertical-align: middle;
+}
+
+.vp-doc td {
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+}
+
+/* Right-align numeric columns (common in tables) */
+.vp-doc th:nth-child(n+2),
+.vp-doc td:nth-child(n+2) {
+  text-align: right;
+}
+
+/* Caption styling */
+.vp-doc caption {
+  caption-side: top;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  text-align: left;
+  background: var(--vp-c-bg-soft);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* Footer styling */
+.vp-doc tfoot th,
+.vp-doc tfoot td {
+  background: var(--coollabs-bg-zinc-300-5);
+  font-weight: 600;
+}
+
+/* Responsive table wrapper for horizontal scroll on small screens */
+@media (max-width: 768px) {
+  .vp-doc table {
+    font-size: 0.8rem;
+  }
+
+  .vp-doc th,
+  .vp-doc td {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  .vp-doc {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vp-doc table {
+    min-width: 600px;
+  }
+}
+
+/* Dark mode table adjustments */
+.dark .vp-doc table {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .vp-doc th {
+  background: var(--coollabs-bg-zinc-300-5);
+}
+
+.dark .vp-doc tfoot th,
+.dark .vp-doc tfoot td {
+  background: var(--coollabs-bg-zinc-300-5);
+}
+
+.dark .vp-doc caption {
+  background: var(--vp-c-bg-elv);
 }

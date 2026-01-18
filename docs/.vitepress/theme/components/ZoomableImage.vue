@@ -19,7 +19,7 @@ const toggleZoom = () => {
       :src="src"
       :alt="alt"
       @click="toggleZoom"
-      :class="['cursor-zoom-in', 'logo-image']"
+      :class="{ 'cursor-zoom-in': !isZoomed }"
     />
     
     <!-- Overlay for zoomed image -->
@@ -43,11 +43,11 @@ const toggleZoom = () => {
   height: auto;
 }
 
-.zoomable-image-container img.logo-image {
+/*.zoomable-image-container img.logo-image {
   max-height: 150px;
   width: auto;
   margin-top: 1rem;
-}
+}*/
 
 .cursor-zoom-in {
   cursor: zoom-in;

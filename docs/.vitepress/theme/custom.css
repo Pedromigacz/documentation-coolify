@@ -7,6 +7,39 @@
   padding-left: 2.7rem;
 }
 
+/* Style tabs to match table appearance with complete border and rounded corners */
+.plugin-tabs {
+  border: 2px solid var(--coollabs-border-zinc-300-20) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+  margin: 1.5rem 0 !important;
+}
+
+.plugin-tabs--tab-list {
+  background: var(--coollabs-bg-zinc-300-5) !important;
+  border-bottom: 1.5px solid var(--vp-c-divider) !important;
+}
+
+.plugin-tabs--content {
+  background-color: var(--vp-c-bg) !important;
+  border: none !important;
+}
+
+.dark .plugin-tabs {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark .plugin-tabs--tab-list {
+  background: var(--coollabs-bg-zinc-300-5) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+.dark .plugin-tabs--content {
+  background-color: var(--vp-c-bg) !important;
+  border: none !important;
+}
+
 @media (min-width: 1440px) {
   .VPContent.has-sidebar {
     padding-right: 0px !important;

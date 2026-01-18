@@ -1,3 +1,12 @@
+/* Add left spacing to lists */
+.vp-doc ul {
+  padding-left: 2.7rem;
+}
+
+.vp-doc ol {
+  padding-left: 2.7rem;
+}
+
 @media (min-width: 1440px) {
   .VPContent.has-sidebar {
     padding-right: 0px !important;

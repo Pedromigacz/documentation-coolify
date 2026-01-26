@@ -1075,7 +1075,8 @@ pre[class*='language-'] *:hover {
 .vp-doc table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   margin: 1.5rem 0;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1102,7 +1103,7 @@ pre[class*='language-'] *:hover {
 
 .vp-doc th:first-child,
 .vp-doc td:first-child {
-  width: 200px;
+  width: 240px;
   min-width: 200px;
   vertical-align: middle;
 }

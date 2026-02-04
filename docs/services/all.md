@@ -44,6 +44,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 ## Analytics
 
+- [GoatCounter](/services/goatcounter) - A web analytics platform that aims to offer easy to use and meaningful privacy-friendly web analytics.
 - [Metabase](/services/metabase) - The simplest, fastest way to share data and analytics inside your company
 - [OpenPanel](/services/openpanel) - Open source alternative to Mixpanel and Plausible for product analytics
 - [PostHog](/services/posthog) - Open source product analytics

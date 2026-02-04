@@ -5,8 +5,7 @@ description: "Run Satisfactory server on Coolify for multiplayer gaming."
 
 # What is Satisfactory?
 
-Satisfactory
-is a first-person, open-world factory simulation game focused on building, automation, and exploration on an alien planet. Players, as "Capital Pioneers" for FICSIT Inc., explore, gather resources, and build massive, multi-story factories interconnected by conveyor belts to automate production.
+Satisfactory is a first-person, open-world factory simulation game focused on building, automation, and exploration on an alien planet. Players, as "Capital Pioneers" for FICSIT Inc., explore, gather resources, and build massive, multi-story factories interconnected by conveyor belts to automate production.
 
 ## Info
 

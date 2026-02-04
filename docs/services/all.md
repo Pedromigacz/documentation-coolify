@@ -249,6 +249,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 ## Gaming
 
+- [Satisfactory](/services/satisfactory) - Game server for Satisfactory open-world factory building game with a dash of exploration and combat.
 - [FoundryVTT](/services/foundryvtt) - Virtual tabletop for tabletop role-playing games
 - [Minecraft](/services/minecraft) - Minecraft game server
 - [Palworld](/services/palworld) - Dedicated server for Palworld multiplayer survival game with creature collection and base building

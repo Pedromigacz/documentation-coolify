@@ -21,6 +21,6 @@ It focuses on speed, design, fast navigation in large note collections, and expl
 
 ## Links
 
-- [Website](https://alexandrie-hub.fr)
+- [Website](https://alexandrie-hub.fr?utm_source=coolify.io)
 - [GitHub](https://github.com/Smaug6739/Alexandrie?utm_source=coolify.io)
 - [Documentation](https://github.com/Smaug6739/Alexandrie/wiki?utm_source=coolify.io)

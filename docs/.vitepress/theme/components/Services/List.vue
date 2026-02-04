@@ -310,11 +310,11 @@ const services = [
         category: 'Productivity'
     },
     {
-         name: 'Alexandrie',
-         slug: 'alexandrie'
-         icon: '/docs/images/services/alexandrie-logo.svg',
-         description: 'Self-hosted Markdown note-taking app focused on performance, local data, and knowledge graph navigation.',
-         category: 'Productivity'
+        name: 'Alexandrie',
+        slug: 'alexandrie',
+        icon: '/docs/images/services/alexandrie-logo.svg',
+        description: 'Markdown note-taking app focused on performance, local data, and knowledge graph navigation.',
+        category: 'Productivity'
     },
     {
         name: 'AppFlowy',

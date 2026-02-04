@@ -25,6 +25,6 @@ GoatCounter is an open source web analytics platform. It aims to offer easy to u
 
 ## Links
 
-- [The official website](https://www.goatcounter.com)
-- [Documentation](https://www.goatcounter.com/help/start)
-- [GitHub](https://github.com/arp242/goatcounter)
+- [The official website](https://www.goatcounter.com?utm_source=coolify.io)
+- [Documentation](https://www.goatcounter.com/help/start?utm_source=coolify.io)
+- [GitHub](https://github.com/arp242/goatcounter?utm_source=coolify.io)

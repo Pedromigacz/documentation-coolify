@@ -33,7 +33,7 @@ services:
     image: 'traefik:v2.10'
     restart: unless-stopped
     environment:
-      - HETZNER_API_KEY=<API Key>
+      - HETZNER_API_TOKEN=<API Key>
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     networks:
@@ -82,7 +82,7 @@ services:
       - traefik.http.middlewares.gzip.compress=true
 ```
 
-> You can also set `env_file` instead of `environment` in the example above, but then you need to create a `.env` file with the `HETZNER_API_KEY` variable on the server.
+> You can also set `env_file` instead of `environment` in the example above, but then you need to create a `.env` file with the `HETZNER_API_TOKEN` variable on the server.
 
 > Change `--certificatesresolvers.letsencrypt.acme.dnschallenge.provider=hetzner` to your provider.
 

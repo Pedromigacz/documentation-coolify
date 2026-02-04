@@ -30,7 +30,7 @@ networks:
 services:
   traefik:
     container_name: coolify-proxy
-    image: 'traefik:v2.10'
+    image: 'traefik:v3.6'
     restart: unless-stopped
     environment:
       - HETZNER_API_TOKEN=<API Key>

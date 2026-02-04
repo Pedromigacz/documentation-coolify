@@ -31,6 +31,6 @@ The PDF Toolkit built for privacy.
 
 ## Links
 
-- [Official website](https://www.bentopdf.com)
-- [Documentation](https://bentopdf.com/docs)
-- [GitHub](https://github.com/alam00000/bentopdf)
+- [Official website](https://www.bentopdf.com?utm_source=coolify.io)
+- [Documentation](https://bentopdf.com/docs?utm_source=coolify.io)
+- [GitHub](https://github.com/alam00000/bentopdf?utm_source=coolify.io)

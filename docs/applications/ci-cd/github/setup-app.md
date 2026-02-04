@@ -183,7 +183,7 @@ Creating apps on github slightly varies for personal accounts and organizations 
 4. Enter Setup URL: `https://coolboxy.shadowarcanist.internal/webhooks/source/github/install?source=a8000cg0g0ogcc0ggkk8ow4k`
 
 5. Enable the option `Redirect on Update`
-6. Enter Webhook URL: `https://coolboxy.shadowarcanist.internal/source/github/events`
+6. Enter Webhook URL: `https://coolboxy.shadowarcanist.internal/webhooks/source/github/events`
 
 ::: info
   You have to replace `https://coolboxy.shadowarcanist.internal` with your Coolify dashboard url and replace `a8000cg0g0ogcc0ggkk8ow4k` with the Source ID [Step 1](#_1-create-a-github-app-on-coolify-1)

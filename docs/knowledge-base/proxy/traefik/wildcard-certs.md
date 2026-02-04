@@ -9,10 +9,10 @@ description: "Configure Let's Encrypt wildcard SSL certificates with Traefik DNS
 
 - You need to have a domain name and a DNS provider that supports wildcard subdomains.
 - You need to use [dnsChallenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge) in Traefik to get wildcard certificates from Let's Encrypt.
-- You need to use one of the supported DNS [providers](https://doc.traefik.io/traefik/https/acme/#providers).
+- You need to use one of the supported DNS [providers](https://go-acme.github.io/lego/dns/index.html#dns-providers).
 
 ::: tip Tip
-Each provider needs environment variables to be set in the Traefik configuration. You can find the required variables in the [official documentation](https://doc.traefik.io/traefik/https/acme/#providers).
+Each provider needs environment variables to be set in the Traefik configuration. You can find the required variables in the [official documentation](https://go-acme.github.io/lego/dns/index.html#dns-providers).
 
 If you need fine-grained token, like with [Cloudflare](https://go-acme.github.io/lego/dns/cloudflare/), check the provider configurations.
 :::

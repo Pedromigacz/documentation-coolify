@@ -253,6 +253,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Minecraft](/services/minecraft) - Minecraft game server
 - [Palworld](/services/palworld) - Dedicated server for Palworld multiplayer survival game with creature collection and base building
 - [Pterodactyl](/services/pterodactyl) - Game server management panel with Wings daemon for hosting Minecraft, CS:GO, ARK and more
+- [Satisfactory](/services/satisfactory) - Satisfactory game server
 - [Terraria Server](/services/terraria-server) - Docker multi-arch image for Terraria game server
 - [Wings](/services/wings) - Pterodactyl server control daemon for standalone game server node deployments
 

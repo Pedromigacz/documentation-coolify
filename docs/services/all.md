@@ -242,6 +242,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [BudgE](/services/budge) - A budgeting personal finance app
 - [Firefly III](/services/firefly) - A personal finances manager
 - [Maybe](/services/maybe) - Personal finance and wealth management application
+- [Sure](/services/sure) - An all-in-one personal finance platform.
 
 ## Forum
 

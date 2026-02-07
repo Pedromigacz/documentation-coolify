@@ -1,6 +1,6 @@
 ---
 title: Domains
-description: "Add custom domains to Coolify with FQDN format, multiple domain support, port mapping, wildcard domains, and custom DNS server validation."
+description: "Add custom domains to Coolify with FQDN format, multiple domain support, port mapping, path-based routing, wildcard domains, and custom DNS server validation."
 ---
 
 # Domains
@@ -38,6 +38,44 @@ If automatic certificate issuance from [Let's Encrypt](https://letsencrypt.org?u
 ::: warning TROUBLESHOOTING
 If you see a certificate warning in your browser or your application shows a self-signed certificate, see the [Let's Encrypt Not Working](/troubleshoot/dns-and-domains/lets-encrypt-not-working) troubleshooting guide for detailed solutions.
 :::
+
+## Path-Based Routing
+
+You can route traffic to different applications and services based on URL paths by appending a path to your domain. This allows multiple applications to share the same domain while being accessible at different paths.
+
+**Format**: `https://domain.com/path` or with a custom port: `https://domain.com:3000/path`
+
+::: warning PORT PLACEMENT
+When using both a port and a path, the port must come **after** the domain but **before** the path.
+
+- Correct: `https://coolify.io:3000/api`
+- Incorrect: `https://coolify.io/api:3000`
+:::
+
+### How Path Priority Works
+
+Coolify automatically applies priority rules to path-based routing. More specific paths take precedence over less specific ones:
+
+- `/api/v2/users` → highest priority
+- `/api/v2` → medium priority
+- `/api` → lower priority
+- `/` → lowest priority (root/fallback)
+
+This means you can safely deploy multiple applications on the same domain without worrying about routing conflicts.
+
+### Health Requirements
+
+For path-based routing to function correctly, the application serving a specific path must be **running and healthy**. If an application becomes unhealthy or stops responding, traffic to that path will fall back to the application serving the root domain (`/`).
+
+::: tip EXAMPLE
+If you have:
+- App A serving `https://coolify.io/` (root)
+- App B serving `https://coolify.io/api`
+
+And App B becomes unhealthy, requests to `/api` will be routed to App A instead.
+:::
+
+Read more about how Coolifys proxies read and intepret the health of your resources in our [Health Checks page](/knowledge-base/health-checks).
 
 ## Catch Multiple Domains
 

@@ -38,6 +38,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [NewAPI](/services/newapi) - The next-generation LLM gateway and AI asset management system supports multiple languages.
 - [Ollama](/services/ollama) - A lightweight and efficient server for running large language models (LLMs) on your local machine or in the cloud
 - [Open WebUI](/services/open-webui) - User-friendly WebUI for LLMs, formerly Ollama WebUI
+- [OpenClaw](/services/openclaw) - AI-powered coding assistant with multi-provider support and browser automation
 - [Qdrant](/services/qdrant) - Open source, AI-native vector database
 - [Unstructured](/services/unstructured) - Open-source platform and tools to ingest and process unstructured documents for Retrieval Augmented Generation (RAG) and model fine-tuning
 - [Weaviate](/services/weaviate) - Open source, AI-native vector database

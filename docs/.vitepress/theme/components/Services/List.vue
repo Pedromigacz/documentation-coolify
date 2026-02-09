@@ -1482,6 +1482,13 @@ const services = [
         disabled: true
     },
     {
+        name: 'OpenClaw',
+        slug: 'openclaw',
+        icon: '/docs/images/services/openclaw-logo.svg',
+        description: 'AI-powered coding assistant with multi-provider support and browser automation.',
+        category: 'AI'
+    },
+    {
         name: 'Organizr',
         slug: 'organizr',
         icon: '/docs/images/services/organizr-logo.png',

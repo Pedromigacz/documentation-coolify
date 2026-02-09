@@ -5,7 +5,7 @@ description: "Deploy OpenClaw AI-powered coding assistant on Coolify with multi-
 
 # OpenClaw
 
-![OpenClaw](/docs/images/services/openclaw-logo.svg)
+<ZoomableImage src="/docs/images/services/openclaw-logo.svg" alt="OpenClaw" />
 
 ## What is OpenClaw?
 

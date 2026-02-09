@@ -123,14 +123,20 @@ If you were using this service, please [migration instructions or alternative].
 :::
 ```
 
+### 5. Remove from All Services Directory
+
+Edit `docs/services/all.md` and remove the service entry from its category section.
+
 ## Verification Checklist
 
 After disabling, verify:
 
 - [ ] `disabled: true` added to service entry in List.vue
 - [ ] Warning callout added to markdown file
+- [ ] Entry removed from `docs/services/all.md`
 - [ ] Documentation file still exists (NOT deleted)
 - [ ] Service no longer appears in listing at http://localhost:5173/docs/services/
+- [ ] Service no longer appears at http://localhost:5173/docs/services/all
 - [ ] Direct URL still works: http://localhost:5173/docs/services/service-name
 - [ ] Warning is visible at top of page
 

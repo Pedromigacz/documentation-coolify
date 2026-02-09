@@ -64,7 +64,7 @@ These hashes are provided for reference only. They have not been verified for ac
 ### Node.js 20.x
 
 | Version | SHA256                                                             |
-| ------- | ------------------------------------------------------------------ |
+| ------- | :------------------------------------------------------------------ |
 | 20.0.0  | `sha256-dFDnV5Vo99HLOYGFz85HLaKDeyqjbFliCyLOS5d7XLU=`              |
 | 20.1.0  | `sha256-YA+eEYYJlYFLkSKxrFMY9q1WQnR4Te7ZjYqSBmSUNrU=`              |
 | 20.2.0  | `sha256-IlI98jFsNVaXFP8fabBTwuKGztRgiYQX3uRpRe/N+Yk=`              |
@@ -105,7 +105,7 @@ These hashes are provided for reference only. They have not been verified for ac
 ### Node.js 22.x
 
 | Version | SHA256                                                             |
-| ------- | ------------------------------------------------------------------ |
+| ------- | :------------------------------------------------------------------ |
 | 22.0.0  | `sha256-IuKPv/MfaQc7gCTLQnReUQX4QEHzR1smC5fVoUEDnRo=`              |
 | 22.1.0  | `sha256-nX1fQNnb1iYMmbXklLX5vHVejw/6xw4SGtzl+0QvI8s=`              |
 | 22.2.0  | `sha256-iJkIqIKNFISRDX5lm2qlet6NUo/w45Dpp372WadihHQ=`              |
@@ -135,7 +135,7 @@ These hashes are provided for reference only. They have not been verified for ac
 ### Node.js 24.x
 
 | Version     | SHA256                                                             |
-| ----------- | ------------------------------------------------------------------ |
+| ----------- | :------------------------------------------------------------------ |
 | 24.0.0-rc.2 | `729fca42bb7266031dd020f3935423ea8d4b4e2d119b34b608f1d079e5c1621a` |
 | 24.0.0-rc.3 | `9bbca08fba05f075a20f734ea80b195a4a39218476b60b32db79e1d393fda20b` |
 | 24.0.0      | `914f3f1b03f84a0994d7357f190ff13c038800c693b6c06da2290eb588c82761` |
@@ -159,5 +159,5 @@ These hashes are provided for reference only. They have not been verified for ac
 ### Node.js 25.x
 
 | Version | SHA256                                                             |
-| ------- | ------------------------------------------------------------------ |
+| ------- | :------------------------------------------------------------------ |
 | 25.2.1  | `aa7c4ac1076dc299a8949b8d834263659b2408ec0e5bba484673a8ce0766c8b9` |

@@ -59,7 +59,7 @@ If you haven't picked a server provider yet, consider using [Hetzner](https://co
 Coolify supports several Linux distributions:
 
 - Debian-based (e.g., Debian, Ubuntu - all versions supported, but non-LTS Ubuntu requires manual installation)
-- Redhat-based (e.g., CentOS, Fedora, Redhat, AlmaLinux, Rocky, Asahi)
+- Redhat-based (e.g., CentOS, TencentOS, Fedora, Redhat, AlmaLinux, Rocky, Asahi)
 - SUSE-based (e.g., SLES, SUSE, openSUSE)
 - Arch Linux (Note: Not all Arch derivatives are supported)
 - Alpine Linux

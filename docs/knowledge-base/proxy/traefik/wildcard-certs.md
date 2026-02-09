@@ -9,10 +9,10 @@ description: "Configure Let's Encrypt wildcard SSL certificates with Traefik DNS
 
 - You need to have a domain name and a DNS provider that supports wildcard subdomains.
 - You need to use [dnsChallenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge) in Traefik to get wildcard certificates from Let's Encrypt.
-- You need to use one of the supported DNS [providers](https://doc.traefik.io/traefik/https/acme/#providers).
+- You need to use one of the supported DNS [providers](https://go-acme.github.io/lego/dns/index.html#dns-providers).
 
 ::: tip Tip
-Each provider needs environment variables to be set in the Traefik configuration. You can find the required variables in the [official documentation](https://doc.traefik.io/traefik/https/acme/#providers).
+Each provider needs environment variables to be set in the Traefik configuration. You can find the required variables in the [official documentation](https://go-acme.github.io/lego/dns/index.html#dns-providers).
 
 If you need fine-grained token, like with [Cloudflare](https://go-acme.github.io/lego/dns/cloudflare/), check the provider configurations.
 :::
@@ -30,10 +30,10 @@ networks:
 services:
   traefik:
     container_name: coolify-proxy
-    image: 'traefik:v2.10'
+    image: 'traefik:v3.6'
     restart: unless-stopped
     environment:
-      - HETZNER_API_KEY=<API Key>
+      - HETZNER_API_TOKEN=<API Key>
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     networks:
@@ -82,7 +82,7 @@ services:
       - traefik.http.middlewares.gzip.compress=true
 ```
 
-> You can also set `env_file` instead of `environment` in the example above, but then you need to create a `.env` file with the `HETZNER_API_KEY` variable on the server.
+> You can also set `env_file` instead of `environment` in the example above, but then you need to create a `.env` file with the `HETZNER_API_TOKEN` variable on the server.
 
 > Change `--certificatesresolvers.letsencrypt.acme.dnschallenge.provider=hetzner` to your provider.
 

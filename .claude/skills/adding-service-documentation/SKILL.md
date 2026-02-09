@@ -22,7 +22,8 @@ This skill guides you through documenting a new service in the Coolify documenta
 3. **Download the logo** from GitHub and save to `docs/public/images/services/`
 4. **Create documentation** at `docs/services/{service-slug}.md`
 5. **Update services list** in `docs/.vitepress/theme/components/Services/List.vue`
-6. **Test locally** with `bun run dev`
+6. **Update all services directory** in `docs/services/all.md`
+7. **Test locally** with `bun run dev`
 
 ## File Structure
 
@@ -39,7 +40,8 @@ https://github.com/coollabsio/coolify/tree/main/public/svgs
 Documentation Repository:
 ├── docs/
 │   ├── services/
-│   │   └── service-name.md       # Service documentation page
+│   │   ├── service-name.md       # Service documentation page
+│   │   └── all.md                # All services directory (categorized list)
 │   ├── public/images/services/
 │   │   └── service-logo.svg      # Copied logo
 │   └── .vitepress/theme/components/Services/
@@ -48,11 +50,12 @@ Documentation Repository:
 
 ## Required Files
 
-Every service requires these 3 files:
+Every service requires these 4 updates:
 
 1. **Service documentation** (`docs/services/{slug}.md`)
 2. **Service logo** (`docs/public/images/services/{name}-logo.{ext}`)
 3. **List entry** (in `docs/.vitepress/theme/components/Services/List.vue`)
+4. **All services directory** (`docs/services/all.md`) — add entry alphabetically under the correct category
 
 ## Detailed Instructions
 

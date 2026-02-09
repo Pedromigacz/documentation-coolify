@@ -11,7 +11,7 @@ Accessing All Resource deployed on Coolify using a Cloudflare Tunnel allows you 
 
 This setup is ideal for people who:
 
-- Don't have a public IP for their server (could be a laptop, rasberry pi etc..).
+- Don't have a public IP for their server (could be a laptop, raspberry pi etc..).
 - Are unable to port forward (e.g., using home internet or on a private network).
 - Want to keep their server’s IP address private and avoid exposing it to the public internet.
 - Have an resource already deployed on Coolify and need an external method to access it securely.
@@ -26,7 +26,7 @@ To follow this guide, you'll need:
 ## Before We Start
 
 - We assume you have Coolify running on your server.
-- If your app requires HTTPS for functionality like cookies or login, then you need to follow the [Full TLS HTTPS guide](/knowledge-base/cloudflare/tunnels/full-tls) after following this guide. This is because in this guide, Cloudflare will manage HTTPS externally, while your app will run over HTTP within Coolify.
+- If your app requires HTTPS for functionality like cookies or login, then you need to follow the [Full TLS HTTPS guide](/integrations/cloudflare/tunnels/full-tls) after following this guide. This is because in this guide, Cloudflare will manage HTTPS externally, while your app will run over HTTP within Coolify.
 
 ## How It Works?
 
@@ -43,7 +43,7 @@ A simple high-level overview diagram to give you a visual idea of how this works
 - [Setup Cloudflare Tunnel on Coolify](#_3-setup-cloudflare-tunnel-on-coolify)
 - [Start Coolify Proxy](#_4-start-coolify-proxy)
 - [Configure Your Resource to Use the Tunnel Domain](#_5-configure-your-resource-to-use-the-tunnel-domain)
-- [How to use Mutiple Different Domains](#how-to-use-mutiple-different-domains)
+- [How to use Multiple Different Domains](#how-to-use-multiple-different-domains)
 - [Known issues and Solutions](#known-issues-and-solutions)
 
 ---
@@ -149,12 +149,12 @@ Enter the domain you want to use for your resource/app and deploy your resource.
 ::: warning HEADS UP!  
  You should enter the domain as **HTTP** because Cloudflare handles **HTTPS** and TLS terminations. If you use **HTTPS** for your resource, you may encounter a **TOO_MANY_REDIRECTS** error.
 
-If your app requires **HTTPS** for features like cookies or login, follow the [Full TLS HTTPS Guide](/knowledge-base/cloudflare/tunnels/full-tls) after completing this guide.  
+If your app requires **HTTPS** for features like cookies or login, follow the [Full TLS HTTPS Guide](/integrations/cloudflare/tunnels/full-tls) after completing this guide.  
 :::
 
 **Congratulations**! You've successfully set up a resource that can be accessed by anyone on the internet your domain.
 
-## How to use Mutiple Different Domains?
+## How to use Multiple Different Domains?
 
 You don't need to create new tunnels for each domain, just create a new hostname with the new domain and point it to the `localhost:80`.
 

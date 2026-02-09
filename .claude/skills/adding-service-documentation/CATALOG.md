@@ -207,9 +207,34 @@ const services = [
 - Keep entries alphabetically sorted
 - Use an existing category when possible
 
+## All Services Directory (`docs/services/all.md`)
+
+In addition to List.vue, add the service to `docs/services/all.md`. This is a manually maintained, categorized list of all services.
+
+### Entry Format
+
+```markdown
+- [ServiceName](/services/service-slug) - Brief description
+```
+
+### Placement
+
+- Find the correct **category heading** (e.g., `## AI`, `## Development`)
+- Insert **alphabetically by name** within that category
+- Use the same description as the List.vue entry
+
+### Example
+
+Under `## AI`:
+```markdown
+- [Ollama](/services/ollama) - A lightweight and efficient server for running LLMs
+- [OpenClaw](/services/openclaw) - AI-powered coding assistant with multi-provider support and browser automation
+- [Open WebUI](/services/open-webui) - User-friendly WebUI for LLMs
+```
+
 ## Testing
 
-After adding a service to List.vue:
+After adding a service to List.vue and all.md:
 
 ```bash
 # Start dev server

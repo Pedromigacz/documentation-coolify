@@ -15,15 +15,16 @@ This skill guides you through renaming a service in the Coolify documentation, e
 - Consolidating duplicate service documentation
 - Correcting typos in service slugs
 
-## Critical: Three Locations Must Be Updated
+## Critical: Four Locations Must Be Updated
 
-When renaming a service, you **MUST** update all three locations:
+When renaming a service, you **MUST** update all four locations:
 
 1. **Documentation file** (`docs/services/`)
 2. **Services list** (`docs/.vitepress/theme/components/Services/List.vue`)
-3. **Nginx redirects** (`nginx/redirects.conf`)
+3. **All services directory** (`docs/services/all.md`)
+4. **Nginx redirects** (`nginx/redirects.conf`)
 
-Failing to update all three will cause broken links or 404 errors.
+Failing to update all four will cause broken links or 404 errors.
 
 ## Step-by-Step Process
 
@@ -69,7 +70,15 @@ location = /knowledge-base/services/old-name { return 301 /docs/services/new-nam
 
 **Important:** Keep redirects even for deleted pages to prevent 404 errors from search engines and bookmarks.
 
-### 4. Update Internal Links
+### 4. Update All Services Directory
+
+Edit `docs/services/all.md` and update the service entry under its category:
+
+```markdown
+- [New Service Name](/services/new-name) - Service description
+```
+
+### 5. Update Internal Links
 
 Search for any internal links referencing the old name:
 
@@ -80,7 +89,7 @@ grep -r "old-name" docs/
 
 Update any found references in other documentation files.
 
-### 5. Rename Logo File (If Needed)
+### 6. Rename Logo File (If Needed)
 
 If the logo filename also needs updating:
 
@@ -99,6 +108,7 @@ After renaming, verify:
 - [ ] Old file removed or redirected
 - [ ] List.vue `slug` matches new filename
 - [ ] List.vue `icon` path is correct
+- [ ] Entry updated in `docs/services/all.md`
 - [ ] Redirect added to `nginx/redirects.conf`
 - [ ] No broken internal links (run `grep -r "old-name" docs/`)
 - [ ] Service appears correctly at http://localhost:5173/docs/services/new-name

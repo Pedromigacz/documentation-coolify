@@ -28,6 +28,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [Chroma](/services/chroma) - Open-source, AI-native vector database for building applications with embeddings
 - [Flowise](/services/flowise) - Drag & drop UI to build your customized LLM flow
 - [Label Studio](/services/labelstudio) - Open source data labeling platform
+- [Langflow](/services/langflow) - Open-source Python-based framework for building AI agents and workflows with visual drag-and-drop interface
 - [Langfuse](/services/langfuse) - Open source LLM engineering platform
 - [LibreChat](/services/librechat) - Self-hosted, powerful, and privacy-focused chat UI for multiple AI models
 - [LibreTranslate](/services/libretranslate) - Free and open-source machine translation API
@@ -37,12 +38,14 @@ Complete directory of all one-click services available in Coolify, organized by 
 - [NewAPI](/services/newapi) - The next-generation LLM gateway and AI asset management system supports multiple languages.
 - [Ollama](/services/ollama) - A lightweight and efficient server for running large language models (LLMs) on your local machine or in the cloud
 - [Open WebUI](/services/open-webui) - User-friendly WebUI for LLMs, formerly Ollama WebUI
+- [OpenClaw](/services/openclaw) - AI-powered coding assistant with multi-provider support and browser automation
 - [Qdrant](/services/qdrant) - Open source, AI-native vector database
 - [Unstructured](/services/unstructured) - Open-source platform and tools to ingest and process unstructured documents for Retrieval Augmented Generation (RAG) and model fine-tuning
 - [Weaviate](/services/weaviate) - Open source, AI-native vector database
 
 ## Analytics
 
+- [GoatCounter](/services/goatcounter) - A web analytics platform that aims to offer easy to use and meaningful privacy-friendly web analytics.
 - [Metabase](/services/metabase) - The simplest, fastest way to share data and analytics inside your company
 - [OpenPanel](/services/openpanel) - Open source alternative to Mixpanel and Plausible for product analytics
 - [PostHog](/services/posthog) - Open source product analytics
@@ -247,6 +250,7 @@ Complete directory of all one-click services available in Coolify, organized by 
 
 ## Gaming
 
+- [Satisfactory](/services/satisfactory) - Game server for Satisfactory open-world factory building game with a dash of exploration and combat.
 - [FoundryVTT](/services/foundryvtt) - Virtual tabletop for tabletop role-playing games
 - [Minecraft](/services/minecraft) - Minecraft game server
 - [Palworld](/services/palworld) - Dedicated server for Palworld multiplayer survival game with creature collection and base building
@@ -329,10 +333,12 @@ Complete directory of all one-click services available in Coolify, organized by 
 ## Productivity
 
 - [Affine](/services/affine) - Open-source knowledge base and workspace combining docs, whiteboards, and databases
+- [Alexandrie](/services/alexandrie) - Markdown note-taking app focused on performance, design and productivity.
 - [AppFlowy](/services/appflowy) - Open-source alternative to Notion with workspaces for docs, wikis, and project management
-- [Ente](/services/ente-photos) - A fully open-source, end-to-end encrypted platform for storing data in the cloud
+- [BentoPDF](/services/bento-pdf) - Process PDFs entirely in your browser. No uploads. No servers. Complete privacy.
 - [Cal.com](/services/calcom) - Open-source Calendly alternative for scheduling meetings
 - [CodiMD](/services/codimd) - Realtime collaborative markdown notes on all platforms
+- [Ente](/services/ente-photos) - A fully open-source, end-to-end encrypted platform for storing data in the cloud
 - [Excalidraw](/services/excalidraw) - Virtual whiteboard for sketching hand-drawn like diagrams
 - [Grist](/services/grist) - Modern relational spreadsheet combining flexibility and database robustness
 - [Joplin](/services/joplin) - Open-source note taking and to-do application

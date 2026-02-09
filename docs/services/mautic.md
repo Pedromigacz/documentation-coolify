@@ -7,6 +7,10 @@ description: "Deploy Mautic open-source marketing automation platform on Coolify
 
 <ZoomableImage src="/docs/images/services/mautic-logo.svg" alt="Mautic dashboard" />
 
+::: danger SERVICE REMOVED FROM COOLIFY
+This service has been removed from Coolify’s one-click service catalog because the official Docker images no longer include AMQP transport, so RabbitMQ integration does not work with our template. More info on https://github.com/coollabsio/coolify/pull/8088
+:::
+
 ## What is Mautic
 
 Mautic is the world's largest open-source marketing automation project, trusted by over 200,000 organizations worldwide. It provides a privacy-focused, fully customizable marketing automation platform that gives you complete control over your data and marketing infrastructure.

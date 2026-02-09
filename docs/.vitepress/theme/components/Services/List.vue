@@ -310,6 +310,13 @@ const services = [
         category: 'Productivity'
     },
     {
+        name: 'Alexandrie',
+        slug: 'alexandrie',
+        icon: '/docs/images/services/alexandrie-logo.svg',
+        description: 'Markdown note-taking app focused on performance, local data, and knowledge graph navigation.',
+        category: 'Productivity'
+    },
+    {
         name: 'AppFlowy',
         slug: 'appflowy',
         icon: '/docs/images/services/appflowy.svg',
@@ -378,6 +385,13 @@ const services = [
         icon: '/docs/images/services/babybuddy-logo.png',
         description: 'It helps parents track their baby\'s daily activities, growth, and health with ease.',
         category: 'Health'
+    },
+    {
+        name: 'BentoPDF',
+        slug: 'bento-pdf',
+        icon: '/docs/images/services/bento-pdf.png',
+        description: 'Process PDFs entirely in your browser. No uploads. No servers. Complete privacy.',
+        category: 'Productivity'
     },
     {
         name: 'Beszel',
@@ -878,6 +892,13 @@ const services = [
         category: 'Development'
     },
     {
+        name: 'GoatCounter',
+        slug: 'goatcounter',
+        icon: '/docs/images/services/goatcounter.svg',
+        description: 'Web analytics platform offering easy to use and meaningful privacy-friendly web analytics.',
+        category: 'Analytics'
+    },
+    {
         name: 'Gotify',
         slug: 'gotify',
         icon: '/docs/images/services/gotify-logo.svg',
@@ -1114,6 +1135,13 @@ const services = [
         slug: 'langfuse',
         icon: '/docs/images/services/langfuse-logo.svg',
         description: 'Open source LLM engineering platform.',
+        category: 'AI'
+    },
+    {
+        name: 'Langflow',
+        slug: 'langflow',
+        icon: '/docs/images/services/langflow.svg',
+        description: 'Open source Python-based framework for building AI applications.',
         category: 'AI'
     },
     {
@@ -1454,6 +1482,13 @@ const services = [
         disabled: true
     },
     {
+        name: 'OpenClaw',
+        slug: 'openclaw',
+        icon: '/docs/images/services/openclaw-logo.svg',
+        description: 'AI-powered coding assistant with multi-provider support and browser automation.',
+        category: 'AI'
+    },
+    {
         name: 'Organizr',
         slug: 'organizr',
         icon: '/docs/images/services/organizr-logo.png',
@@ -1720,6 +1755,13 @@ const services = [
         icon: '/docs/images/services/rocketchat-logo.svg',
         description: 'Open source team chat software.',
         category: 'Communication'
+    },
+    {
+        name: 'Satisfactory',
+        slug: 'satisfactory',
+        // No icon available on the codebase yet.
+        description: 'Game server for Satisfactory open-world factory building game with a dash of exploration and combat.',
+        category: 'Search'
     },
     {
         name: 'SearXNG',
@@ -2526,3 +2568,4 @@ const { preloadServices, handleImageError, hasImageError, isImageLoading, getFal
         </div>
     </div>
 </template>
+

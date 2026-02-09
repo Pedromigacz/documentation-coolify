@@ -2240,6 +2240,13 @@ const services = [
         category: 'Email'
     },
     {
+        name: 'Sure',
+        slug: 'sure',
+        icon: '/docs/images/services/sure.png',
+        description: 'An all-in-one personal finance platform.',
+        category: 'Finance'
+    },
+    {
         name: 'SFTPGo',
         slug: 'sftpgo',
         icon: '/docs/images/services/sftpgo-logo.png',

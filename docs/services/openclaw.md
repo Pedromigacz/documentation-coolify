@@ -43,6 +43,34 @@ When using a proxy provider like **OpenRouter** or **OpenCode**, you must prefix
 Using just `google/gemini-2.5-flash` without the provider prefix won't work. Always use the full `provider/model` path.
 :::
 
+### Subscription-Based Authentication
+
+If you have an **Anthropic** (Claude) or **OpenAI** (Codex) subscription, you can authenticate using their CLI login flows instead of API keys. Open a terminal in your OpenClaw container and run:
+
+**Anthropic (Claude):**
+
+```bash
+openclaw models auth login --provider anthropic
+```
+
+**OpenAI (Codex):**
+
+```bash
+openclaw models auth login --provider openai
+```
+
+Alternatively, use the onboarding wizard to set up authentication interactively:
+
+```bash
+openclaw onboard
+```
+
+You can verify your authentication status with:
+
+```bash
+openclaw models status
+```
+
 For the full list of supported providers and configuration options, see the [GitHub repository](https://github.com/coollabsio/openclaw?utm_source=coolify.io).
 
 ## Browser

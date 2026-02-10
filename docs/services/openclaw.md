@@ -34,6 +34,15 @@ At least one AI provider API key is required. Set the corresponding environment 
 
 Use `OPENCLAW_PRIMARY_MODEL` to set the default model.
 
+::: tip Model Naming for Proxy Providers
+When using a proxy provider like **OpenRouter** or **OpenCode**, you must prefix the model name with the provider path. For example:
+
+- **OpenRouter**: `OPENCLAW_PRIMARY_MODEL=openrouter/google/gemini-2.5-flash`
+- **OpenCode**: `OPENCLAW_PRIMARY_MODEL=opencode/google/gemini-2.5-flash`
+
+Using just `google/gemini-2.5-flash` without the provider prefix won't work. Always use the full `provider/model` path.
+:::
+
 For the full list of supported providers and configuration options, see the [GitHub repository](https://github.com/coollabsio/openclaw?utm_source=coolify.io).
 
 ## Browser

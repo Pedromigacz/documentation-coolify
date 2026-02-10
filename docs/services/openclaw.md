@@ -9,7 +9,7 @@ description: "Deploy OpenClaw AI-powered coding assistant on Coolify with multi-
 
 ## What is OpenClaw?
 
-OpenClaw is an AI-powered coding assistant built by coollabsio. It supports over 20 AI providers, includes built-in browser automation, and integrates with chat platforms like Telegram, Discord, Slack, and WhatsApp.
+OpenClaw [Github](https://github.com/openclaw/openclaw?utm_source=coolify.io) is an AI-powered coding assistant. It supports over 20 AI providers, includes built-in browser automation, and integrates with chat platforms like Telegram, Discord, Slack, and WhatsApp.
 
 ## Authentication
 
